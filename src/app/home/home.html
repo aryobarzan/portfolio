@@ -1,0 +1,49 @@
+<section class="content-center justify-center items-center">
+
+    <nav
+        class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg px-6 py-3 z-10">
+        <ul class="flex space-x-8">
+            <li>
+                <a href="#bio" routerLink="/bio" routerLinkActive="text-blue-600 font-medium"
+                    [class]="isActive('#bio') ? 'text-blue-600 font-medium' : 'text-gray-600'"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="#projects" routerLink="/projects" routerLinkActive="text-blue-600 font-medium"
+                    [class]="isActive('#projects') ? 'text-blue-600 font-medium' : 'text-gray-600'"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a href="#education" routerLink="/education" routerLinkActive="text-blue-600 font-medium"
+                    [class]="isActive('#education') ? 'text-blue-600 font-medium' : 'text-gray-600'"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">
+                    Education
+                </a>
+            </li>
+            <li>
+                <a href="#skills" routerLink="/skills" routerLinkActive="text-blue-600 font-medium"
+                    [class]="isActive('#skills') ? 'text-blue-600 font-medium' : 'text-gray-600'"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">
+                    Skills
+                </a>
+            </li>
+            <li>
+                <a href="#publications" routerLink="/publications" routerLinkActive="text-blue-600 font-medium"
+                    [class]="isActive('#publications') ? 'text-blue-600 font-medium' : 'text-gray-600'"
+                    class="text-gray-600 hover:text-blue-600 transition-colors">
+                    Publications
+                </a>
+            </li>
+            <!-- Add more navigation items as needed -->
+        </ul>
+    </nav>
+
+    <section><app-bio-header></app-bio-header></section>
+
+    <section><app-projects></app-projects></section>
+
+</section>
