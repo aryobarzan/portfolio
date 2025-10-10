@@ -10,7 +10,7 @@ export class ProjectService {
       title: 'BEACON Q',
       description: 'Personalized and gamified mobile quiz app.',
       technologies: ['Flutter', 'Dart', 'MongoDB', 'Node.js', 'Express', 'Firebase Messaging'],
-      year: 2023,
+      year: 2025,
       iconURL: 'assets/images/beaconq.jpg',
       links: [
         {
@@ -22,6 +22,48 @@ export class ProjectService {
           name: 'App Store',
           type: 'App Store',
           url: 'https://apps.apple.com/us/app/beacon-q/id1643852992',
+        },
+      ],
+    },
+    {
+      title: 'DartBlock',
+      description: 'Block-based programming framework.',
+      technologies: ['Flutter', 'Dart'],
+      year: 2023,
+      iconURL: 'assets/images/beaconq.jpg',
+      links: [
+        {
+          name: 'GitHub',
+          type: 'GitHub',
+          url: 'https://play.google.com/store/apps/details?id=lu.uni.coast.beacon_q_app',
+        },
+      ],
+    },
+    {
+      title: 'Sketchnoting',
+      description: 'Block-based programming framework.',
+      technologies: ['Flutter', 'Dart'],
+      year: 2023,
+      iconURL: 'assets/images/beaconq.jpg',
+      links: [
+        {
+          name: 'GitHub',
+          type: 'GitHub',
+          url: 'https://play.google.com/store/apps/details?id=lu.uni.coast.beacon_q_app',
+        },
+      ],
+    },
+    {
+      title: 'Yactul',
+      description: 'Block-based programming framework.',
+      technologies: ['Flutter', 'Dart'],
+      year: 2023,
+      iconURL: 'assets/images/beaconq.jpg',
+      links: [
+        {
+          name: 'App Store',
+          type: 'App Store',
+          url: 'https://play.google.com/store/apps/details?id=lu.uni.coast.beacon_q_app',
         },
       ],
     },

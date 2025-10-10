@@ -1,6 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'tailwindcss';
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
 /* Smooth scrolling with padding for fixed header */
 html {
   scroll-behavior: smooth;
