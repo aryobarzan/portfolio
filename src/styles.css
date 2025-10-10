@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Smooth scrolling with padding for fixed header */
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
-    /* Adjust this value based on your nav height */
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  /* Adjust this value based on your nav height */
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }

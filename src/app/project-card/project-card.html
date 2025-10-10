@@ -1,1 +1,17 @@
-<p>{{project.title}}</p>
+<section class="card">
+  <p class="title">{{ project.title }}</p>
+  <p class="description">{{ project.description }}</p>
+  @if (project.links && project.links.length >0) {
+  <!-- <hr /> -->
+  <section class="link-grid">
+    @for (link of project.links; track $index) {
+    <div class="link">
+      <a href="{{ link.url }}" target="_blank">
+        {{ link.name }}
+        <!-- <span class="material-symbols-outlined link-icon">open_in_new</span> -->
+      </a>
+    </div>
+    }
+  </section>
+  }
+</section>
