@@ -1,8 +1,18 @@
 <section class="card">
-  <p class="title">{{ project.title }}</p>
-  <p class="description">{{ project.description }}</p>
-  @if (project.links && project.links.length >0) {
-  <!-- <hr /> -->
+  <div class="flex w-full space-x-4">
+    <!-- Left column - auto width based on content -->
+    <div class="shrink-0">
+      <img class="logo" src="{{ project.iconURL }}" alt="{{ project.title }} logo" />
+    </div>
+
+    <!-- Right column - remaining width -->
+    <div class="flex-1">
+      <p class="title">{{ project.title }}</p>
+      <p class="description">{{ project.description }}</p>
+    </div>
+  </div>
+
+  @if (project.links && project.links.length > 0) {
   <section class="link-grid">
     @for (link of project.links; track $index) {
     <div class="link">

@@ -11,6 +11,7 @@ export class ProjectService {
       description: 'Personalized and gamified mobile quiz app.',
       technologies: ['Flutter', 'Dart', 'MongoDB', 'Node.js', 'Express', 'Firebase Messaging'],
       year: 2023,
+      iconURL: 'assets/images/beaconq.jpg',
       links: [
         {
           name: 'Play Store',

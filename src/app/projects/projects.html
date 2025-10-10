@@ -1,12 +1,8 @@
 <section class="container pt-16" id="projects">
-    <div class="section">
-        <h1>Projects</h1>
-        <section class="intro">
-            <section>
-                @for(project of projects; track $index) {
-                <app-project-card [project]="project"></app-project-card>
-                }
-            </section>
-        </section>
-    </div>
+  <h1>Projects</h1>
+  <section>
+    @for(project of projects; track $index) {
+    <app-project-card [project]="project"></app-project-card>
+    }
+  </section>
 </section>

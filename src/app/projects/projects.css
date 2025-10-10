@@ -1,21 +1,19 @@
 h1 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .container {
-    max-width: 500px;
-    margin: auto auto;
-    text-align: center;
+  max-width: 500px;
+  margin: auto auto;
+  text-align: center;
 }
 
-.section {}
-
 .intro {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    justify-self: center;
-    max-width: 480px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  max-width: 480px;
 }
