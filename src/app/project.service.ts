@@ -30,7 +30,7 @@ export class ProjectService {
       description: 'Block-based programming framework.',
       technologies: ['Flutter', 'Dart'],
       year: 2023,
-      iconURL: 'assets/images/beaconq.jpg',
+      iconURL: 'assets/images/dartblock.jpg',
       links: [
         {
           name: 'GitHub',
@@ -41,10 +41,10 @@ export class ProjectService {
     },
     {
       title: 'Sketchnoting',
-      description: 'Block-based programming framework.',
-      technologies: ['Flutter', 'Dart'],
-      year: 2023,
-      iconURL: 'assets/images/beaconq.jpg',
+      description: 'Note-taking app for iPad, with semantic annotations and search.',
+      technologies: ['Swift', 'UIKit'],
+      year: 2021,
+      iconURL: 'assets/images/sketchnoting.jpg',
       links: [
         {
           name: 'GitHub',
@@ -55,15 +55,15 @@ export class ProjectService {
     },
     {
       title: 'Yactul',
-      description: 'Block-based programming framework.',
-      technologies: ['Flutter', 'Dart'],
-      year: 2023,
-      iconURL: 'assets/images/beaconq.jpg',
+      description: 'Quiz app for mobile, with spaced repetition and integrated learning material.',
+      technologies: ['Xamarin', 'C#', 'Flutter', 'Dart'],
+      year: 2019,
+      iconURL: 'assets/images/yactul.jpg',
       links: [
         {
           name: 'App Store',
           type: 'App Store',
-          url: 'https://play.google.com/store/apps/details?id=lu.uni.coast.beacon_q_app',
+          url: 'https://apps.apple.com/us/app/yactul/id1435998187',
         },
       ],
     },

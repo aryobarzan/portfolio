@@ -1,0 +1,55 @@
+.card {
+  margin-bottom: 8px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  text-align: left;
+}
+
+button:hover .material-symbols-outlined {
+  transform: scale(1.1);
+}
+.link {
+  margin-right: 8px;
+  /* border: 1px solid blue;
+  border-radius: 8px; */
+  padding: 4px 8px;
+  color: blue;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  vertical-align: middle;
+}
+.link:hover {
+  background-color: rgba(44, 121, 184, 0.2);
+  border-radius: 16px;
+}
+.link:active {
+  background-color: rgba(44, 121, 184, 0.4);
+  border-radius: 16px;
+}
+.link-grid {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.link-icon {
+  /* vertical-align: middle; */
+  font-size: 18px;
+  font-weight: 500;
+  /* position: relative;
+  top: 2px;*/
+  /* bottom: 2px; */
+  top: 4px;
+  position: relative;
+}
+.link:hover .link-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}

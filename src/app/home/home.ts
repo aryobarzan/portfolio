@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { BioHeader } from '../bio-header/bio-header';
-import { Projects } from "../projects/projects";
+import { Projects } from '../projects/projects';
+import { Publications } from '../publications/publications';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [BioHeader, Projects, RouterLink],
+  imports: [BioHeader, Projects, RouterLink, Publications],
   templateUrl: './home.html',
-  styleUrl: './home.css'
+  styleUrl: './home.css',
 })
 export class Home {
   isActive(path: string): boolean {

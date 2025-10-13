@@ -10,11 +10,11 @@ import { ProjectCard } from '../project-card/project-card';
   styleUrl: './projects.css',
 })
 export class Projects {
-  projectsService: ProjectService = inject(ProjectService);
+  projectService: ProjectService = inject(ProjectService);
   projects: Project[] = [];
 
   constructor() {
-    this.projects = this.projectsService.projects;
+    this.projects = this.projectService.projects;
   }
 
   getAnimationStyle(index: number): { [key: string]: string } {

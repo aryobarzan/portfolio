@@ -1,0 +1,7 @@
+<section class="container pt-16" id="publications">
+  <h1>Publications</h1>
+  <section>
+    @for (publication of publications; track $index) {
+    <app-publication-card [publication]="publication"></app-publication-card> }
+  </section>
+</section>

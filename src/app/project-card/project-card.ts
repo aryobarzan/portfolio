@@ -1,10 +1,10 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Project } from '../project';
 @Component({
   selector: 'app-project-card',
   imports: [],
   templateUrl: './project-card.html',
-  styleUrl: './project-card.css'
+  styleUrl: './project-card.css',
 })
 export class ProjectCard {
   @Input({ required: true }) project!: Project;

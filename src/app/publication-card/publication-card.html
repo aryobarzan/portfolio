@@ -1,0 +1,43 @@
+<section class="card">
+  <div class="flex justify-between items-start gap-4">
+    <p class="mb-2">
+      {{ publication.authors }}. "{{ publication.title }}." <i> {{ publication.proceedings }}</i
+      >. @if(publication.publisher){ {{ publication.publisher }}, }{{ publication.year }}.
+      @if(publication.pages){ {{ publication.pages }}. }
+    </p>
+  </div>
+
+  <!-- Links section -->
+  <section class="link-grid mt-3">
+    <button (click)="onToggleAbstract()" class="link">
+      <span class="material-symbols-outlined link-icon">
+        {{ showAbstract ? 'arrow_upward' : 'arrow_downward' }} </span
+      >Abstract
+    </button>
+    @for(link of publication.links; track $index){
+    <div class="link">
+      <a href="{{ link.url }}" target="_blank">
+        <span class="material-symbols-outlined link-icon"
+          >@if(link.type == 'PDF'){ article}@else if (link.type == 'DOI') {open_in_new}
+        </span>
+        {{ link.name }}
+      </a>
+    </div>
+    }
+  </section>
+  <!-- The abstract, which should only be shown when "showAbstract" is true. -->
+  <!-- overflow-hidden: Mark the div as the expandable section -->
+  <!-- transition-all: animate the expand / collapse action -->
+  <!-- duration-300: duration of the animation in ms -->
+  <!-- ease-in-out: cause the animation to start and end slowly -->
+
+  <!-- [style.maxHeight]: dynamic binding to maxHeight property to ensure the div refreshes when showAbstract changes. -->
+  <div
+    class="overflow-hidden transition-all duration-300 ease-in-out"
+    [style.maxHeight]="showAbstract ? '800px' : '0'"
+  >
+    <p class="text-gray-600 mt-2 px-4 py-2 bg-gray-50 rounded-lg">
+      {{ publication.abstract }}
+    </p>
+  </div>
+</section>
