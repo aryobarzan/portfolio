@@ -7,17 +7,17 @@
     </p>
   </div>
 
-  <!-- Links section -->
-  <section class="link-grid mt-3">
-    <button (click)="onToggleAbstract()" class="link">
-      <span class="material-symbols-outlined link-icon">
+  <!-- Links -->
+  <section class="link-button-grid mt-3">
+    <button (click)="onToggleAbstract()" class="link-button">
+      <span class="material-symbols-outlined link-button-icon">
         {{ showAbstract ? 'arrow_upward' : 'arrow_downward' }} </span
       >Abstract
     </button>
     @for(link of publication.links; track $index){
-    <div class="link">
+    <div class="link-button">
       <a href="{{ link.url }}" target="_blank">
-        <span class="material-symbols-outlined link-icon"
+        <span class="material-symbols-outlined link-button-icon"
           >@if(link.type == 'PDF'){ article}@else if (link.type == 'DOI') {open_in_new}
         </span>
         {{ link.name }}

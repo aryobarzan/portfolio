@@ -61,9 +61,15 @@
       <!-- Add more navigation items as needed -->
     </ul>
   </nav>
-  <br />
+
+  <!-- Leave a gap at the top such that the fixed navigation bar doesn't cover the content. -->
+  <div class="pt-24"></div>
+  <app-contact-bar></app-contact-bar>
   <section><app-bio-header></app-bio-header></section>
 
   <section><app-projects></app-projects></section>
   <section><app-publications></app-publications></section>
+  <div class="pt-8"></div>
+  <app-contact-bar></app-contact-bar>
+  <div class="pb-8"></div>
 </section>
