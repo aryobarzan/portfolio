@@ -4,10 +4,11 @@ import { Projects } from '../projects/projects';
 import { Publications } from '../publications/publications';
 import { RouterLink } from '@angular/router';
 import { ContactBar } from '../contact-bar/contact-bar';
+import { Degrees } from '../degrees/degrees';
 
 @Component({
   selector: 'app-home',
-  imports: [BioHeader, Projects, RouterLink, Publications, ContactBar],
+  imports: [BioHeader, Projects, RouterLink, Publications, ContactBar, Degrees],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
