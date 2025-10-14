@@ -35,7 +35,7 @@ export class ProjectService {
         {
           name: 'GitHub',
           type: 'GitHub',
-          url: 'https://play.google.com/store/apps/details?id=lu.uni.coast.beacon_q_app',
+          url: 'https://github.com/aryobarzan',
         },
       ],
     },
@@ -49,7 +49,7 @@ export class ProjectService {
         {
           name: 'GitHub',
           type: 'GitHub',
-          url: 'https://play.google.com/store/apps/details?id=lu.uni.coast.beacon_q_app',
+          url: 'https://github.com/aryobarzan',
         },
       ],
     },

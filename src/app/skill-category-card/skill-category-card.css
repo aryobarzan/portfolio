@@ -1,0 +1,68 @@
+.card {
+  width: 100%;
+  margin-top: 8px;
+}
+/* .card:hover {
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+.card:mouseleave {
+  transform: translateY(8px);
+  transition: all 0.3s ease;
+} */
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.description {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.logo {
+  max-height: 64px;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+hr {
+  margin-top: 8px;
+}
+.link-button-grid {
+  /* Override global 'center' to 'flex-end' */
+  justify-content: flex-end;
+}
+
+.skill-grid {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill {
+  border-radius: 16px;
+  padding: 4px 8px;
+  background-color: rgb(59, 134, 210);
+  /* background-color: rgb(62, 141, 232); */
+  color: white;
+}
+
+.skill:hover {
+  background-color: rgb(24, 94, 174);
+  color: white;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.skill:active {
+  background-color: rgb(254, 166, 1);
+  color: black;
+}

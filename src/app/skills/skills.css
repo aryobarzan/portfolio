@@ -18,3 +18,12 @@ h1 {
   justify-self: center;
   max-width: 800px;
 }
+
+.category-grid {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
