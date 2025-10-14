@@ -1,0 +1,25 @@
+name: Deploy Production Build to Public Repo
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the source repository
+
+      # Step 5: Push the production build folder to the target repository
+      - name: Push to production repository
+        uses: cpina/github-action-push-to-another-repository@v1.7.2
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
+        with:
+          source-directory: 'docs/' # The folder with your production build
+          destination-github-username: 'aryobarzan'
+          destination-repository-name: 'aryobarzan'
+          user-email: 'aryobarzan.atashpendar@gmail.com'
+          commit-message: 'Deploying from source repository [skip ci]'
