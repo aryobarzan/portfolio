@@ -25,6 +25,8 @@ jobs:
           path: 'target-repo'
       - name: Copy docs and push
         run: |
+          pwd
+          ls
           # Clean up previous docs in the target repo
           rm -rf target-repo/docs
 
