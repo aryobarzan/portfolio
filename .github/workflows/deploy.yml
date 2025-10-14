@@ -12,7 +12,7 @@ jobs:
     steps:
       # Step 1: Checkout the source repository
       # This needs to be done on the private repo containing the docs folder
-      - name: Checkout Source Repo
+      - name: Checkout Source Repository
         uses: actions/checkout@v4
         with:
           # Use the PAT to access the private repo
