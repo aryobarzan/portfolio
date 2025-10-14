@@ -17,18 +17,38 @@ jobs:
         with:
           # Use the PAT to access the private repo
           token: ${{ secrets.ACCESS_TOKEN }}
+      - name: Checkout Destination Repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          repository: 'aryobarzan/aryobarzan'
+          path: 'target-repo'
+      - name: Copy docs and push
+        run: |
+          # Clean up previous docs in the target repo
+          rm -rf target-repo/docs
+
+          # Copy the docs folder from the source repo to the target repo
+          cp -r source-repo/docs target-repo/
+
+          cd target-repo
+          git config user.name "aryobarzan"
+          git config user.email "aryobarzan.atashpendar@gmail.com"
+          git add docs
+          git commit -m "Deploying docs from private repository [skip ci]"
+          git push
       # Step 1: Checkout the source repository
 
       # Step 5: Push the production build folder to the target repository
-      - name: Push to production repo
-        uses: cpina/github-action-push-to-another-repository@v1.7.2
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
-        with:
-          source-directory: 'docs' # The folder with your production build
-          destination-github-username: 'aryobarzan'
-          destination-repository-name: 'aryobarzan'
-          user-email: 'aryobarzan.atashpendar@gmail.com'
-          commit-message: 'Deploying from source repository [skip ci]'
-          destination-directory: 'docs'
-          target-branch: main
+    #   - name: Push to production repo
+    #     uses: cpina/github-action-push-to-another-repository@v1.7.2
+    #     env:
+    #       API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
+    #     with:
+    #       source-directory: 'docs' # The folder with your production build
+    #       destination-github-username: 'aryobarzan'
+    #       destination-repository-name: 'aryobarzan'
+    #       user-email: 'aryobarzan.atashpendar@gmail.com'
+    #       commit-message: 'Deploying from source repository [skip ci]'
+    #       destination-directory: 'docs'
+    #       target-branch: main
