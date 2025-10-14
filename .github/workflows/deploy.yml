@@ -18,7 +18,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
         with:
-          source-directory: 'docs/' # The folder with your production build
+          source-directory: './docs/' # The folder with your production build
           destination-github-username: 'aryobarzan'
           destination-repository-name: 'aryobarzan'
           user-email: 'aryobarzan.atashpendar@gmail.com'
