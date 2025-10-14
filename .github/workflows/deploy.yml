@@ -36,8 +36,9 @@ jobs:
           # Copy the docs folder and its contents from the source repo
           # This command ensures the parent directory exists
           cp -r ../docs . # Note the trailing dot
-
-          cd target-repo
+      - name: Commit and push changes
+        working-directory: ./target-repo # <-- Add this line
+        run: |
           git config user.name "aryobarzan"
           git config user.email "aryobarzan.atashpendar@gmail.com"
           git add docs
