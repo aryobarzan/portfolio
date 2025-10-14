@@ -9,6 +9,17 @@
 
   <!-- Links -->
   <section class="link-button-grid mt-3">
+    @if (publication.isBestPaper){
+    <div style="align-items: center; display: flex; gap: 4px">
+      <span class="material-symbols-outlined link-button-icon mb-2" style="color: rgb(230, 153, 71)"
+        >trophy
+      </span>
+      <p style="color: rgb(230, 153, 71); font-weight: bold">Best Paper</p>
+    </div>
+
+    <!-- Spacer between "Best Paper" and the links section -->
+    <div class="flex-grow"></div>
+    }
     <button (click)="onToggleAbstract()" class="link-button">
       <span class="material-symbols-outlined link-button-icon">
         {{ showAbstract ? 'arrow_upward' : 'arrow_downward' }} </span

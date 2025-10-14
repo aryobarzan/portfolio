@@ -27,7 +27,7 @@ export class ProjectService {
     },
     {
       title: 'DartBlock',
-      description: 'Block-based programming framework.',
+      description: 'Block-based programming framework for mobile.',
       technologies: ['Flutter', 'Dart'],
       year: 2023,
       iconURL: 'assets/images/dartblock.jpg',

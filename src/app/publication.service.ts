@@ -12,6 +12,7 @@ export class PublicationService {
       proceedings: 'Doctoral thesis',
       publisher: 'ORBilu-University of Luxembourg',
       year: 2025,
+      isBestPaper: false,
       links: [
         {
           name: 'PDF',
@@ -30,6 +31,7 @@ export class PublicationService {
       proceedings:
         'Proceedings of the 2024 on Innovation and Technology in Computer Science Education V. 1',
       year: 2024,
+      isBestPaper: false,
       pages: '597-603',
       links: [
         { name: 'PDF', type: 'PDF', url: 'https://dl.acm.org/doi/pdf/10.1145/3649217.3653549' },
@@ -45,6 +47,7 @@ export class PublicationService {
       proceedings: '16th the International Conference on Computer Supported Education (CSEDU 2024)',
       publisher: 'SciTePress',
       year: 2024,
+      isBestPaper: false,
       links: [
         {
           name: 'PDF',
@@ -67,6 +70,7 @@ export class PublicationService {
         '2023 IEEE International Conference on Teaching, Assessment and Learning for Engineering (TALE)',
       publisher: 'IEEE',
       year: 2023,
+      isBestPaper: false,
       links: [
         {
           name: 'Details',
@@ -85,6 +89,7 @@ export class PublicationService {
         '2023 11th International Conference on Information and Education Technology (ICIET)',
       publisher: 'IEEE',
       year: 2023,
+      isBestPaper: false,
       links: [
         {
           name: 'Details',
@@ -101,6 +106,7 @@ export class PublicationService {
       proceedings: 'International Conference on Human-Computer Interaction',
       publisher: 'Cham: Springer International Publishing',
       year: 2022,
+      isBestPaper: false,
       pages: '13-29',
       links: [
         {
@@ -118,6 +124,7 @@ export class PublicationService {
       proceedings: 'International Conference on Applied Informatics',
       publisher: 'Cham: Springer International Publishing',
       year: 2019,
+      isBestPaper: true,
       pages: '340-353',
       links: [
         {

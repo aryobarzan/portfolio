@@ -11,7 +11,7 @@ export class DegreeService {
       institution: 'University of Luxembourg',
       start: '2021',
       end: '2025',
-      thesis: 'BEACON: Encouraging Regular Self-Testing via a Personalized and Gamified Quiz App',
+      thesis: 'BEACON Q: Encouraging Regular Self-Testing via a Personalized and Gamified Quiz App',
     },
     {
       title: 'Master in Information and Computer Science',
@@ -29,3 +29,6 @@ export class DegreeService {
     },
   ];
 }
+
+// BEST PAPER AWARD
+// FONT

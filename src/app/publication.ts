@@ -7,6 +7,7 @@ export interface Publication {
   pages?: string;
   abstract: string;
   links: PublicationLink[];
+  isBestPaper: boolean;
 }
 
 export interface PublicationLink {
