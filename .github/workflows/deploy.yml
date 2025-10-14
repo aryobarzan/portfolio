@@ -11,8 +11,14 @@ jobs:
 
     steps:
       # Step 1: Checkout the source repository
-      - name: Copy docs/ to docs/ using rsync (to exclude main.epub in this example)
-        run: sudo apt install rsync rsync && rsync -arv docs/ docs/
+      # This needs to be done on the private repo containing the docs folder
+      - name: Checkout Source Repo
+        uses: actions/checkout@v4
+        with:
+          # Use the PAT to access the private repo
+          token: ${{ secrets.ACCESS_TOKEN }}
+      # Step 1: Checkout the source repository
+
       # Step 5: Push the production build folder to the target repository
       - name: Push to production repository
         uses: cpina/github-action-push-to-another-repository@v1.7.2
