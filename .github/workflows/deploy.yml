@@ -12,7 +12,7 @@ jobs:
     steps:
       # Step 1: Checkout the source repository
       - name: Copy docs_temp/ to docs/ using rsync (to exclude main.epub in this example)
-        run: apt install rsync rsync && rsync -arv docs_temp/ docs/
+        run: sudo apt install rsync rsync && rsync -arv docs_temp/ docs/
       # Step 5: Push the production build folder to the target repository
       - name: Push to production repository
         uses: cpina/github-action-push-to-another-repository@v1.7.2
