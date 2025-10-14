@@ -20,7 +20,7 @@ jobs:
       - name: Checkout Destination Repo
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          token: ${{ secrets.ACCESS_TOKEN }}
           repository: 'aryobarzan/aryobarzan'
           path: 'target-repo'
       - name: Copy docs and push
