@@ -33,7 +33,7 @@ jobs:
 
           # Copy the docs folder and its contents from the source repo
           # This command ensures the parent directory exists
-          cp -r ../source-repo/docs . # Note the trailing dot
+          cp -r ../docs . # Note the trailing dot
 
           cd target-repo
           git config user.name "aryobarzan"
