@@ -36,6 +36,7 @@ jobs:
           # Copy the docs folder and its contents from the source repo
           # This command ensures the parent directory exists
           cp -r ../docs . # Note the trailing dot
+          cp ./docs/index.html ./docs/404.html
       - name: Commit and push changes
         working-directory: ./target-repo # <-- Add this line
         run: |
