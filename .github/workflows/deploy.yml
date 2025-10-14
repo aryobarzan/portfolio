@@ -20,7 +20,7 @@ jobs:
       # Step 1: Checkout the source repository
 
       # Step 5: Push the production build folder to the target repository
-      - name: Push to production repository
+      - name: Push to production repo
         uses: cpina/github-action-push-to-another-repository@v1.7.2
         env:
           API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
