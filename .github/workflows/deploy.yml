@@ -25,13 +25,15 @@ jobs:
           path: 'target-repo'
       - name: Copy docs and push
         run: |
-          pwd
-          ls
-          # Clean up previous docs in the target repo
-          rm -rf target-repo/docs
+          # Change directory to the target repo
+          cd target-repo
 
-          # Copy the docs folder from the source repo to the target repo
-          cp -r source-repo/docs target-repo/
+          # Remove any old docs folder to ensure a clean sync
+          rm -rf docs
+
+          # Copy the docs folder and its contents from the source repo
+          # This command ensures the parent directory exists
+          cp -r ../source-repo/docs . # Note the trailing dot
 
           cd target-repo
           git config user.name "aryobarzan"
