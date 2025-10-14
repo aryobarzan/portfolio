@@ -25,6 +25,8 @@ jobs:
           path: 'target-repo'
       - name: Copy docs and push
         run: |
+          pwd
+          ls
           # Change directory to the target repo
           cd target-repo
 
