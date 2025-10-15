@@ -37,26 +37,12 @@ jobs:
           # This command ensures the parent directory exists
           cp -r ../docs . # Note the trailing dot
           cp ./docs/index.html ./docs/404.html
+          echo "aryobarzan.com" >> ./docs/CNAME
       - name: Commit and push changes
-        working-directory: ./target-repo # <-- Add this line
+        working-directory: ./target-repo
         run: |
           git config user.name "aryobarzan"
           git config user.email "aryobarzan.atashpendar@gmail.com"
           git add docs
           git commit -m "Deploying docs from private repository [skip ci]"
           git push
-      # Step 1: Checkout the source repository
-
-      # Step 5: Push the production build folder to the target repository
-    #   - name: Push to production repo
-    #     uses: cpina/github-action-push-to-another-repository@v1.7.2
-    #     env:
-    #       API_TOKEN_GITHUB: ${{ secrets.ACCESS_TOKEN }}
-    #     with:
-    #       source-directory: 'docs' # The folder with your production build
-    #       destination-github-username: 'aryobarzan'
-    #       destination-repository-name: 'aryobarzan'
-    #       user-email: 'aryobarzan.atashpendar@gmail.com'
-    #       commit-message: 'Deploying from source repository [skip ci]'
-    #       destination-directory: 'docs'
-    #       target-branch: main
