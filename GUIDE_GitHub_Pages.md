@@ -48,8 +48,10 @@ Whenever you want to release an updated version of the web app, perform the foll
 - Build the app for production, with the value for the property "--base-href" being the name of the public repository:
 
 ```bash
-ng build -c production --base-href "/aryobarzan/"
+ng build -c production --base-href "./"
 ```
+
+(Note: many guides indicate to use "/public-reposity-name" as the argument for --base-href. However, this will cause issues when using a custom domain, as the website is actually hosted at username.github.io/repo-name, not username.github.io. By using "./", the relative path ensures that the assets and routes of Angular work irrespective of the domain name.)
 
 - Commit and push the updated docs folder.
 
