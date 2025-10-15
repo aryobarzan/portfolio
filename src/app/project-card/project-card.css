@@ -1,17 +1,36 @@
 .card {
   width: 100%;
-  margin-top: 8px;
-}
-.card:hover {
-  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-}
-.card:mouseleave {
-  transform: translateY(8px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  /* Make the main portion of the card take up the height, ensuring the links row is pushed to the bottom. */
+  flex: 1;
+}
+.left-column {
+  /* Have the column's width not grow or shrink, but take up only the space required by its content. */
+  flex: 0 0 auto;
+}
+
+.right-column {
+  /* Have the column's width take up the available/remaining space of the row. */
+  flex: 1;
+}
 .title {
   font-size: 1.25rem;
   font-weight: 500;

@@ -1,15 +1,12 @@
-<section class="card">
-  <div class="flex w-full space-x-4">
-    <!-- Left column - auto width based on content -->
-    <div class="shrink-0">
+<section class="card h-full flex flex-col">
+  <div class="flex-container space-x-4">
+    <aside class="left-column">
       <img class="logo" src="{{ project.iconURL }}" alt="{{ project.title }} logo" />
-    </div>
-
-    <!-- Right column - remaining width -->
-    <div class="flex-1">
+    </aside>
+    <aside class="right-column">
       <p class="title">{{ project.title }}</p>
       <p class="description">{{ project.description }}</p>
-    </div>
+    </aside>
   </div>
 
   @if (project.links && project.links.length > 0) {

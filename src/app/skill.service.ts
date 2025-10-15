@@ -50,6 +50,35 @@ export class SkillService {
       ],
     },
     {
+      title: 'Data Analysis & Visualization',
+      skills: [
+        {
+          name: 'Pandas',
+          url: 'https://pandas.pydata.org/',
+        },
+        {
+          name: 'SciPy',
+          url: 'https://scipy.org/',
+        },
+        {
+          name: 'NumPy',
+          url: 'https://numpy.org/',
+        },
+        {
+          name: 'Matplotlib',
+          url: 'https://matplotlib.org/',
+        },
+        {
+          name: 'Seaborn',
+          url: 'https://seaborn.pydata.org/',
+        },
+        {
+          name: 'Plotly',
+          url: 'https://plotly.com/python/',
+        },
+      ],
+    },
+    {
       title: 'Languages',
       skills: [
         {
@@ -84,6 +113,10 @@ export class SkillService {
         {
           name: 'GitHub',
           url: 'https://github.com/',
+        },
+        {
+          name: 'GitHub Actions',
+          url: 'https://docs.github.com/en/actions',
         },
         {
           name: 'PM2',

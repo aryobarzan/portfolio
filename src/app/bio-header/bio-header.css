@@ -1,9 +1,9 @@
 h1 {
   font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .container {
-  max-width: 800px;
   margin: auto auto;
   text-align: center;
 }
@@ -11,9 +11,9 @@ h1 {
 .intro {
   position: relative;
   display: flex;
+  text-align: justify;
   align-items: center;
   justify-content: center;
   justify-items: center;
   justify-self: center;
-  max-width: 800px;
 }

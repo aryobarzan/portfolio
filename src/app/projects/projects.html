@@ -1,13 +1,15 @@
 <section class="container pt-8" id="projects">
-  <h1 class="animate-fade-in-up">Projects</h1>
-  <section>
+  <h1 class="animate-fade-in-up mb-4">Projects</h1>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
     @for(project of projects; track $index) {
+
     <app-project-card
       [project]="project"
-      class="animate-fade-in-up block"
+      class="animate-fade-in-up block h-full"
       [style]="getAnimationStyle($index)"
     >
     </app-project-card>
+
     }
   </section>
 </section>

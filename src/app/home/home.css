@@ -9,3 +9,11 @@
   margin: auto auto;
   text-align: center;
 }
+
+.home-container {
+  max-width: 1200px;
+  margin: auto auto;
+  text-align: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
