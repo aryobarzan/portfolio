@@ -11,6 +11,7 @@
 
   @if (project.links && project.links.length > 0) {
   <section class="link-button-grid">
+    <!-- <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" /> -->
     @for (link of project.links; track $index) {
     <div class="link-button">
       <a href="{{ link.url }}" target="_blank">
