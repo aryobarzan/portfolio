@@ -33,9 +33,14 @@ export class ProjectService {
       iconURL: 'assets/images/dartblock.jpg',
       links: [
         {
+          name: 'pub.dev',
+          type: 'Other',
+          url: 'https://pub.dev/packages/dartblock_code',
+        },
+        {
           name: 'GitHub',
           type: 'GitHub',
-          url: 'https://github.com/aryobarzan',
+          url: 'https://github.com/aryobarzan/dartblock',
         },
       ],
     },
@@ -47,7 +52,7 @@ export class ProjectService {
       iconURL: 'assets/images/sketchnoting.jpg',
       links: [
         {
-          name: 'GitHub',
+          name: 'GitHub (coming soon)',
           type: 'GitHub',
           url: 'https://github.com/aryobarzan',
         },
