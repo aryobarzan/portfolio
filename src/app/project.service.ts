@@ -52,9 +52,9 @@ export class ProjectService {
       iconURL: 'assets/images/sketchnoting.jpg',
       links: [
         {
-          name: 'GitHub (coming soon)',
+          name: 'GitHub',
           type: 'GitHub',
-          url: 'https://github.com/aryobarzan',
+          url: 'https://github.com/aryobarzan/Sketchnoting',
         },
       ],
     },
