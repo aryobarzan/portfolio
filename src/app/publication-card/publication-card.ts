@@ -5,7 +5,7 @@ import { Publication } from '../publication';
   selector: 'app-publication-card',
   imports: [],
   templateUrl: './publication-card.html',
-  styleUrl: './publication-card.css',
+  styleUrl: './publication-card.scss',
 })
 export class PublicationCard {
   @Input({ required: true }) publication!: Publication;

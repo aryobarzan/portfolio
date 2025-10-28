@@ -1,0 +1,55 @@
+<section class="page-container content-center justify-center items-center">
+  <nav
+    class="fixed top-4 left-2/4 transform -translate-x-1/2 tab-bar backdrop-blur-sm rounded-full shadow-lg px-6 py-3 z-10 link-button"
+  >
+    <a routerLink="/" routerLinkActive="active">
+      <span class="material-symbols-outlined link-button-icon">home</span> Home</a
+    >
+  </nav>
+  <div class="pt-12"></div>
+  <section class="container pt-8" id="about">
+    <div class="section">
+      <h1>DartBlock</h1>
+      <section class="intro">
+        <p>
+          Play around with the DartBlock framework using the Web version integrated below!<br />
+          <b>Editor:</b> free-form editor.<br />
+          <b>Quiz:</b> an example quiz question requiring you to compose a corresponding DartBlock
+          which solves the problem.<br /><br />
+          <i
+            >Technical details: DartBlock has been written using the Flutter framework, though it
+            can be integrated within any web app as an iframe by building the Flutter app for the
+            Web platform. However, the Web version comes with a limitation compared to the other
+            supported platforms: due to the lack of support for isolates, programs are executed on
+            the same thread on which the Flutter app itself is running. For more details, see the
+            GitHub page.</i
+          >
+        </p>
+        <section class="link-button-grid">
+          <div class="link-button">
+            <a href="https://pub.dev/packages/dartblock_code" target="_blank">
+              <!-- <a routerLink="{{ link.url }}" routerLinkActive="active" target="_blank"> -->
+              pub.dev
+              <!-- <span class="material-symbols-outlined link-icon">open_in_new</span> -->
+            </a>
+          </div>
+          <div class="link-button">
+            <a href="https://github.com/aryobarzan/dartblock" target="_blank">
+              <!-- <a routerLink="{{ link.url }}" routerLinkActive="active" target="_blank"> -->
+              GitHub
+              <!-- <span class="material-symbols-outlined link-icon">open_in_new</span> -->
+            </a>
+          </div>
+        </section>
+        <div class="smartphone-frame">
+          <div class="smartphone-content">
+            <iframe class="smartphone-content" src="assets/dartblock/index.html"></iframe>
+          </div>
+        </div>
+
+        <!-- <div id="dartblock-host"></div> -->
+      </section>
+    </div>
+  </section>
+</section>
+<router-outlet></router-outlet>

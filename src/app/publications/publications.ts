@@ -7,7 +7,7 @@ import { PublicationCard } from '../publication-card/publication-card';
   selector: 'app-publications',
   imports: [PublicationCard],
   templateUrl: './publications.html',
-  styleUrl: './publications.css',
+  styleUrl: './publications.scss',
 })
 export class Publications {
   publicationService: PublicationService = inject(PublicationService);

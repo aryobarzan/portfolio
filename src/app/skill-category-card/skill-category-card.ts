@@ -4,7 +4,7 @@ import { SkillCategory } from '../skill-category';
   selector: 'app-skill-category-card',
   imports: [],
   templateUrl: './skill-category-card.html',
-  styleUrl: './skill-category-card.css',
+  styleUrl: './skill-category-card.scss',
 })
 export class SkillCategoryCard {
   @Input({ required: true }) skillCategory!: SkillCategory;

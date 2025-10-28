@@ -1,15 +1,16 @@
 <section class="home-container content-center justify-center items-center">
   <nav
-    class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg px-6 py-3 z-10"
+    class="fixed top-4 left-1/2 transform -translate-x-1/2 tab-bar backdrop-blur-sm rounded-full shadow-lg px-6 py-3 z-10"
   >
     <ul class="flex space-x-8">
       <li>
         <a
           routerLink="/"
-          fragment="bio"
-          routerLinkActive="text-blue-600 font-medium"
-          [class]="isActive('#bio') ? 'text-blue-600 font-medium' : 'text-gray-600'"
-          class="isActive('#projects') ? 'text-blue-600 font-medium' : 'text-gray-600' hover:text-blue-600 transition-colors"
+          fragment="about"
+          [ngClass]="{
+            'tab-option-selected': activeFragment() === 'about',
+            'tab-option': activeFragment() !== 'about'
+          }"
         >
           About
         </a>
@@ -18,45 +19,45 @@
         <a
           routerLink="/"
           fragment="projects"
-          routerLinkActive="text-blue-600 font-medium"
-          [class]="isActive('#projects') ? 'text-blue-600 font-medium' : 'text-gray-600'"
-          class="isActive('#projects') ? 'text-blue-600 font-medium' : 'text-gray-600' hover:text-blue-600 transition-colors"
+          [ngClass]="{
+            'tab-option-selected': activeFragment() === 'projects',
+            'tab-option': activeFragment() !== 'projects'
+          }"
+          >Projects</a
         >
-          Projects
-        </a>
       </li>
       <li>
         <a
           routerLink="/"
           fragment="education"
-          routerLinkActive="text-blue-600 font-medium"
-          [class]="isActive('#education') ? 'text-blue-600 font-medium' : 'text-gray-600'"
-          class="isActive('#projects') ? 'text-blue-600 font-medium' : 'text-gray-600' hover:text-blue-600 transition-colors"
+          [ngClass]="{
+            'tab-option-selected': activeFragment() === 'education',
+            'tab-option': activeFragment() !== 'education'
+          }"
+          >Education</a
         >
-          Education
-        </a>
       </li>
       <li>
         <a
           routerLink="/"
           fragment="skills"
-          routerLinkActive="text-blue-600 font-medium"
-          [class]="isActive('#skills') ? 'text-blue-600 font-medium' : 'text-gray-600'"
-          class="isActive('#projects') ? 'text-blue-600 font-medium' : 'text-gray-600' hover:text-blue-600 transition-colors"
+          [ngClass]="{
+            'tab-option-selected': activeFragment() === 'skills',
+            'tab-option': activeFragment() !== 'skills'
+          }"
+          >Skills</a
         >
-          Skills
-        </a>
       </li>
       <li>
         <a
           routerLink="/"
           fragment="publications"
-          routerLinkActive="text-blue-600 font-medium"
-          [class]="isActive('#publications') ? 'text-blue-600 font-medium' : 'text-gray-600'"
-          class="isActive('#projects') ? 'text-blue-600 font-medium' : 'text-gray-600' hover:text-blue-600 transition-colors"
+          [ngClass]="{
+            'tab-option-selected': activeFragment() === 'publications',
+            'tab-option': activeFragment() !== 'publications'
+          }"
+          >Publications</a
         >
-          Publications
-        </a>
       </li>
       <!-- Add more navigation items as needed -->
     </ul>
@@ -74,7 +75,10 @@
   <div class="pt-8"></div>
   <app-contact-bar></app-contact-bar>
   <div class="bottom-bar pt-8">
-    <p style="color: gray">Made with love, as well as Angular and Tailwind CSS.</p>
+    <p style="color: var(--md-sys-color-outline)">
+      Made with love, as well as Angular and Tailwind CSS.
+    </p>
   </div>
   <div class="pb-8"></div>
 </section>
+<router-outlet></router-outlet>

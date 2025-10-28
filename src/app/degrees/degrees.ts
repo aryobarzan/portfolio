@@ -6,7 +6,7 @@ import { DegreeCard } from '../degree-card/degree-card';
   selector: 'app-degrees',
   imports: [DegreeCard],
   templateUrl: './degrees.html',
-  styleUrl: './degrees.css',
+  styleUrl: './degrees.scss',
 })
 export class Degrees {
   degreeService: DegreeService = inject(DegreeService);
