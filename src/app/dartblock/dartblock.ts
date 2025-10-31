@@ -10,6 +10,11 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './dartblock.scss',
 })
 export class Dartblock {
+  isLoading: boolean = true;
+
+  onIframeLoad(): void {
+    this.isLoading = false;
+  }
   // implements AfterViewInit
   // constructor(private renderer: Renderer2) {}
   // ngAfterViewInit(): void {

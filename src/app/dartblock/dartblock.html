@@ -12,18 +12,10 @@
       <h1>DartBlock</h1>
       <section class="intro">
         <p>
-          Play around with the DartBlock framework using the Web version integrated below!<br />
+          Play around with the DartBlock framework using the Web version below!<br />
           <b>Editor:</b> free-form editor.<br />
           <b>Quiz:</b> an example quiz question requiring you to compose a corresponding DartBlock
           which solves the problem.<br /><br />
-          <i
-            >Technical details: DartBlock has been written using the Flutter framework, though it
-            can be integrated within any web app as an iframe by building the Flutter app for the
-            Web platform. However, the Web version comes with a limitation compared to the other
-            supported platforms: due to the lack of support for isolates, programs are executed on
-            the same thread on which the Flutter app itself is running. For more details, see the
-            GitHub page.</i
-          >
         </p>
         <section class="link-button-grid">
           <div class="link-button">
@@ -41,14 +33,37 @@
             </a>
           </div>
         </section>
+        <br />
         <div class="smartphone-frame">
           <div class="smartphone-content">
-            <iframe class="smartphone-content" src="assets/dartblock/index.html"></iframe>
+            @if (isLoading) {
+            <div class="loading-spinner">
+              <div class="spinner"></div>
+            </div>
+            }
+            <iframe
+              class="smartphone-content"
+              src="assets/dartblock/index.html"
+              loading="lazy"
+              [class.is-hidden]="isLoading"
+              (load)="onIframeLoad()"
+            ></iframe>
           </div>
         </div>
 
         <!-- <div id="dartblock-host"></div> -->
       </section>
+      <br />
+      <p>
+        <i
+          >Technical details: DartBlock has been written using the Flutter framework, though it can
+          be integrated within any web app as an iframe by building the Flutter app for the Web
+          platform. However, the Web version comes with a limitation compared to the other supported
+          platforms: due to the lack of support for isolates, programs are executed on the same
+          thread on which the Flutter app itself is running. For more details, see the GitHub
+          page.</i
+        >
+      </p>
     </div>
   </section>
 </section>
