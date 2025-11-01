@@ -13,7 +13,13 @@ export class ProjectCard {
   iconForLink(link?: ProjectLink): string | undefined {
     if (link) {
       if (link.type == 'GitHub') {
-        return 'assets/images/icon_github_invertocat.svg';
+        const darkModeOn =
+          window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (darkModeOn) {
+          return 'assets/images/icon_github_invertocat_white.webp';
+        } else {
+          return 'assets/images/icon_github_invertocat.svg';
+        }
       } else if (link.type == 'pub.dev') {
         return 'assets/images/icon_dart.svg';
       } else if (link.type == 'App Store') {
