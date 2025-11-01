@@ -7,6 +7,35 @@ import { SkillCategory } from './skill-category';
 export class SkillService {
   readonly skillCategories: SkillCategory[] = [
     {
+      title: 'Languages',
+      skills: [
+        {
+          name: 'Dart',
+          url: 'https://dart.dev',
+        },
+        {
+          name: 'Python',
+          url: 'https://www.python.org/',
+        },
+        {
+          name: 'Java',
+          url: 'https://www.java.com/en/',
+        },
+        {
+          name: 'Swift',
+          url: 'https://www.swift.org/',
+        },
+        {
+          name: 'JavaScript',
+          url: 'https://web.dev/learn/javascript/welcome',
+        },
+        {
+          name: 'TypeScript',
+          url: 'https://www.typescriptlang.org/',
+        },
+      ],
+    },
+    {
       title: 'Frontend',
       skills: [
         {
@@ -34,6 +63,22 @@ export class SkillService {
           name: 'FastAPI',
           url: 'https://fastapi.tiangolo.com/',
         },
+        {
+          name: 'Firebase',
+          url: 'https://firebase.google.com/',
+        },
+        // {
+        //   name: 'Firebase Cloud Messaging',
+        //   url: 'https://firebase.google.com/products/cloud-messaging',
+        // },
+        // {
+        //   name: 'Firebase Authentication',
+        //   url: 'https://firebase.google.com/products/auth',
+        // },
+        // {
+        //   name: 'Firebase Cloud Firestore',
+        //   url: 'https://firebase.google.com/products/firestore',
+        // },
       ],
     },
     {
@@ -78,31 +123,7 @@ export class SkillService {
         },
       ],
     },
-    {
-      title: 'Languages',
-      skills: [
-        {
-          name: 'Dart',
-          url: 'https://dart.dev',
-        },
-        {
-          name: 'Python',
-          url: 'https://www.python.org/',
-        },
-        {
-          name: 'Java',
-          url: 'https://www.java.com/en/',
-        },
-        {
-          name: 'JavaScript',
-          url: 'https://web.dev/learn/javascript/welcome',
-        },
-        {
-          name: 'TypeScript',
-          url: 'https://www.typescriptlang.org/',
-        },
-      ],
-    },
+
     {
       title: 'CD/CI & DevOps',
       skills: [
