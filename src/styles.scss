@@ -108,14 +108,15 @@ h1 {
 }
 .outlined-button:hover {
   border: 0x;
+  background-color: rgb(from var(--md-sys-color-primary) r g b / 0.2);
+  // background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-primary);
+}
+.outlined-button:active {
+  // border: 2px solid var(--md-sys-color-on-primary-container);
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
 }
-// .outlined-button:active {
-//   border: 2px solid var(--md-sys-color-on-primary-container);
-//   background-color: var(--md-sys-color-primary);
-//   color: var(--md-sys-color-on-primary);
-// }
 .outlined-button-icon {
   font-size: 18px;
   font-weight: 500;

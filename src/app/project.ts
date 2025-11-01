@@ -9,7 +9,7 @@ export interface Project {
 
 export interface ProjectLink {
   name: string;
-  type: 'Details' | 'GitHub' | 'App Store' | 'Play Store' | 'Website' | 'Other';
+  type: 'Details' | 'GitHub' | 'App Store' | 'Play Store' | 'Website' | 'pub.dev' | 'Other';
   url: string;
   isExternal: boolean;
 }

@@ -42,7 +42,7 @@ export class ProjectService {
         },
         {
           name: 'pub.dev',
-          type: 'Other',
+          type: 'pub.dev',
           url: 'https://pub.dev/packages/dartblock_code',
           isExternal: true,
         },
