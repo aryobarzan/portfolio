@@ -128,3 +128,15 @@ h1 {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
+
+.link-text {
+  color: var(--md-sys-color-primary);
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+
+.link-text:visited {
+  color: var(--md-sys-color-tertiary);
+}

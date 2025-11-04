@@ -60,13 +60,14 @@ export class SkillService {
           url: 'https://nodejs.org/',
         },
         {
-          name: 'FastAPI',
-          url: 'https://fastapi.tiangolo.com/',
-        },
-        {
           name: 'Firebase',
           url: 'https://firebase.google.com/',
         },
+        {
+          name: 'FastAPI',
+          url: 'https://fastapi.tiangolo.com/',
+        },
+
         // {
         //   name: 'Firebase Cloud Messaging',
         //   url: 'https://firebase.google.com/products/cloud-messaging',
@@ -88,10 +89,10 @@ export class SkillService {
           name: 'MongoDB',
           url: 'https://www.mongodb.com/',
         },
-        {
-          name: 'MySQL',
-          url: 'https://www.mysql.com/',
-        },
+        // {
+        //   name: 'MySQL',
+        //   url: 'https://www.mysql.com/',
+        // },
       ],
     },
     {

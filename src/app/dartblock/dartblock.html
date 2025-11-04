@@ -12,7 +12,8 @@
       <h1>DartBlock</h1>
       <section class="intro">
         <p>
-          Play around with the DartBlock framework using the Web version below!<br />
+          Play around with the block-based programming framework <b>DartBlock</b> using the Web
+          version below!<br />
           <b>Editor:</b> free-form editor.<br />
           <b>Quiz:</b> an example quiz question requiring you to compose a corresponding DartBlock
           which solves the problem.<br /><br />
@@ -55,14 +56,24 @@
       </section>
       <br />
       <p>
-        <i
-          >Technical details: DartBlock has been written using the Flutter framework, though it can
-          be integrated within any web app as an iframe by building the Flutter app for the Web
-          platform. However, the Web version comes with a limitation compared to the other supported
-          platforms: due to the lack of support for isolates, programs are executed on the same
-          thread on which the Flutter app itself is running. For more details, see the GitHub
-          page.</i
+        <i>Technical details:</i> DartBlock has been developed using the Flutter framework for all
+        major mobile and desktop platforms, though it can also be integrated within any web app as
+        an iframe. However, the Web version comes with a limitation: due to Dart's lack of support
+        for
+        <a
+          href="https://docs.flutter.dev/perf/isolates#web-platforms-and-compute"
+          target="_blank"
+          class="link-text"
+          ><b>isolates on the Web</b></a
         >
+        platform, programs are executed on the same thread on which the Flutter app itself is
+        running. For more details, see the
+        <a
+          href="https://github.com/aryobarzan/dartblock?tab=readme-ov-file#web"
+          target="_blank"
+          class="link-text"
+          ><b>GitHub page</b></a
+        >.
       </p>
     </div>
   </section>
