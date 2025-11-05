@@ -83,7 +83,7 @@ export class ProjectService {
     },
     {
       title: 'Yactul',
-      description: 'Quiz app for mobile, with spaced repetition and integrated learning material.',
+      description: 'Quiz app for mobile, with integrated learning material.',
       technologies: [
         { name: 'C#', isLanguage: true },
         { name: 'Xamarin.Forms', isLanguage: false },

@@ -8,6 +8,7 @@ export interface Publication {
   abstract: string;
   links: PublicationLink[];
   isBestPaper: boolean;
+  relatedProjects?: string[];
 }
 
 export interface PublicationLink {

@@ -1,7 +1,28 @@
 <section class="container pt-8" id="publications">
   <h1>Publications</h1>
+  @if(projectNames.length>0) {
+  <section class="project-filters-grid">
+    @for(projectName of projectNames; track $index) {
+    <div
+      class="project-filter"
+      [class]="
+        isProjectFilterActive(projectName) ? 'project-filter-active' : 'project-filter-inactive'
+      "
+      (click)="toggleProjectFilter(projectName)"
+    >
+      {{ projectName }}
+    </div>
+    }
+  </section>
+  }
+
   <section>
-    @for (publication of publications; track $index) {
-    <app-publication-card [publication]="publication"></app-publication-card> }
+    @for (publication of getFilteredPublications(); track $index) {
+    <app-publication-card
+      [publication]="publication"
+      animate.enter="publication-enter-animation"
+      animate.leave="publication-leave-animation"
+    ></app-publication-card>
+    }
   </section>
 </section>
