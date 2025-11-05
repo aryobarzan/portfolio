@@ -9,7 +9,13 @@ export class ProjectService {
     {
       title: 'BEACON Q',
       description: 'Personalized and gamified mobile quiz app.',
-      technologies: ['Flutter', 'Dart', 'MongoDB', 'Node.js', 'Express', 'Firebase Messaging'],
+      technologies: [
+        { name: 'Dart', isLanguage: true },
+        { name: 'Flutter', isLanguage: false },
+        { name: 'MongoDB', isLanguage: false },
+        { name: 'Node.js', isLanguage: false },
+        { name: 'Firebase', isLanguage: false },
+      ],
       year: 2025,
       iconURL: 'assets/images/beaconq.jpg',
       links: [
@@ -30,7 +36,10 @@ export class ProjectService {
     {
       title: 'DartBlock',
       description: 'Block-based programming framework for mobile.',
-      technologies: ['Flutter', 'Dart'],
+      technologies: [
+        { name: 'Dart', isLanguage: true },
+        { name: 'Flutter', isLanguage: false },
+      ],
       year: 2023,
       iconURL: 'assets/images/dartblock.jpg',
       links: [
@@ -57,7 +66,10 @@ export class ProjectService {
     {
       title: 'Sketchnoting',
       description: 'Note-taking app for iPad, with semantic annotations and search.',
-      technologies: ['Swift', 'UIKit'],
+      technologies: [
+        { name: 'Swift', isLanguage: true },
+        { name: 'UIKit', isLanguage: false },
+      ],
       year: 2021,
       iconURL: 'assets/images/sketchnoting.jpg',
       links: [
@@ -72,7 +84,12 @@ export class ProjectService {
     {
       title: 'Yactul',
       description: 'Quiz app for mobile, with spaced repetition and integrated learning material.',
-      technologies: ['Xamarin', 'C#', 'Flutter', 'Dart'],
+      technologies: [
+        { name: 'C#', isLanguage: true },
+        { name: 'Xamarin.Forms', isLanguage: false },
+        { name: 'Dart', isLanguage: true },
+        { name: 'Flutter', isLanguage: false },
+      ],
       year: 2019,
       iconURL: 'assets/images/yactul.jpg',
       links: [

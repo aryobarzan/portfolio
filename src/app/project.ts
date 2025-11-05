@@ -2,9 +2,14 @@ export interface Project {
   title: string;
   description: string;
   year: number;
-  technologies?: string[];
+  technologies?: ProjectTechnology[];
   links?: ProjectLink[];
   iconURL?: string;
+}
+
+export interface ProjectTechnology {
+  name: string;
+  isLanguage: boolean;
 }
 
 export interface ProjectLink {
