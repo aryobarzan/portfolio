@@ -1,12 +1,13 @@
 <section class="home-container content-center justify-center items-center">
   <nav
-    class="fixed top-4 left-1/2 transform -translate-x-1/2 tab-bar backdrop-blur-sm rounded-full shadow-lg px-6 py-3 z-10"
+    class="fixed top-4 left-1/2 transform -translate-x-1/2 tab-bar backdrop-blur-sm rounded-full shadow-lg px-4 py-3 z-10 inline-flex max-w-full"
   >
-    <ul class="flex space-x-8">
+    <ul class="flex space-x-4 sm:space-x-6 overflow-hidden justify-center">
       <li>
         <a
           routerLink="/"
           fragment="about"
+          class="text-sm sm:text-base whitespace-nowrap"
           [ngClass]="{
             'tab-option-selected': activeFragment() === 'about',
             'tab-option': activeFragment() !== 'about'
@@ -19,6 +20,7 @@
         <a
           routerLink="/"
           fragment="projects"
+          class="text-sm sm:text-base whitespace-nowrap"
           [ngClass]="{
             'tab-option-selected': activeFragment() === 'projects',
             'tab-option': activeFragment() !== 'projects'
@@ -30,6 +32,7 @@
         <a
           routerLink="/"
           fragment="education"
+          class="text-sm sm:text-base whitespace-nowrap"
           [ngClass]="{
             'tab-option-selected': activeFragment() === 'education',
             'tab-option': activeFragment() !== 'education'
@@ -41,6 +44,7 @@
         <a
           routerLink="/"
           fragment="skills"
+          class="text-sm sm:text-base whitespace-nowrap"
           [ngClass]="{
             'tab-option-selected': activeFragment() === 'skills',
             'tab-option': activeFragment() !== 'skills'
@@ -52,6 +56,7 @@
         <a
           routerLink="/"
           fragment="publications"
+          class="text-sm sm:text-base whitespace-nowrap"
           [ngClass]="{
             'tab-option-selected': activeFragment() === 'publications',
             'tab-option': activeFragment() !== 'publications'
