@@ -20,20 +20,13 @@ export class ThemeService {
   }
 
   private loadInitialTheme(): void {
-    // // Check for a saved user preference first
-    // const savedTheme = localStorage.getItem('theme');
-    // if (savedTheme) {
-    //   this.setTheme(savedTheme);
-    //   return;
-    // }
-
-    // If no preference is saved, detect the system theme
+    // Apply the current system theme
     const darkModeOn =
       window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initialTheme = darkModeOn ? 'dark-theme' : 'light-theme';
     this.setTheme(initialTheme);
 
-    // Listen for system theme changes and update the theme
+    // Listen for system theme changes and update accordingly
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
       const newTheme = e.matches ? 'dark-theme' : 'light-theme';
       this.setTheme(newTheme);
@@ -44,7 +37,7 @@ export class ThemeService {
     const body = this.document.body;
     this.renderer.removeClass(body, this.currentTheme.value);
     this.renderer.addClass(body, theme);
-    localStorage.setItem('theme', theme); // This persists the user's *explicit* choice
+    localStorage.setItem('theme', theme); // Persist the user's choice across app visits
     this.currentTheme.next(theme);
   }
 

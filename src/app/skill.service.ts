@@ -67,19 +67,6 @@ export class SkillService {
           name: 'FastAPI',
           url: 'https://fastapi.tiangolo.com/',
         },
-
-        // {
-        //   name: 'Firebase Cloud Messaging',
-        //   url: 'https://firebase.google.com/products/cloud-messaging',
-        // },
-        // {
-        //   name: 'Firebase Authentication',
-        //   url: 'https://firebase.google.com/products/auth',
-        // },
-        // {
-        //   name: 'Firebase Cloud Firestore',
-        //   url: 'https://firebase.google.com/products/firestore',
-        // },
       ],
     },
     {
@@ -89,10 +76,6 @@ export class SkillService {
           name: 'MongoDB',
           url: 'https://www.mongodb.com/',
         },
-        // {
-        //   name: 'MySQL',
-        //   url: 'https://www.mysql.com/',
-        // },
       ],
     },
     {

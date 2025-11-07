@@ -4,6 +4,7 @@ import { Directive, EventEmitter, Output, ElementRef, OnInit, OnDestroy } from '
   selector: '[appScrollObserver]',
   standalone: true,
 })
+// This directive helps to observe whenever the user scrolls through a given page and certain <section> elements are reached based on their "id" attribute.
 export class ScrollObserver implements OnInit, OnDestroy {
   // Emit the id of the section that has been intersected, i.e., scrolled to/past.
   @Output() sectionChange = new EventEmitter<string>();

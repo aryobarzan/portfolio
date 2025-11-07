@@ -1,4 +1,5 @@
 <section class="page-container content-center justify-center items-center">
+  <!-- Place in the middle vertically: left-2/4 transform -translate-x-1/2 -->
   <nav
     class="fixed top-4 left-2/4 transform -translate-x-1/2 tab-bar backdrop-blur-sm rounded-full shadow-lg px-6 py-3 z-10 link-button"
   >
@@ -6,11 +7,10 @@
       <span class="material-symbols-outlined link-button-icon">home</span> Home</a
     >
   </nav>
-  <div class="pt-12"></div>
-  <section class="container pt-8 pb-8" id="about">
+  <section class="container pt-20 pb-8" id="about">
     <div class="section">
       <h1>DartBlock</h1>
-      <section class="intro">
+      <section class="text-container">
         <p>
           Play around with the block-based programming framework <b>DartBlock</b> using the Web
           version below!<br />
@@ -20,14 +20,15 @@
         </p>
         <section class="link-button-grid">
           <div class="link-button">
-            <a href="https://pub.dev/packages/dartblock_code" target="_blank"> pub.dev </a>
+            <a href="https://pub.dev/packages/dartblock_code" target="_blank">pub.dev</a>
           </div>
           <div class="link-button">
-            <a href="https://github.com/aryobarzan/dartblock" target="_blank"> GitHub </a>
+            <a href="https://github.com/aryobarzan/dartblock" target="_blank">GitHub</a>
           </div>
         </section>
         <br />
         <!-- Take up almost the entire screen width on smaller devices (phones), otherwise just 95%. -->
+        <!-- We want a minimum width of 350px. -->
         <div class="smartphone-frame w-[99.0%] md:w-[95%] min-w-[350px]">
           <div class="smartphone-content">
             @if (isLoading) {
@@ -35,6 +36,8 @@
               <div class="spinner"></div>
             </div>
             }
+            <!-- "lazy" loading means only start loading the iframe when it becomes visible on the screen. -->
+            <!-- Here, we integrate our DartBlock web app as an iframe. -->
             <iframe
               class="smartphone-content"
               src="assets/dartblock/index.html"
@@ -70,4 +73,5 @@
   </section>
   <app-contact-bar></app-contact-bar>
 </section>
+<!-- Include the following such that the Home button's routerLink="/" works!-->
 <router-outlet></router-outlet>

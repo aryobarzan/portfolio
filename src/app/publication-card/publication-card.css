@@ -7,7 +7,7 @@ button:hover .material-symbols-outlined {
 }
 
 .link-button-grid {
-  /* Override global 'center' to 'flex-end' */
+  /* override */
   justify-content: flex-end;
 }
 

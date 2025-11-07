@@ -4,8 +4,8 @@
       <img class="logo" src="{{ project.iconURL }}" alt="{{ project.title }} logo" />
     </aside>
     <aside class="right-column">
-      <p class="title">{{ project.title }}</p>
-      <p class="description">{{ project.description }}</p>
+      <p class="card-title">{{ project.title }}</p>
+      <p class="card-body">{{ project.description }}</p>
       @if(project.technologies && project.technologies.length>1){
       <section class="technology-grid">
         @for(technology of project.technologies; track $index) {

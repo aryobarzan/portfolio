@@ -11,7 +11,6 @@ import { ThemeService } from './theme.service';
 export class App {
   protected readonly title = signal('portfolio');
   constructor(private themeService: ThemeService) {
-    // The ThemeService constructor now handles initial setup
-    // based on system preference and listens for changes.
+    // The ThemeService constructor now handles initial setup based on system preference and listens for changes.
   }
 }

@@ -1,5 +1,5 @@
 <section class="card">
-  <p class="title">{{ skillCategory.title }}</p>
+  <p class="card-title">{{ skillCategory.title }}</p>
   <section class="skill-grid">
     @for(skill of skillCategory.skills; track $index) {
     <a class="skill" href="{{ skill.url }}" target="_blank">{{ skill.name }}</a>

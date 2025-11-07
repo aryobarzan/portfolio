@@ -15,27 +15,17 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-  /* Make the main portion of the card take up the height, ensuring the links row is pushed to the bottom. */
+  /* Ensure the main portion of the card takes up the height of the container. This helps to have the links row be pushed to the bottom of the card. */
   flex: 1;
 }
 .left-column {
-  /* Have the column's width not grow or shrink, but take up only the space required by its content. */
+  /* The left column should only take up the width required by its content. */
   flex: 0 0 auto;
 }
 
 .right-column {
-  /* Have the column's width take up the available/remaining space of the row. */
+  /* The right column takes up whatever width remains. */
   flex: 1;
-}
-.title {
-  font-size: 1.25rem;
-  font-weight: 500;
-  text-align: left;
-}
-
-.description {
-  font-size: 1rem;
-  text-align: left;
 }
 
 .logo {
@@ -48,7 +38,7 @@ hr {
   margin-top: 8px;
 }
 .link-button-grid {
-  /* Override global 'center' to 'flex-end' */
+  /* override */
   justify-content: flex-end;
 }
 

@@ -18,6 +18,7 @@ export class Projects {
   }
 
   getAnimationStyle(index: number): { [key: string]: string } {
+    // Have the project cards animate sequentially based on their indices.
     return {
       'animation-delay': `${(index + 1) * 100}ms`,
     };

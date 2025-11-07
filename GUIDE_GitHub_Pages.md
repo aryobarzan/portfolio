@@ -1,5 +1,7 @@
 # GitHub Pages
 
+Guide for publishing the built website via GitHub Pages.
+
 ## Modify angular.json
 
 Modify angular.json:

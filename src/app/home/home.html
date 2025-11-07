@@ -1,15 +1,20 @@
 <section class="home-container content-center justify-center items-center">
+  <!-- Position it in the middle vertically: left-1/2 transform -translate-x-1/2 -->
+  <!-- Only take up the required width based on content: inline-flex max-w-full -->
   <nav
     class="fixed top-4 left-1/2 transform -translate-x-1/2 tab-bar backdrop-blur-sm rounded-full shadow-lg px-4 py-3 z-10 inline-flex max-w-full"
   >
+    <!-- Use less spacing by default: space-x-4 -->
+    <!-- Use more spacing on every device of size sm or bigger: sm:space-x-6 -->
     <ul class="flex space-x-4 sm:space-x-6 overflow-hidden justify-center">
       <li>
+        <!-- A fragment allows us to jump to a specific section of the same page, thus avoiding unnecessary reloads. -->
         <a
           routerLink="/"
           fragment="about"
           class="text-sm sm:text-base whitespace-nowrap"
           [ngClass]="{
-            'tab-option-selected': activeFragment() === 'about',
+            'tab-option-selected': activeFragment() == 'about',
             'tab-option': activeFragment() !== 'about'
           }"
         >

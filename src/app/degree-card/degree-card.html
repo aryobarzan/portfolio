@@ -1,9 +1,9 @@
 <section class="card">
-  <p class="title">{{ degree.title }}</p>
-  <p class="description">{{ degree.institution }}</p>
+  <p class="card-title">{{ degree.title }}</p>
+  <p class="card-body">{{ degree.institution }}</p>
   <p class="date-range">{{ degree.start }} - {{ degree.end }}</p>
   @if(degree.thesis){
-  <p class="description">
+  <p class="card-body">
     <i>Thesis: "{{ degree.thesis }}"</i>
   </p>
   }
