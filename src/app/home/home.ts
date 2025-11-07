@@ -29,6 +29,14 @@ import { Skills } from '../skills/skills';
   styleUrl: './home.css',
 })
 export class Home {
+  navigationTabs = [
+    { fragment: 'about', label: 'About' },
+    { fragment: 'projects', label: 'Projects' },
+    { fragment: 'education', label: 'Education' },
+    { fragment: 'skills', label: 'Skills' },
+    { fragment: 'publications', label: 'Publications' },
+  ];
+
   activeFragment = signal<string>('about');
 
   isActive(path: string): boolean {
