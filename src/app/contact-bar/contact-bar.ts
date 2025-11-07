@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-contact-bar',
   imports: [],
   templateUrl: './contact-bar.html',
-  styleUrl: './contact-bar.scss',
+  styleUrl: './contact-bar.css',
 })
 export class ContactBar {}

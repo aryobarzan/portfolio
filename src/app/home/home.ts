@@ -25,7 +25,7 @@ import { signal } from '@angular/core';
     NgClass,
   ],
   templateUrl: './home.html',
-  styleUrl: './home.scss',
+  styleUrl: './home.css',
 })
 export class Home {
   activeFragment = signal<string>('about');

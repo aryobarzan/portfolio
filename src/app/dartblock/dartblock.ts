@@ -7,7 +7,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   selector: 'app-dartblock',
   imports: [RouterLink, RouterOutlet],
   templateUrl: './dartblock.html',
-  styleUrl: './dartblock.scss',
+  styleUrl: './dartblock.css',
 })
 export class Dartblock {
   isLoading: boolean = true;

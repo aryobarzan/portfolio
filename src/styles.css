@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'tailwindcss';
-@import './material-theme/light.scss';
-@import './material-theme/dark.scss';
+@import './material-theme/light.css';
+@import './material-theme/dark.css';
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -46,7 +46,6 @@ h1 {
   border: 1px solid var(--md-sys-color-on-primary-container);
   border-radius: 8px;
   background-color: var(--md-sys-color-surface-container);
-  // background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -112,11 +111,11 @@ h1 {
 .outlined-button:hover {
   border: 0x;
   background-color: rgb(from var(--md-sys-color-primary) r g b / 0.2);
-  // background-color: var(--md-sys-color-primary);
+  /*  background-color: var(--md-sys-color-primary); */
   color: var(--md-sys-color-primary);
 }
 .outlined-button:active {
-  // border: 2px solid var(--md-sys-color-on-primary-container);
+  /* border: 2px solid var(--md-sys-color-on-primary-container); */
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
 }

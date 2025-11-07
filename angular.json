@@ -6,7 +6,7 @@
   "projects": {
     "portfolio": {
       "projectType": "application",
-      "schematics": { "style": "scss" },
+      "schematics": { "style": "css" },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -32,7 +32,7 @@
               "public/assets/dartblock/flutter_bootstrap.js",
               "public/assets/dartblock/flutter.js"
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["src/styles.css"]
           },
           "configurations": {
             "production": {
@@ -88,7 +88,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["src/styles.css"]
           }
         }
       }

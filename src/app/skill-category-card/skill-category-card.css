@@ -56,7 +56,6 @@ hr {
 
 .skill:hover {
   background-color: rgb(from var(--md-sys-color-primary-container) r g b / 0.8);
-  // color: white;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
   transition: all 0.3s ease;

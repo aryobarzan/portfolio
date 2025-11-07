@@ -6,7 +6,7 @@ import { SkillCategoryCard } from '../skill-category-card/skill-category-card';
   selector: 'app-skills',
   imports: [SkillCategoryCard],
   templateUrl: './skills.html',
-  styleUrl: './skills.scss',
+  styleUrl: './skills.css',
 })
 export class Skills {
   skillService: SkillService = inject(SkillService);

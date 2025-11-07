@@ -7,7 +7,7 @@ import { ProjectCard } from '../project-card/project-card';
   selector: 'app-projects',
   imports: [ProjectCard],
   templateUrl: './projects.html',
-  styleUrl: './projects.scss',
+  styleUrl: './projects.css',
 })
 export class Projects {
   projectService: ProjectService = inject(ProjectService);

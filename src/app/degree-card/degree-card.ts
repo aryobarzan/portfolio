@@ -5,7 +5,7 @@ import { Degree } from '../degree';
   selector: 'app-degree-card',
   imports: [],
   templateUrl: './degree-card.html',
-  styleUrl: './degree-card.scss',
+  styleUrl: './degree-card.css',
 })
 export class DegreeCard {
   @Input({ required: true }) degree!: Degree;

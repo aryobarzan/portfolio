@@ -12,10 +12,6 @@
   color: var(--md-sys-color-tertiary);
   font-weight: 500;
 }
-// .tab-option:active {
-//   color: var(--md-sys-color-tertiary);
-//   font: medium;
-// }
 
 .bottom-bar {
   max-width: 800px;

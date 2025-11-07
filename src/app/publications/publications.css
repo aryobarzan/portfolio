@@ -76,8 +76,10 @@ h1 {
     transform: translateY(-10px);
   }
   to {
-    opacity: 1; // Fade in
-    transform: translateY(0); // Slide down
+    /* Fade in */
+    opacity: 1;
+    /* Slide down */
+    transform: translateY(0);
   }
 }
 
@@ -87,8 +89,10 @@ h1 {
     transform: translateX(0);
   }
   to {
-    opacity: 0; // Fade out
-    transform: translateX(100px); // Slide to the right
+    /* Fade out */
+    opacity: 0;
+    /* Slide to the right */
+    transform: translateX(100px);
   }
 }
 

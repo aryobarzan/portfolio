@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-bio-header',
   imports: [],
   templateUrl: './bio-header.html',
-  styleUrl: './bio-header.scss',
+  styleUrl: './bio-header.css',
 })
 export class BioHeader {}
