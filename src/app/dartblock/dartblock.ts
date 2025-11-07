@@ -1,11 +1,12 @@
 import { Component, AfterViewInit, Renderer2 } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { ContactBar } from '../contact-bar/contact-bar';
 
 // declare var _flutter: any;
 
 @Component({
   selector: 'app-dartblock',
-  imports: [RouterLink, RouterOutlet],
+  imports: [RouterLink, RouterOutlet, ContactBar],
   templateUrl: './dartblock.html',
   styleUrl: './dartblock.css',
 })
