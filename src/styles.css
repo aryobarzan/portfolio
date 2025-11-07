@@ -11,27 +11,12 @@ body {
 p {
   color: var(--md-sys-color-on-background);
 }
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-  opacity: 0;
-}
 
 /* Smooth scrolling with padding for fixed header */
 html {
   scroll-behavior: smooth;
+  /* Top padding due to the fixed nav bar on the home page */
   scroll-padding-top: 6rem;
-  /* Adjust this value based on your nav height */
 }
 
 h1 {
@@ -39,7 +24,6 @@ h1 {
   font-weight: bold;
 }
 
-/* Card */
 .card {
   margin-bottom: 8px;
   padding: 16px;
@@ -53,8 +37,6 @@ h1 {
 /* Link Button */
 .link-button {
   margin-right: 8px;
-  /* border: 1px solid blue;
-  border-radius: 8px; */
   padding: 4px 8px;
   color: var(--md-sys-color-primary);
   cursor: pointer;
@@ -73,12 +55,9 @@ h1 {
   border-radius: 16px;
 }
 .link-button-icon {
-  /* vertical-align: middle; */
   font-size: 18px;
   font-weight: 500;
-  /* position: relative;
-  top: 2px;*/
-  /* bottom: 2px; */
+
   top: 4px;
   position: relative;
 }
@@ -86,7 +65,7 @@ h1 {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
-
+/* Place elements in a row, with wrapping being applied (jumping to a new row) when the width no longer suffices. */
 .link-button-grid {
   margin-top: 8px;
   display: flex;
@@ -111,11 +90,10 @@ h1 {
 .outlined-button:hover {
   border: 0x;
   background-color: rgb(from var(--md-sys-color-primary) r g b / 0.2);
-  /*  background-color: var(--md-sys-color-primary); */
+
   color: var(--md-sys-color-primary);
 }
 .outlined-button:active {
-  /* border: 2px solid var(--md-sys-color-on-primary-container); */
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
 }
@@ -130,6 +108,7 @@ h1 {
   transition: transform 0.3s ease;
 }
 
+/* Color for text with a hyperlinked attached to it. */
 .link-text {
   color: var(--md-sys-color-primary);
 }
@@ -138,6 +117,25 @@ h1 {
   text-decoration: underline;
 }
 
+/* Color to use when a hyperlink has previously been visited by the use. */
 .link-text:visited {
   color: var(--md-sys-color-tertiary);
+}
+
+/* Used to animate in an element by having it fade in (opacity 0 -> 1) and translating it upward (20px -> 0px) */
+/* This animation is for example used for the app-project-card elements on the home page. */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
 }

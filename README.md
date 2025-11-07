@@ -1,6 +1,6 @@
 # Portfolio
 
-The source code for the portfolio website.
+The source code for my portfolio website.
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
 
 ## Development server
@@ -15,4 +15,4 @@ Once the server is running, open your browser and navigate to `http://localhost:
 
 ## Public
 
-The production build is hosted on a separate, public repository: https://github.com/aryobarzan/aryobarzan
+The production build is hosted on a public repository using GitHub Pages: https://github.com/aryobarzan/aryobarzan
