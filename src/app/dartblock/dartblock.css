@@ -31,7 +31,7 @@ h1 {
 .smartphone-frame {
   position: relative;
   display: flex;
-  // width: min(450px, calc(100% * 3 / 4));
+  /*  width: min(450px, calc(100% * 3 / 4)); */
   height: 800px;
   border: 12px solid #000;
   border-radius: 48px;
