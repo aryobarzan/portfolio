@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Degrees } from '../degrees/degrees';
-import { SpokenLanguages } from '../languages/spoken-languages';
+import { SpokenLanguages } from '../spoken-languages/spoken-languages';
 
 @Component({
   selector: 'app-education',
