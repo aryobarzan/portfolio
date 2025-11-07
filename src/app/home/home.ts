@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { BioHeader } from '../bio-header/bio-header';
 import { Projects } from '../projects/projects';
 import { Publications } from '../publications/publications';
@@ -8,7 +8,7 @@ import { Education } from '../education/education';
 import { ScrollObserver } from '../scroll-observer';
 import { NgClass } from '@angular/common';
 import { signal } from '@angular/core';
-import { Skills } from '../skills/skills';
+import { SkillCategories } from '../skill-categories/skill-categories';
 
 @Component({
   selector: 'app-home',
@@ -19,11 +19,11 @@ import { Skills } from '../skills/skills';
     Publications,
     ContactBar,
     Education,
-    Skills,
+    SkillCategories,
     RouterOutlet,
     ScrollObserver,
     NgClass,
-    Skills,
+    SkillCategories,
   ],
   templateUrl: './home.html',
   styleUrl: './home.css',

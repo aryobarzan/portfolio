@@ -5,10 +5,10 @@ import { SkillCategoryCard } from '../skill-category-card/skill-category-card';
 @Component({
   selector: 'app-skills',
   imports: [SkillCategoryCard],
-  templateUrl: './skills.html',
-  styleUrl: './skills.css',
+  templateUrl: './skill-categories.html',
+  styleUrl: './skill-categories.css',
 })
-export class Skills {
+export class SkillCategories {
   skillService: SkillService = inject(SkillService);
   skillCategories: SkillCategory[] = [];
 
