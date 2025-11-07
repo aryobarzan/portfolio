@@ -64,19 +64,21 @@
           >Publications</a
         >
       </li>
-      <!-- Add more navigation items as needed -->
     </ul>
   </nav>
 
   <!-- Leave a gap at the top such that the fixed navigation bar doesn't cover the content. -->
   <div class="pt-24"></div>
   <app-contact-bar></app-contact-bar>
-  <section><app-bio-header></app-bio-header></section>
+  <div appScrollObserver (sectionChange)="onSectionChange($event)">
+    <section><app-bio-header></app-bio-header></section>
 
-  <section><app-projects></app-projects></section>
-  <section><app-degrees></app-degrees></section>
-  <section><app-skills></app-skills></section>
-  <section><app-publications></app-publications></section>
+    <section><app-projects></app-projects></section>
+    <section><app-degrees></app-degrees></section>
+    <section><app-skills></app-skills></section>
+    <section><app-publications></app-publications></section>
+  </div>
+
   <div class="pt-8"></div>
   <app-contact-bar></app-contact-bar>
   <div class="bottom-bar pt-8">
