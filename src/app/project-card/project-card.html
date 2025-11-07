@@ -6,22 +6,20 @@
     <aside class="right-column">
       <p class="card-title">{{ project.title }}</p>
       <p class="card-body">{{ project.description }}</p>
-      @if(project.technologies && project.technologies.length>1){
-      <section class="technology-grid">
-        @for(technology of project.technologies; track $index) {
-        <div
-          class="technology"
-          [class]="technology.isLanguage ? 'technology-language-color' : 'technology-color'"
-        >
-          <p>{{ technology.name }}</p>
-        </div>
-        }
-      </section>
-      }
     </aside>
   </div>
-
-  @if (project.links && project.links.length > 0) {
+  @if(project.technologies && project.technologies.length>1){
+  <section class="technology-grid">
+    @for(technology of project.technologies; track $index) {
+    <div
+      class="technology"
+      [class]="technology.isLanguage ? 'technology-language-color' : 'technology-color'"
+    >
+      <p>{{ technology.name }}</p>
+    </div>
+    }
+  </section>
+  } @if (project.links && project.links.length > 0) {
   <section class="link-button-grid">
     <!-- <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" /> -->
     @for (link of project.links; track $index) { @if (link.isExternal){

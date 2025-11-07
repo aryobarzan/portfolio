@@ -4,11 +4,11 @@ import { Projects } from '../projects/projects';
 import { Publications } from '../publications/publications';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { ContactBar } from '../contact-bar/contact-bar';
-import { Degrees } from '../degrees/degrees';
-import { Skills } from '../skills/skills';
+import { Education } from '../education/education';
 import { ScrollObserver } from '../scroll-observer';
 import { NgClass } from '@angular/common';
 import { signal } from '@angular/core';
+import { Skills } from '../skills/skills';
 
 @Component({
   selector: 'app-home',
@@ -18,11 +18,12 @@ import { signal } from '@angular/core';
     RouterLink,
     Publications,
     ContactBar,
-    Degrees,
+    Education,
     Skills,
     RouterOutlet,
     ScrollObserver,
     NgClass,
+    Skills,
   ],
   templateUrl: './home.html',
   styleUrl: './home.css',

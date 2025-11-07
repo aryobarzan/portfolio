@@ -1,0 +1,14 @@
+<div class="flex justify-between items-center w-full">
+  <span class="language-title">{{ spokenLanguage.name }}</span>
+  <span class="proficiency-label">{{
+    SpokenLanguageProficiencyLabels[spokenLanguage.proficiency]
+  }}</span>
+</div>
+<div class="progress-container" role="progressbar">
+  @for(i of [].constructor(7);track $index){
+  <div
+    class="progress-segment"
+    [attr.status]="spokenLanguage.proficiency > $index ? 'filled' : 'empty'"
+  ></div>
+  }
+</div>

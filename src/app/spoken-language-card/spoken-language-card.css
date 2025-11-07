@@ -1,0 +1,36 @@
+.progress-container {
+  /* Distribute each segment evenly within the container */
+  display: flex;
+  /* width: 200px; */
+  flex-wrap: wrap;
+  height: 8px;
+  gap: 4px;
+}
+
+.language-title {
+  text-align: start;
+  font-weight: 500;
+}
+
+.proficiency-label {
+  font-size: 0.875rem;
+  color: var(--md-sys-color-primary);
+}
+
+.progress-segment {
+  /* Equal width for each segment */
+  flex: 1;
+  height: 100%;
+  /* width: 50px; */
+  background-color: var(--md-sys-color-outline);
+  border-radius: 8px;
+  transition: background-color 0.5s ease;
+}
+
+.progress-segment[status='filled'] {
+  background-color: var(--md-sys-color-primary);
+}
+
+.progress-segment[status='empty'] {
+  background-color: var(--md-sys-color-outline);
+}

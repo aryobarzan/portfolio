@@ -29,6 +29,3 @@ export class DegreeService {
     },
   ];
 }
-
-// BEST PAPER AWARD
-// FONT

@@ -1,0 +1,8 @@
+<!-- Section with id "languages" (used for navbar on home page) -->
+<section class="" id="languages">
+  <h1>Languages</h1>
+  <section class="card grid grid-cols-1 md:grid-cols-2 gap-4">
+    @for(spokenLanguage of spokenLanguages; track $index){
+    <app-spoken-language-card [spokenLanguage]="spokenLanguage"></app-spoken-language-card>}
+  </section>
+</section>

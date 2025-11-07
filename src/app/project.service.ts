@@ -12,9 +12,11 @@ export class ProjectService {
       technologies: [
         { name: 'Dart', isLanguage: true },
         { name: 'Flutter', isLanguage: false },
-        { name: 'MongoDB', isLanguage: false },
         { name: 'Node.js', isLanguage: false },
+        { name: 'MongoDB', isLanguage: false },
         { name: 'Firebase', isLanguage: false },
+        { name: 'PM2', isLanguage: false },
+        { name: 'ChatGPT', isLanguage: false },
       ],
       year: 2025,
       iconURL: 'assets/images/beaconq.jpg',
@@ -69,6 +71,7 @@ export class ProjectService {
       technologies: [
         { name: 'Swift', isLanguage: true },
         { name: 'UIKit', isLanguage: false },
+        { name: 'Google ML Kit', isLanguage: false },
       ],
       year: 2021,
       iconURL: 'assets/images/sketchnoting.jpg',

@@ -1,8 +1,5 @@
-<!-- Section with id "education" (used for navbar on home page) -->
-<section class="container pt-8" id="education">
-  <h1>Education</h1>
-  <section>
-    @for (degree of degrees; track $index) {
-    <app-degree-card [degree]="degree"></app-degree-card> }
-  </section>
+<h1>Education</h1>
+<section>
+  @for (degree of degrees; track $index) {
+  <app-degree-card [degree]="degree"></app-degree-card> }
 </section>

@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { DegreeService } from '../degree.service';
 import { Degree } from '../degree';
 import { DegreeCard } from '../degree-card/degree-card';
+
 @Component({
   selector: 'app-degrees',
   imports: [DegreeCard],
