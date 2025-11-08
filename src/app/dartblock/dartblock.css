@@ -68,3 +68,14 @@
     transform: rotate(360deg);
   }
 }
+
+.scroll-to-top-button {
+  color: var(--md-sys-color-on-primary);
+  background-color: var(--md-sys-color-primary);
+  border-radius: 18px;
+  height: 36px;
+  width: 36px;
+  user-select: none;
+  cursor: pointer;
+  align-content: center;
+}

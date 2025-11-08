@@ -1,4 +1,12 @@
-import { Directive, EventEmitter, Output, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import {
+  Directive,
+  EventEmitter,
+  Output,
+  ElementRef,
+  OnInit,
+  OnDestroy,
+  Input,
+} from '@angular/core';
 // Attribute directive: modify behavior of HTML element it is applied to
 @Directive({
   selector: '[appScrollObserver]',
@@ -6,6 +14,8 @@ import { Directive, EventEmitter, Output, ElementRef, OnInit, OnDestroy } from '
 })
 // This directive helps to observe whenever the user scrolls through a given page and certain <section> elements are reached based on their "id" attribute.
 export class ScrollObserver implements OnInit, OnDestroy {
+  @Input() threshold: number = 0.0;
+
   // Emit the id of the section that has been intersected, i.e., scrolled to/past.
   @Output() sectionChange = new EventEmitter<string>();
   // A standard browser API not specific to Angular.
@@ -21,7 +31,7 @@ export class ScrollObserver implements OnInit, OnDestroy {
       // This provides a pseudo "line" which acts as the detection cut-off.
       rootMargin: '0px 0px -90% 0px',
       // Because of our line detection approach, we go for a low threshold.
-      threshold: 0,
+      threshold: this.threshold,
     };
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

@@ -8,9 +8,9 @@
     >
   </nav>
   <section class="container pt-20 pb-8" id="about">
-    <div class="section">
+    <section class="section">
       <h1>DartBlock</h1>
-      <section class="text-container">
+      <section class="text-container" id="introText">
         <p>
           Play around with the block-based programming framework <b>DartBlock</b> using the Web
           version below!<br />
@@ -18,7 +18,7 @@
           <b>Quiz:</b> an example quiz question requiring you to compose a corresponding DartBlock
           which solves the problem.<br /><br />
         </p>
-        <section class="link-button-grid">
+        <section class="link-button-grid" id="linkButtons">
           <div class="link-button">
             <a href="https://pub.dev/packages/dartblock_code" target="_blank">pub.dev</a>
           </div>
@@ -69,9 +69,18 @@
           ><b>GitHub page</b></a
         >.
       </p>
-    </div>
+    </section>
   </section>
-  <app-contact-bar class="pb-4"></app-contact-bar>
+  <app-contact-bar></app-contact-bar>
+  <button
+    class="fixed bottom-4 right-4 scroll-to-top-button"
+    title="Scroll to top"
+    [style.opacity]="showScrollToTop ? 1 : 0"
+    [style.pointerEvents]="showScrollToTop ? 'auto' : 'none'"
+    (click)="scrollToTop()"
+  >
+    <span class="material-symbols-outlined link-button-icon">arrow_upward </span>
+  </button>
 </section>
 <!-- Include the following such that the Home button's routerLink="/" works!-->
 <router-outlet></router-outlet>
