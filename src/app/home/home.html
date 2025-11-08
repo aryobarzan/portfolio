@@ -2,7 +2,7 @@
   <!-- Position it in the middle vertically: left-1/2 transform -translate-x-1/2 -->
   <!-- Only take up the required width based on content: inline-flex max-w-full -->
   <nav
-    class="fixed top-4 left-1/2 transform -translate-x-1/2 tab-bar backdrop-blur-sm rounded-full shadow-lg px-4 py-3 z-10 inline-flex max-w-full"
+    class="fixed top-auto bottom-0 sm:top-4 sm:bottom-auto left-1/2 transform -translate-x-1/2 tab-bar backdrop-blur-sm rounded-full shadow-lg px-4 py-3 z-10 inline-flex max-w-full"
   >
     <!-- Use less spacing by default: space-x-4 -->
     <!-- Use more spacing on every device of size sm or bigger: sm:space-x-6 -->
@@ -27,7 +27,7 @@
   </nav>
 
   <!-- Leave a gap at the top such that the fixed navigation bar doesn't cover the content. -->
-  <div class="pt-24"></div>
+  <div class="sm:pt-24 pt-4"></div>
   <app-contact-bar></app-contact-bar>
   <div appScrollObserver (sectionChange)="onSectionChange($event)">
     <app-bio-header></app-bio-header>
@@ -39,7 +39,7 @@
 
   <div class="pt-8"></div>
   <app-contact-bar></app-contact-bar>
-  <div class="bottom-bar pt-8">
+  <div class="bottom-bar pt-8 pb-24 sm:pb-0">
     <p style="color: var(--md-sys-color-outline)">
       Made with love, as well as Angular and Tailwind CSS.
     </p>
