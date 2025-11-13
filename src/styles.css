@@ -21,18 +21,27 @@ html {
 }
 
 h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h3 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 8px;
 }
 
 .card {
-  margin-bottom: 8px;
+  /* margin-bottom: 16px; */
   padding: 16px;
-  border: 1px solid var(--md-sys-color-on-primary-container);
+  /* border: 1px solid var(--md-sys-color-on-surface-container); */
   border-radius: 8px;
   background-color: var(--md-sys-color-surface-container);
-  color: var(--md-sys-color-on-primary-container);
+  color: var(--md-sys-color-on-background);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -167,5 +176,11 @@ h1 {
 
 .card-body {
   font-size: 1rem;
+  text-align: left;
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  color: var(--md-sys-color-outline);
   text-align: left;
 }

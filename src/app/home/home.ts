@@ -9,6 +9,7 @@ import { ScrollObserver } from '../scroll-observer';
 import { NgClass } from '@angular/common';
 import { signal } from '@angular/core';
 import { SkillCategories } from '../skill-categories/skill-categories';
+import { WorkExperiences } from '../work-experiences/work-experiences';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +25,7 @@ import { SkillCategories } from '../skill-categories/skill-categories';
     ScrollObserver,
     NgClass,
     SkillCategories,
+    WorkExperiences,
   ],
   templateUrl: './home.html',
   styleUrl: './home.css',
@@ -33,6 +35,7 @@ export class Home {
     { fragment: 'about', label: 'About' },
     { fragment: 'projects', label: 'Projects' },
     { fragment: 'education', label: 'Education' },
+    { fragment: 'experience', label: 'Experience' },
     { fragment: 'skills', label: 'Skills' },
     { fragment: 'publications', label: 'Publications' },
   ];

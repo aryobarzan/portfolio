@@ -1,6 +1,6 @@
 <!-- Section with id "skills" (used for navbar on home page) -->
-<section class="container pt-8" id="skills">
-  <h1>Skills</h1>
+<section class="container" id="skills">
+  <h1 class="mb-2 mt-8">Skills</h1>
   <section class="category-grid">
     @for (skillCategory of skillCategories; track $index) {
     <app-skill-category-card [skillCategory]="skillCategory"></app-skill-category-card> }

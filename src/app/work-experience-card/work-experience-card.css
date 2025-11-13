@@ -1,0 +1,24 @@
+/* Chip styling uses Material theme CSS variables provided in
+	 ./src/material-theme/{light,dark}.css so chips adapt to theme. */
+.chip {
+  background-color: var(--md-sys-color-secondary-container, #e6eaf9);
+  color: var(--md-sys-color-on-secondary-container, #3e4759);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.chip:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(65, 95, 145, 0.12);
+}
+
+.technology {
+  border-radius: 16px;
+  padding: 4px 8px;
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+}

@@ -1,6 +1,6 @@
 <!-- Section with id "publications" (used for navbar on home page) -->
-<section class="container pt-8" id="publications">
-  <h1>Publications</h1>
+<section class="container" id="publications">
+  <h1 class="mb-2 mt-8">Publications</h1>
   @if(projectNames.length>0) {
   <section class="project-filters-grid">
     @for(projectName of projectNames; track $index) {
@@ -16,8 +16,7 @@
     }
   </section>
   }
-
-  <section>
+  <div class="flex flex-col gap-4">
     @for (publication of getFilteredPublications(); track $index) {
     <!-- animate.enter and animate.leave help to animate when publication cards are shown/hidden whenever the user changes the active filters. -->
     <app-publication-card
@@ -26,5 +25,5 @@
       animate.leave="publication-leave-animation"
     ></app-publication-card>
     }
-  </section>
+  </div>
 </section>

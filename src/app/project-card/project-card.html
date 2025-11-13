@@ -9,7 +9,7 @@
     </aside>
   </div>
   @if(project.technologies && project.technologies.length>1){
-  <section class="technology-grid">
+  <section class="technology-grid pt-2">
     @for(technology of project.technologies; track $index) {
     <div
       class="technology"
@@ -20,7 +20,7 @@
     }
   </section>
   } @if (project.links && project.links.length > 0) {
-  <section class="link-button-grid">
+  <section class="link-button-grid pt-2">
     <!-- <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" /> -->
     @for (link of project.links; track $index) { @if (link.isExternal){
     <div class="link-button">
