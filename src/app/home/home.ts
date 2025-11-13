@@ -49,4 +49,15 @@ export class Home {
   onSectionChange(sectionId: string): void {
     this.activeFragment.set(sectionId);
   }
+
+  // for skip-link
+  skipToMain(event: Event) {
+    event.preventDefault();
+    const main = document.getElementById('main');
+    if (main) {
+      main.focus();
+      // show fragment #main in URL:
+      history.replaceState(null, '', '#main');
+    }
+  }
 }
