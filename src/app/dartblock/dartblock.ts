@@ -1,10 +1,9 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { ContactBar } from '../contact-bar/contact-bar';
 
 @Component({
   selector: 'app-dartblock',
-  imports: [RouterLink, RouterOutlet, ContactBar],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './dartblock.html',
   styleUrl: './dartblock.css',
 })
