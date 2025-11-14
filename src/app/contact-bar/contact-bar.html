@@ -1,21 +1,12 @@
 <section class="container link-button-grid">
-  <div class="link-button">
-    <a href="mailto:aryobarzan.atashpendar@gmail.com">
-      <span class="material-symbols-outlined link-button-icon">mail</span>
-      aryobarzan.atashpendar@gmail.com
-    </a>
-  </div>
-  <div class="link-button">
-    <!-- To have a link be opened in a new tab, we use: target="_blank"  -->
-    <a href="https://www.linkedin.com/in/aryobarzan-atashpendar-768111199/" target="_blank">
-      <span class="material-symbols-outlined link-button-icon">account_circle</span>
-      LinkedIn
-    </a>
-  </div>
-  <div class="link-button">
-    <a href="https://github.com/aryobarzan" target="_blank">
-      <span class="material-symbols-outlined link-button-icon">code</span>
-      GitHub
-    </a>
-  </div>
+  <a href="https://www.linkedin.com/in/aryobarzan-atashpendar-768111199/" target="_blank">
+    <div class="icon-button">
+      <img [src]="getLinkedInIcon()" width="24" height="24" />
+    </div>
+  </a>
+  <a href="https://github.com/aryobarzan" target="_blank">
+    <div class="icon-button">
+      <img [src]="getGitHubIcon()" width="24" height="24" />
+    </div>
+  </a>
 </section>

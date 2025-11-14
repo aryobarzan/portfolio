@@ -10,7 +10,7 @@ export class ProjectService {
       title: 'BEACON Q',
       description: `Mobile quiz app for self-paced learning. 
       Features adaptive difficulty, review recommendations based on spaced-repetition, 
-      recall analysis, and extensive gamification elements. Used at University of Luxembourg.`,
+      recall analysis, and extensive gamification elements. Supports coding questions via the block-based framework 'DartBlock'. Used at University of Luxembourg.`,
       technologies: [
         { name: 'Dart', isLanguage: true },
         { name: 'Flutter', isLanguage: false },
@@ -72,7 +72,12 @@ export class ProjectService {
     },
     {
       title: 'Sketchnoting',
-      description: 'Note-taking app for iPad, with semantic annotations and search.',
+      description: `Note-taking app for iPad. 
+      Supports handwritten text and sketch recognition. 
+      Automatically annotates notes with semantically relevant web resources. 
+      Integrates a multi-faceted search, combining lexical, semantic and visual 
+      (sketch-based) capabilities, as well as automatic question-answering and 
+      visual search visualization using a force-directed graph.`,
       technologies: [
         { name: 'Swift', isLanguage: true },
         { name: 'UIKit', isLanguage: false },
@@ -91,7 +96,8 @@ export class ProjectService {
     },
     {
       title: 'Yactul',
-      description: 'Quiz app for mobile, with integrated learning material.',
+      description:
+        'Quiz app for mobile. Includes multiple question types and a spaced-repetition based coaching (endless) mode. Integrates multimedia lecture and web resources for enhanced learning.',
       technologies: [
         { name: 'C#', isLanguage: true },
         { name: 'Xamarin.Forms', isLanguage: false },

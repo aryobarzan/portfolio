@@ -8,7 +8,21 @@
 
 .card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
+  transform: translateY(-4px) translateX(4px);
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+}
+
+/* in src/styles.css or project-card.css */
+.card .technology {
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+/* change color when the card is hovered or focused-within (keyboard accessible) */
+.card:hover .technology,
+.card:focus-within .technology {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
 }
 
 .flex-container {
@@ -53,7 +67,13 @@ hr {
 
 .technology {
   border-radius: 16px;
-  padding: 4px 8px;
+  padding: 4px 12px;
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
+  font-size: 1rem;
+}
+
+/* ensure p element inside technology element follows the color of technology */
+.technology p {
+  color: inherit;
 }

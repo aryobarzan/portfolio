@@ -20,14 +20,16 @@
     <!-- Spacer between "Best Paper" and the links section -->
     <div class="grow"></div>
     } @for(link of publication.links; track $index){
-    <div class="link-button">
-      <a href="{{ link.url }}" target="_blank">
+
+    <a href="{{ link.url }}" target="_blank">
+      <div class="link-button">
         <span class="material-symbols-outlined link-button-icon"
           >@if(link.type == 'PDF'){ article}@else if (link.type == 'DOI') {open_in_new}
         </span>
         {{ link.name }}
-      </a>
-    </div>
+      </div>
+    </a>
+
     }
     <button (click)="onToggleAbstract()" class="link-button">
       <span class="material-symbols-outlined link-button-icon">

@@ -19,12 +19,16 @@
           which solves the problem.<br /><br />
         </p>
         <section class="link-button-grid" id="linkButtons">
-          <div class="link-button">
-            <a href="https://pub.dev/packages/dartblock_code" target="_blank">pub.dev</a>
-          </div>
-          <div class="link-button">
-            <a href="https://github.com/aryobarzan/dartblock" target="_blank">GitHub</a>
-          </div>
+          <a href="https://pub.dev/packages/dartblock_code" target="_blank">
+            <div class="icon-button">
+              <img src="assets/images/icon_dart.svg" width="24" height="24" />
+            </div>
+          </a>
+          <a href="https://github.com/aryobarzan/dartblock" target="_blank">
+            <div class="icon-button">
+              <img [src]="getGitHubIcon()" width="24" height="24" />
+            </div>
+          </a>
         </section>
         <br />
         <!-- Take up almost the entire screen width on smaller devices (phones), otherwise just 95%. -->
@@ -71,7 +75,6 @@
       </p>
     </section>
   </section>
-  <app-contact-bar></app-contact-bar>
   <button
     class="fixed bottom-4 right-4 scroll-to-top-button w-12 h-12 rounded-[24px] sm:rounded-[18px] sm:w-9 sm:h-9"
     title="Scroll to top"

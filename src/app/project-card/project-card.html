@@ -1,10 +1,17 @@
-<section class="card h-full flex flex-col">
+<article
+  class="card h-full flex flex-col p-4 text-left"
+  role="article"
+  aria-label="Project called {{ project.title }}"
+>
   <div class="flex-container space-x-2">
     <aside class="left-column">
       <img class="logo" src="{{ project.iconURL }}" alt="{{ project.title }} logo" />
     </aside>
     <aside class="right-column">
-      <p class="card-title">{{ project.title }}</p>
+      <header>
+        <h3>{{ project.title }}</h3>
+      </header>
+
       <p class="card-body">{{ project.description }}</p>
       @if(project.technologies && project.technologies.length>1){
       <section class="technology-grid pt-2">
@@ -19,34 +26,26 @@
   </div>
   @if (project.links && project.links.length > 0) {
   <section class="link-button-grid pt-2">
-    <!-- <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" /> -->
     @for (link of project.links; track $index) { @if (link.isExternal){
-    <div class="link-button">
-      <a href="{{ link.url }}" target="_blank" class="flex">
-        <!-- <a routerLink="{{ link.url }}" routerLinkActive="active" target="_blank"> -->
+    <a href="{{ link.url }}" target="_blank" class="flex">
+      <div class="icon-button">
         @if(iconForLink(link) != undefined) {
         <img
           src="{{ iconForLink(link) }}"
-          width="20"
-          height="20"
           [alt]="'External link: ' + link.name"
           [title]="link.name"
         />
         }@else{ {{ link.name }}}
-
-        <!-- <span class="material-symbols-outlined link-icon">open_in_new</span> -->
-      </a>
-    </div>
+      </div>
+    </a>
     } @else {
-    <div class="outlined-button">
-      <a routerLink="{{ link.url }}" routerLinkActive="active">
-        <!-- <a routerLink="{{ link.url }}" routerLinkActive="active" target="_blank"> -->
+    <a routerLink="{{ link.url }}" routerLinkActive="active">
+      <div class="outlined-button">
         {{ link.name }}
-        <!-- <span class="material-symbols-outlined link-icon">open_in_new</span> -->
-      </a>
-    </div>
+      </div>
+    </a>
 
     } }
   </section>
   }
-</section>
+</article>

@@ -35,6 +35,31 @@ h3 {
   font-weight: bold;
 }
 
+.icon-button {
+  /* margin-right: 8px; */
+  padding: 4px 8px;
+  /* color: var(--md-sys-color-primary); */
+  cursor: pointer;
+  vertical-align: middle;
+  opacity: 0.75;
+  width: 40px; /* optional: button hit area */
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button:hover {
+  opacity: 1;
+  border-radius: 16px;
+}
+
+.icon-button .material-symbols-outlined {
+  font-size: 32px; /* the glyph size */
+  line-height: 1;
+  display: inline-block;
+}
+
 /* Link Button */
 .link-button {
   margin-right: 8px;
@@ -159,11 +184,9 @@ h3 {
 }
 
 .card {
-  /* margin-bottom: 16px; */
   padding: 16px;
-  /* border: 1px solid var(--md-sys-color-on-surface-container); */
   border-radius: 8px;
-  background-color: var(--md-sys-color-surface-container);
+  background-color: rgb(from var(--md-sys-color-surface-container) r g b / 0.75);
   color: var(--md-sys-color-on-background);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
