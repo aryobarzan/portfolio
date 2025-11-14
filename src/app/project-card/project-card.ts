@@ -1,9 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
 import { Project, ProjectLink } from '../project';
 import { RouterLink } from '@angular/router';
+import { MarkdownPipe } from '../pipes/markdown.pipe';
 @Component({
   selector: 'app-project-card',
-  imports: [RouterLink],
+  imports: [RouterLink, MarkdownPipe, AsyncPipe],
   templateUrl: './project-card.html',
   styleUrl: './project-card.css',
 })

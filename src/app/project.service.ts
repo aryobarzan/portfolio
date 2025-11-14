@@ -10,7 +10,9 @@ export class ProjectService {
       title: 'BEACON Q',
       description: `Mobile quiz app for self-paced learning. 
       Features adaptive difficulty, review recommendations based on spaced-repetition, 
-      recall analysis, and extensive gamification elements. Supports coding questions via the block-based framework 'DartBlock'. Used at University of Luxembourg.`,
+      recall analysis, and extensive gamification elements. Supports coding questions via the block-based framework 'DartBlock'. 
+      Used at University of Luxembourg.  
+      *The source code of the backend is available on GitHub.*`,
       technologies: [
         { name: 'Dart', isLanguage: true },
         { name: 'Flutter', isLanguage: false },
@@ -18,7 +20,7 @@ export class ProjectService {
         { name: 'MongoDB', isLanguage: false },
         { name: 'Firebase', isLanguage: false },
         { name: 'PM2', isLanguage: false },
-        { name: 'ChatGPT', isLanguage: false },
+        { name: 'OpenAI GPT', isLanguage: false },
       ],
       year: 2025,
       iconURL: 'assets/images/beaconq.jpg',
@@ -33,6 +35,12 @@ export class ProjectService {
           name: 'App Store',
           type: 'App Store',
           url: 'https://apps.apple.com/us/app/beacon-q/id1643852992',
+          isExternal: true,
+        },
+        {
+          name: 'GitHub',
+          type: 'GitHub',
+          url: 'https://github.com/aryobarzan/beaconq-backend-node',
           isExternal: true,
         },
       ],

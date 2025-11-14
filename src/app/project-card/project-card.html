@@ -11,8 +11,8 @@
       <header>
         <h3>{{ project.title }}</h3>
       </header>
-
-      <p class="card-body">{{ project.description }}</p>
+      <!-- The 'markdown' pipe returns a Promise<SafeHtml>, which we have to pipe to 'async' to finally include the SafeHtml within [innerHTML] -->
+      <p class="card-body" [innerHTML]="project.description | markdown | async"></p>
       @if(project.technologies && project.technologies.length>1){
       <section class="technology-grid pt-2">
         @for(technology of project.technologies; track $index) {

@@ -7,7 +7,7 @@ import { SkillCategory } from './skill-category';
 export class SkillService {
   readonly skillCategories: SkillCategory[] = [
     {
-      title: 'Languages',
+      title: 'Programming Languages',
       skills: [
         {
           name: 'Dart',
