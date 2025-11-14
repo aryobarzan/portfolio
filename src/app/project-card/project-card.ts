@@ -10,6 +10,12 @@ import { RouterLink } from '@angular/router';
 export class ProjectCard {
   @Input({ required: true }) project!: Project;
 
+  getLinks(isExternal: boolean): ProjectLink[] {
+    return this.project.links
+      ? this.project.links.filter((link) => link.isExternal === isExternal)
+      : [];
+  }
+
   iconForLink(link?: ProjectLink): string | undefined {
     if (link) {
       if (link.type == 'GitHub') {

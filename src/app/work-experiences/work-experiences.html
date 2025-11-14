@@ -1,6 +1,9 @@
 <!-- Section with id "experience" (used for navbar on home page) -->
 <section class="" id="experience">
-  <h1 class="mb-2 mt-8">Work Experience</h1>
+  <header class="mb-4 mt-8">
+    <h1>Work Experience</h1>
+  </header>
+  <!-- <h1 class="mb-2 mt-8">Work Experience</h1> -->
   <div class="flex flex-col gap-6">
     @for(workExperience of workExperiences; track $index){
     <app-work-experience-card [workExperience]="workExperience"></app-work-experience-card>

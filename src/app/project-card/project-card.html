@@ -1,25 +1,23 @@
 <section class="card h-full flex flex-col">
-  <div class="flex-container space-x-1">
+  <div class="flex-container space-x-2">
     <aside class="left-column">
       <img class="logo" src="{{ project.iconURL }}" alt="{{ project.title }} logo" />
     </aside>
     <aside class="right-column">
       <p class="card-title">{{ project.title }}</p>
       <p class="card-body">{{ project.description }}</p>
+      @if(project.technologies && project.technologies.length>1){
+      <section class="technology-grid pt-2">
+        @for(technology of project.technologies; track $index) {
+        <div class="technology">
+          <p>{{ technology.name }}</p>
+        </div>
+        }
+      </section>
+      }
     </aside>
   </div>
-  @if(project.technologies && project.technologies.length>1){
-  <section class="technology-grid pt-2">
-    @for(technology of project.technologies; track $index) {
-    <div
-      class="technology"
-      [class]="technology.isLanguage ? 'technology-language-color' : 'technology-color'"
-    >
-      <p>{{ technology.name }}</p>
-    </div>
-    }
-  </section>
-  } @if (project.links && project.links.length > 0) {
+  @if (project.links && project.links.length > 0) {
   <section class="link-button-grid pt-2">
     <!-- <img src="assets/images/app-store-badge.svg" alt="Download on the App Store" /> -->
     @for (link of project.links; track $index) { @if (link.isExternal){
@@ -27,10 +25,15 @@
       <a href="{{ link.url }}" target="_blank" class="flex">
         <!-- <a routerLink="{{ link.url }}" routerLinkActive="active" target="_blank"> -->
         @if(iconForLink(link) != undefined) {
-        <img src="{{ iconForLink(link) }}" width="20" height="20" class="mr-2" />
-        }
+        <img
+          src="{{ iconForLink(link) }}"
+          width="20"
+          height="20"
+          [alt]="'External link: ' + link.name"
+          [title]="link.name"
+        />
+        }@else{ {{ link.name }}}
 
-        {{ link.name }}
         <!-- <span class="material-symbols-outlined link-icon">open_in_new</span> -->
       </a>
     </div>

@@ -1,6 +1,8 @@
 <!-- Section with id "publications" (used for navbar on home page) -->
 <section class="container" id="publications">
-  <h1 class="mb-2 mt-8">Publications</h1>
+  <header class="mb-4 mt-8">
+    <h1>Publications</h1>
+  </header>
   @if(projectNames.length>0) {
   <section class="project-filters-grid">
     @for(projectName of projectNames; track $index) {

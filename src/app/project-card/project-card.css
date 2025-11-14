@@ -54,14 +54,6 @@ hr {
 .technology {
   border-radius: 16px;
   padding: 4px 8px;
-}
-
-.technology-color {
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
-}
-
-.technology-language-color {
-  background-color: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
 }

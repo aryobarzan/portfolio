@@ -8,7 +8,9 @@ export class ProjectService {
   readonly projects: Project[] = [
     {
       title: 'BEACON Q',
-      description: 'Personalized and gamified mobile quiz app.',
+      description: `Mobile quiz app for self-paced learning. 
+      Features adaptive difficulty, review recommendations based on spaced-repetition, 
+      recall analysis, and extensive gamification elements. Used at University of Luxembourg.`,
       technologies: [
         { name: 'Dart', isLanguage: true },
         { name: 'Flutter', isLanguage: false },
@@ -37,7 +39,10 @@ export class ProjectService {
     },
     {
       title: 'DartBlock',
-      description: 'Block-based programming framework for mobile.',
+      description: `Block-based programming framework for mobile. 
+        Enables coding via drag-and-drop of visual coding blocks. 
+        Supports quiz-related features like automatic code validation and difficulty adjustment, 
+        as well as advanced concepts such as exception-throwing and asynchronous programming.`,
       technologies: [
         { name: 'Dart', isLanguage: true },
         { name: 'Flutter', isLanguage: false },

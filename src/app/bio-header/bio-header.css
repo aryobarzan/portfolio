@@ -1,0 +1,11 @@
+.container {
+  margin: auto auto;
+  text-align: start;
+}
+
+.job-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--md-sys-color-primary);
+  text-align: left;
+}
