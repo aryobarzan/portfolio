@@ -6,20 +6,6 @@
       <p class="job-title">Full-stack developer</p>
     </header>
 
-    <p class="card-body">
-      I have a deep interest in frontend software development and UI design, with a strong focus on
-      mobile apps and cross-platform frameworks. As part of my PhD, I developed a new e-learning
-      solution, called BEACON Q, focused on repeatable quizzes. With the integration of spaced
-      repetition, review recommendations and recall analysis, the app offers itself up as a smart
-      learning companion to help students keep up with their classes and improve their long-term
-      retention.<br /><br />
-      Other major works include the development of a new block-based framework, called DartBlock,
-      targeting a mobile-first UI design, alongside support for automatic program evaluation and
-      dynamic difficulty adjustment.<br /><br />
-      I have a long experience of working with the cross-platform framework Flutter, as well as
-      native iOS app development using Swift and UIKit. Other than frontend, I have also worked with
-      Node.js and MongoDB for the development of a backend REST API server, as well as Python for
-      data analysis and visualization.
-    </p>
+    <p class="card-body" [innerHTML]="biography | markdown | async"></p>
   </article>
 </section>

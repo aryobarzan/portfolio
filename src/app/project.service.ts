@@ -85,7 +85,7 @@ export class ProjectService {
       Automatically annotates notes with semantically relevant web resources. 
       Integrates a multi-faceted search, combining lexical, semantic and visual 
       (sketch-based) capabilities, as well as automatic question-answering and 
-      visual search visualization using a force-directed graph.`,
+      search visualization using a force-directed graph.`,
       technologies: [
         { name: 'Swift', isLanguage: true },
         { name: 'UIKit', isLanguage: false },
