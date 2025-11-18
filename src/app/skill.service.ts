@@ -76,6 +76,10 @@ export class SkillService {
           name: 'MongoDB',
           url: 'https://www.mongodb.com/',
         },
+        {
+          name: 'PostgreSQL',
+          url: 'https://www.postgresql.org/',
+        },
       ],
     },
     {
