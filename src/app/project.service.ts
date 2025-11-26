@@ -16,9 +16,11 @@ export class ProjectService {
       technologies: [
         { name: 'Dart', isLanguage: true },
         { name: 'Flutter', isLanguage: false },
+        { name: 'TypeScript', isLanguage: true },
         { name: 'Node.js', isLanguage: false },
         { name: 'MongoDB', isLanguage: false },
         { name: 'Firebase', isLanguage: false },
+        { name: 'Docker', isLanguage: false },
         { name: 'PM2', isLanguage: false },
         { name: 'OpenAI GPT', isLanguage: false },
       ],
