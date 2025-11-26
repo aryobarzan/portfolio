@@ -1,0 +1,13 @@
+public/
+docs/
+dist/
+build/
+node_modules/
+coverage/
+/*.log
+/.turbo
+/.next
+
+# Ignore generated Flutter web build assets under `public/assets` and `src/assets`
+public/assets/
+src/assets/dartblock/

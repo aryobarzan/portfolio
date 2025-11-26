@@ -7,7 +7,9 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  transition: background-color 150ms ease, color 150ms ease;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
 }
 
 .chip:focus {

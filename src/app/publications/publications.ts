@@ -45,7 +45,7 @@ export class Publications {
       for (let publication of this.publications) {
         if (publication.relatedProjects) {
           let intersection = publication.relatedProjects.filter((relatedProject) =>
-            this.activeProjectFilters.includes(relatedProject)
+            this.activeProjectFilters.includes(relatedProject),
           );
           if (intersection.length == this.activeProjectFilters.length) {
             filteredPublications.push(publication);

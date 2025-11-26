@@ -8,9 +8,8 @@ describe('BioHeader', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BioHeader]
-    })
-    .compileComponents();
+      imports: [BioHeader],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(BioHeader);
     component = fixture.componentInstance;

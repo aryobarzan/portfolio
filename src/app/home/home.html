@@ -19,21 +19,21 @@
         <!-- Use more spacing on every device of size sm or bigger: sm:space-x-6 -->
         <!-- A fragment allows us to jump to a specific section of the same page, thus avoiding unnecessary reloads. -->
         <ul class="flex space-x-4 sm:space-x-6 overflow-hidden justify-center">
-          @for(navigationTab of navigationTabs; track $index) {
-          <li>
-            <a
-              routerLink="/"
-              [fragment]="navigationTab.fragment"
-              class="text-sm sm:text-base whitespace-nowrap"
-              [ngClass]="{
-                'tab-option-selected': activeFragment() == navigationTab.fragment,
-                'tab-option': activeFragment() != navigationTab.fragment
-              }"
-              [attr.aria-current]="activeFragment() === navigationTab.fragment ? 'true' : null"
-            >
-              {{ navigationTab.label }}
-            </a>
-          </li>
+          @for (navigationTab of navigationTabs; track $index) {
+            <li>
+              <a
+                routerLink="/"
+                [fragment]="navigationTab.fragment"
+                class="text-sm sm:text-base whitespace-nowrap"
+                [ngClass]="{
+                  'tab-option-selected': activeFragment() == navigationTab.fragment,
+                  'tab-option': activeFragment() != navigationTab.fragment,
+                }"
+                [attr.aria-current]="activeFragment() === navigationTab.fragment ? 'true' : null"
+              >
+                {{ navigationTab.label }}
+              </a>
+            </li>
           }
         </ul>
       </nav>

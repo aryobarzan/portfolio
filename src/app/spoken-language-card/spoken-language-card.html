@@ -5,10 +5,10 @@
   }}</span>
 </div>
 <div class="progress-container" role="progressbar">
-  @for(i of [].constructor(7);track $index){
-  <div
-    class="progress-segment"
-    [attr.status]="spokenLanguage.proficiency > $index ? 'filled' : 'empty'"
-  ></div>
+  @for (i of [].constructor(7); track $index) {
+    <div
+      class="progress-segment"
+      [attr.status]="spokenLanguage.proficiency > $index ? 'filled' : 'empty'"
+    ></div>
   }
 </div>

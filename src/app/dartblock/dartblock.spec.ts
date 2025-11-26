@@ -8,9 +8,8 @@ describe('Dartblock', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Dartblock]
-    })
-    .compileComponents();
+      imports: [Dartblock],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(Dartblock);
     component = fixture.componentInstance;

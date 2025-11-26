@@ -2,34 +2,45 @@
   <div class="flex justify-between items-start gap-4">
     <p class="mb-2">
       {{ publication.authors }}. "{{ publication.title }}." <i> {{ publication.proceedings }}</i
-      >. @if(publication.publisher){ {{ publication.publisher }}, }{{ publication.year }}.
-      @if(publication.pages){ {{ publication.pages }}. }
+      >.
+      @if (publication.publisher) {
+        {{ publication.publisher }},
+      }
+      {{ publication.year }}.
+      @if (publication.pages) {
+        {{ publication.pages }}.
+      }
     </p>
   </div>
 
   <!-- Links -->
   <section class="link-button-grid mt-3">
-    @if (publication.isBestPaper){
-    <div style="align-items: center; display: flex; gap: 4px">
-      <span class="material-symbols-outlined link-button-icon mb-2" style="color: rgb(230, 153, 71)"
-        >trophy
-      </span>
-      <p style="color: rgb(230, 153, 71); font-weight: bold">Best Paper</p>
-    </div>
-
-    <!-- Spacer between "Best Paper" and the links section -->
-    <div class="grow"></div>
-    } @for(link of publication.links; track $index){
-
-    <a href="{{ link.url }}" target="_blank">
-      <div class="link-button">
-        <span class="material-symbols-outlined link-button-icon"
-          >@if(link.type == 'PDF'){ article}@else if (link.type == 'DOI') {open_in_new}
+    @if (publication.isBestPaper) {
+      <div style="align-items: center; display: flex; gap: 4px">
+        <span
+          class="material-symbols-outlined link-button-icon mb-2"
+          style="color: rgb(230, 153, 71)"
+          >trophy
         </span>
-        {{ link.name }}
+        <p style="color: rgb(230, 153, 71); font-weight: bold">Best Paper</p>
       </div>
-    </a>
 
+      <!-- Spacer between "Best Paper" and the links section -->
+      <div class="grow"></div>
+    }
+    @for (link of publication.links; track $index) {
+      <a href="{{ link.url }}" target="_blank">
+        <div class="link-button">
+          <span class="material-symbols-outlined link-button-icon">
+            @if (link.type == 'PDF') {
+              article
+            } @else if (link.type == 'DOI') {
+              open_in_new
+            }
+          </span>
+          {{ link.name }}
+        </div>
+      </a>
     }
     <button (click)="onToggleAbstract()" class="link-button">
       <span class="material-symbols-outlined link-button-icon">

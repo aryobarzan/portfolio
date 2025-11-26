@@ -13,39 +13,42 @@
       </header>
       <!-- The 'markdown' pipe returns a Promise<SafeHtml>, which we have to pipe to 'async' to finally include the SafeHtml within [innerHTML] -->
       <p class="card-body" [innerHTML]="project.description | markdown | async"></p>
-      @if(project.technologies && project.technologies.length>1){
-      <section class="technology-grid pt-2">
-        @for(technology of project.technologies; track $index) {
-        <div class="technology">
-          <p>{{ technology.name }}</p>
-        </div>
-        }
-      </section>
+      @if (project.technologies && project.technologies.length > 1) {
+        <section class="technology-grid pt-2">
+          @for (technology of project.technologies; track $index) {
+            <div class="technology">
+              <p>{{ technology.name }}</p>
+            </div>
+          }
+        </section>
       }
     </aside>
   </div>
   @if (project.links && project.links.length > 0) {
-  <section class="link-button-grid pt-2">
-    @for (link of project.links; track $index) { @if (link.isExternal){
-    <a href="{{ link.url }}" target="_blank" class="flex">
-      <div class="icon-button">
-        @if(iconForLink(link) != undefined) {
-        <img
-          src="{{ iconForLink(link) }}"
-          [alt]="'External link: ' + link.name"
-          [title]="link.name"
-        />
-        }@else{ {{ link.name }}}
-      </div>
-    </a>
-    } @else {
-    <a routerLink="{{ link.url }}" routerLinkActive="active">
-      <div class="outlined-button">
-        {{ link.name }}
-      </div>
-    </a>
-
-    } }
-  </section>
+    <section class="link-button-grid pt-2">
+      @for (link of project.links; track $index) {
+        @if (link.isExternal) {
+          <a href="{{ link.url }}" target="_blank" class="flex">
+            <div class="icon-button">
+              @if (iconForLink(link) != undefined) {
+                <img
+                  src="{{ iconForLink(link) }}"
+                  [alt]="'External link: ' + link.name"
+                  [title]="link.name"
+                />
+              } @else {
+                {{ link.name }}
+              }
+            </div>
+          </a>
+        } @else {
+          <a routerLink="{{ link.url }}" routerLinkActive="active">
+            <div class="outlined-button">
+              {{ link.name }}
+            </div>
+          </a>
+        }
+      }
+    </section>
   }
 </article>

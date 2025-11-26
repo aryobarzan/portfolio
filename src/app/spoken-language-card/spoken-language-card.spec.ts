@@ -8,9 +8,8 @@ describe('SpokenLanguageCard', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SpokenLanguageCard]
-    })
-    .compileComponents();
+      imports: [SpokenLanguageCard],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SpokenLanguageCard);
     component = fixture.componentInstance;

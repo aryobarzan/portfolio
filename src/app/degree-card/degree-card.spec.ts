@@ -8,9 +8,8 @@ describe('DegreeCard', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DegreeCard]
-    })
-    .compileComponents();
+      imports: [DegreeCard],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DegreeCard);
     component = fixture.componentInstance;

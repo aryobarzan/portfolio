@@ -15,7 +15,9 @@
 
 /* in src/styles.css or project-card.css */
 .card .technology {
-  transition: background-color 180ms ease, color 180ms ease;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 /* change color when the card is hovered or focused-within (keyboard accessible) */

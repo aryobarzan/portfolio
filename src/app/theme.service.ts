@@ -13,7 +13,7 @@ export class ThemeService {
 
   constructor(
     private rendererFactory: RendererFactory2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
     this.loadInitialTheme();

@@ -3,29 +3,29 @@
   <header class="mb-4 mt-8">
     <h1>Publications</h1>
   </header>
-  @if(projectNames.length>0) {
-  <section class="project-filters-grid">
-    @for(projectName of projectNames; track $index) {
-    <div
-      class="project-filter"
-      [class]="
-        isProjectFilterActive(projectName) ? 'project-filter-active' : 'project-filter-inactive'
-      "
-      (click)="toggleProjectFilter(projectName)"
-    >
-      {{ projectName }}
-    </div>
-    }
-  </section>
+  @if (projectNames.length > 0) {
+    <section class="project-filters-grid">
+      @for (projectName of projectNames; track $index) {
+        <div
+          class="project-filter"
+          [class]="
+            isProjectFilterActive(projectName) ? 'project-filter-active' : 'project-filter-inactive'
+          "
+          (click)="toggleProjectFilter(projectName)"
+        >
+          {{ projectName }}
+        </div>
+      }
+    </section>
   }
   <div class="flex flex-col gap-4">
     @for (publication of getFilteredPublications(); track $index) {
-    <!-- animate.enter and animate.leave help to animate when publication cards are shown/hidden whenever the user changes the active filters. -->
-    <app-publication-card
-      [publication]="publication"
-      animate.enter="publication-enter-animation"
-      animate.leave="publication-leave-animation"
-    ></app-publication-card>
+      <!-- animate.enter and animate.leave help to animate when publication cards are shown/hidden whenever the user changes the active filters. -->
+      <app-publication-card
+        [publication]="publication"
+        animate.enter="publication-enter-animation"
+        animate.leave="publication-leave-animation"
+      ></app-publication-card>
     }
   </div>
 </section>
