@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { MarkdownPipe } from '../pipes/markdown.pipe';
 import { AsyncPipe } from '@angular/common';
+import { Fedil26Card } from '../fedil26-card/fedil26-card';
 
 @Component({
   selector: 'app-bio-header',
-  imports: [MarkdownPipe, AsyncPipe],
+  imports: [MarkdownPipe, AsyncPipe, Fedil26Card],
   templateUrl: './bio-header.html',
   styleUrl: './bio-header.css',
 })
