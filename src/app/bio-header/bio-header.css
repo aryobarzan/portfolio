@@ -9,3 +9,10 @@
   color: var(--md-sys-color-primary);
   text-align: left;
 }
+
+.job-email {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--md-sys-color-secondary);
+  text-align: left;
+}
