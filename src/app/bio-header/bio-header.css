@@ -1,6 +1,11 @@
 .container {
   margin: auto auto;
   text-align: start;
+  /* Have content vertically centered */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .job-title {
@@ -15,4 +20,15 @@
   font-weight: 300;
   color: var(--md-sys-color-secondary);
   text-align: left;
+}
+
+.name {
+  font-size: 5rem;
+  font-weight: 800;
+  color: white;
+  text-align: left;
+}
+
+.name.last {
+  color: var(--traxus-primary);
 }
