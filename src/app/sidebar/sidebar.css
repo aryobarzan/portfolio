@@ -16,6 +16,7 @@
 .sidebar-item {
   cursor: pointer;
   padding: 15px 20px;
+  color: var(--traxus-primary);
 }
 .sidebar-item:hover {
   background-color: #555;
@@ -23,6 +24,7 @@
 
 .active:hover .sidebar-item {
   background-color: var(--traxus-primary);
+  color: black;
 }
 
 .active {

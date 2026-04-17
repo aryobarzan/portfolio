@@ -3,6 +3,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  align-items: center;
-  gap: 8px;
+  /* We want the cards to be the same height. Note that skill-category-card has height 100% to make this work. */
+  align-items: stretch;
+  /* gap: 8px; */
+}
+.container {
+  margin: auto auto;
+  text-align: start;
+  /* Have content vertically centered */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -25,10 +25,19 @@
 .name {
   font-size: 5rem;
   font-weight: 800;
+  font-family: 'Space-Grotesk';
   color: white;
   text-align: left;
 }
 
 .name.last {
   color: var(--traxus-primary);
+  /* We want the last name to be vertically closer to the first name */
+  margin-top: -1.5rem;
+}
+
+.link-button-grid {
+  margin-top: 32px;
+  justify-content: end;
+  gap: 8px;
 }

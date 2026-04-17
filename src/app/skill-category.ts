@@ -6,4 +6,5 @@ export interface SkillCategory {
 export interface Skill {
   name: string;
   url: string;
+  level: 'low' | 'med' | 'high';
 }

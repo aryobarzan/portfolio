@@ -1,5 +1,9 @@
 .card {
-  width: 100%;
+  width: 350px;
+  height: 100%;
+  border: 2px solid rgba(from var(--traxus-primary) r g b / 0.5);
+  border-radius: 0px;
+  padding: 32px;
 }
 
 hr {
@@ -13,9 +17,10 @@ hr {
 .skill-grid {
   margin-top: 8px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   justify-content: start;
-  align-items: center;
+  align-items: start;
   gap: 8px;
 }
 
@@ -37,4 +42,35 @@ hr {
 .skill:active {
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
+}
+
+.skill-category-title {
+  font-size: 0.825rem;
+  font-weight: 400;
+  color: var(--traxus-primary);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.skill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.skill-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: gray;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.skill-level {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--traxus-primary);
+  text-align: left;
+  text-transform: uppercase;
 }

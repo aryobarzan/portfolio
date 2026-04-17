@@ -4,13 +4,14 @@
 @import './material-theme/dark.css';
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--md-sys-color-background);
   color: var(--md-sys-color-on-background);
   padding-bottom: max(4px, env(safe-area-inset-bottom, 3rem));
 }
 p {
   color: var(--md-sys-color-on-background);
+  font-family: 'Inter', sans-serif;
 }
 
 /* Smooth scrolling with padding for fixed header */
@@ -230,5 +231,54 @@ h3 {
   background-color: var(--traxus-primary);
   color: black;
   font-weight: 1000;
+  font-family: 'Space-Grotesk';
   width: fit-content;
+}
+
+/* Use of background-image, background-size and background-position to create a color change effect from left to right when hovering */
+.traxus-button {
+  padding: 12px 12px;
+  background-image: linear-gradient(to right, black 50%, var(--traxus-primary) 50%);
+  /* we use 210% here, as 200% would cause the visible edge to align with the gradient's stop at 50%, which can cause
+  sub-pixel bleed, resulting in a visible black line on the left. */
+  background-size: 210% 100%;
+  background-position: right center;
+  border: 1px solid var(--traxus-primary);
+  color: black;
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  cursor: pointer;
+  transition:
+    background-position 0.3s ease,
+    color 0.3s ease;
+}
+
+.traxus-button:hover {
+  background-position: left center;
+  color: var(--traxus-primary);
+}
+
+.page-header {
+  font-size: 4rem;
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  color: white;
+  text-transform: uppercase;
+}
+
+.page-header-block {
+  display: flex;
+  justify-content: start;
+  border-left: 6px solid var(--traxus-primary);
+  padding-left: 32px;
+}
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  src: url('../public/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../public/assets/fonts/Inter-VariableFont_opsz\,wght.ttf');
 }

@@ -1,8 +1,12 @@
 <section class="card">
-  <p class="card-title">{{ skillCategory.title }}</p>
+  <p class="skill-category-title">{{ skillCategory.title }}</p>
   <section class="skill-grid">
     @for (skill of skillCategory.skills; track $index) {
-      <a class="skill" href="{{ skill.url }}" target="_blank">{{ skill.name }}</a>
+      <div class="skill-row">
+        <aside class="skill-title">{{ skill.name }}</aside>
+        <aside class="skill-level">[{{ skill.level }}]</aside>
+      </div>
+      <!-- <a class="skill" href="{{ skill.url }}" target="_blank">{{ skill.name }}</a> -->
     }
   </section>
 </section>
