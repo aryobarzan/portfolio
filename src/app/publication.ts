@@ -9,10 +9,12 @@ export interface Publication {
   links: PublicationLink[];
   isBestPaper: boolean;
   relatedProjects?: string[];
+  doi: string;
+  keywords: string[];
 }
 
 export interface PublicationLink {
   url: string;
   name: string;
-  type: 'DOI' | 'PDF' | 'Other';
+  type: 'DOI' | 'PDF';
 }

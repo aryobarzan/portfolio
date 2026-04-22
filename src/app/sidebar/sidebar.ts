@@ -14,7 +14,6 @@ export class Sidebar {
     { label: 'PROJECTS', icon: 'person', route: '/projects' },
     { label: 'EDUCATION', icon: 'settings', route: '/education' },
     { label: 'EXPERIENCE', icon: 'settings', route: '/experience' },
-    { label: 'SKILLS', icon: 'settings', route: '/skills' },
     { label: 'PUBLICATIONS', icon: 'settings', route: '/publications' },
   ];
 

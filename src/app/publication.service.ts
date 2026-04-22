@@ -13,6 +13,22 @@ export class PublicationService {
       publisher: 'ORBilu-University of Luxembourg',
       year: 2025,
       isBestPaper: false,
+      doi: '10993/65895',
+      keywords: [
+        'E-learning',
+        'Mobile App',
+        'Testing Effect',
+        'Regular Testing',
+        'Gamification',
+        'Block-Based Programming',
+        'Spaced Repetition',
+        'Dynamic Difficulty Adjustment',
+        'Mobile Interface Design',
+        'Generative AI',
+        'Mobile Quiz App',
+        'Review Recommendations',
+        'Recall Analysis',
+      ],
       links: [
         {
           name: 'PDF',
@@ -34,6 +50,8 @@ export class PublicationService {
       year: 2024,
       isBestPaper: false,
       pages: '597-603',
+      doi: '10.1145/3649217.3653549',
+      keywords: ['Block-based Programming', 'Automatic Evaluation', 'Digital Quiz'],
       links: [
         { name: 'PDF', type: 'PDF', url: 'https://dl.acm.org/doi/pdf/10.1145/3649217.3653549' },
         { name: 'Details', type: 'DOI', url: 'https://dl.acm.org/doi/abs/10.1145/3649217.3653549' },
@@ -50,6 +68,8 @@ export class PublicationService {
       publisher: 'SciTePress',
       year: 2024,
       isBestPaper: false,
+      doi: '10.5220/0012682500003693',
+      keywords: ['Pre-Briefing', 'High-Fidelity Simulation', 'Medical Education', 'Digital Quiz'],
       links: [
         {
           name: 'PDF',
@@ -74,6 +94,8 @@ export class PublicationService {
       publisher: 'IEEE',
       year: 2023,
       isBestPaper: false,
+      doi: '10.1109/TALE56641.2023.10398305',
+      keywords: ['Testing effect', 'Digital quiz', 'Case study'],
       links: [
         {
           name: 'Details',
@@ -94,6 +116,8 @@ export class PublicationService {
       publisher: 'IEEE',
       year: 2023,
       isBestPaper: false,
+      doi: '10.1109/ICIET56899.2023.10111487',
+      keywords: ['Testing effect', 'Digital quiz', 'Recall and recognition', 'Dynamic difficulty'],
       links: [
         {
           name: 'Details',
@@ -113,6 +137,14 @@ export class PublicationService {
       year: 2022,
       isBestPaper: false,
       pages: '13-29',
+      doi: '10.1007/978-3-031-05657-4_2',
+      keywords: [
+        'Learning material',
+        'Semantic search',
+        'Question-answering',
+        'Note similarity',
+        'Interactive search',
+      ],
       links: [
         {
           name: 'Details',
@@ -132,6 +164,15 @@ export class PublicationService {
       year: 2019,
       isBestPaper: true,
       pages: '340-353',
+      doi: '10.1007/978-3-030-32475-9_25',
+      keywords: [
+        'Sketchnoting',
+        'Learning material',
+        'Handwriting recognition',
+        'Semantic annotation',
+        'Drawing recognition',
+        'Visual search',
+      ],
       links: [
         {
           name: 'Details',

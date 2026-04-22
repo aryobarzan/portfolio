@@ -1,11 +1,14 @@
 <!-- Section with id "skills" (used for navbar on home page) -->
-<section class="container" id="skills">
-  <header class="mb-4 mt-8">
+<!-- <section class="container" id="skills"> -->
+<!-- <header class="mb-4 mt-8">
     <div class="page-header-block"><aside class="page-header">Skills</aside></div>
-  </header>
-  <section class="category-grid">
-    @for (skillCategory of skillCategories; track $index) {
-      <app-skill-category-card [skillCategory]="skillCategory"></app-skill-category-card>
-    }
-  </section>
+  </header> -->
+<section class="category-grid">
+  @for (skillCategory of skillCategories; track $index) {
+    <app-skill-category-card
+      [index]="$index"
+      [skillCategory]="skillCategory"
+    ></app-skill-category-card>
+  }
 </section>
+<!-- </section> -->

@@ -7,7 +7,7 @@ import { SkillCategory } from './skill-category';
 export class SkillService {
   readonly skillCategories: SkillCategory[] = [
     {
-      title: 'MODULE_01: LANGUAGES',
+      title: 'LANGUAGES',
       skills: [
         {
           name: 'Dart',
@@ -42,7 +42,7 @@ export class SkillService {
       ],
     },
     {
-      title: 'MODULE_02: FRONTEND',
+      title: 'FRONTEND',
       skills: [
         {
           name: 'Flutter',
@@ -62,7 +62,7 @@ export class SkillService {
       ],
     },
     {
-      title: 'MODULE_03: BACKEND',
+      title: 'BACKEND',
       skills: [
         {
           name: 'Node.js',
@@ -82,7 +82,7 @@ export class SkillService {
       ],
     },
     {
-      title: 'MODULE_04: DATABASES',
+      title: 'DATABASES',
       skills: [
         {
           name: 'MongoDB',
@@ -97,7 +97,7 @@ export class SkillService {
       ],
     },
     {
-      title: 'MODULE_05: DATA ANALYSIS',
+      title: 'DATA ANALYSIS',
       skills: [
         {
           name: 'Pandas',
@@ -133,7 +133,7 @@ export class SkillService {
     },
 
     {
-      title: 'MODULE_06: CD/CI & DEVOPS',
+      title: 'CD/CI & DEVOPS',
       skills: [
         {
           name: 'Git',

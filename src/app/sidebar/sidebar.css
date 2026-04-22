@@ -4,9 +4,9 @@
   left: 0;
   width: 240px;
   height: 100%;
-  background-color: var(--traxus-background);
+  background-color: black;
   color: #fff;
-  /* padding: 20px; */
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 .sidebar-items {
   display: flex;
@@ -48,7 +48,8 @@
   bottom: 0;
   left: 0;
   width: 240px;
-  background-color: var(--traxus-background);
+  background-color: black;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
   display: flex;
   justify-content: center;

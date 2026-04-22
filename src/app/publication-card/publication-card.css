@@ -16,3 +16,63 @@ button:hover .material-symbols-outlined {
   color: var(--md-sys-color-on-secondary);
   padding: 4px 8px;
 }
+
+.publication-card {
+  display: block;
+  flex-direction: row;
+  gap: 8px;
+  padding: 32px;
+  border: 2px solid #262629;
+  background-color: #090909;
+}
+
+.publication-card-striped {
+  display: block;
+  flex-direction: row;
+  gap: 8px;
+  padding: 32px;
+  border: 2px solid #262629;
+  background: repeating-linear-gradient(45deg, #090909, #090909 4px, #111113 4px, #111113 8px);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Space-Grotesk';
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.authors {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Space-Grotesk';
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.doi {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+  font-family: 'Space-Grotesk';
+  text-align: left;
+}
+
+.keyword-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.keyword {
+  font-size: 1rem;
+  color: gray;
+  font-weight: 400;
+  font-family: 'Space-Grotesk';
+  text-align: left;
+  border: 1px solid gray;
+  padding: 2px 8px;
+  text-transform: uppercase;
+}

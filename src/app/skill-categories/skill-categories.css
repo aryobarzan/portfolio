@@ -1,11 +1,8 @@
 .category-grid {
-  /* margin-top: 8px; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  /* We want the cards to be the same height. Note that skill-category-card has height 100% to make this work. */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: stretch;
-  /* gap: 8px; */
+  gap: 8px;
 }
 .container {
   margin: auto auto;

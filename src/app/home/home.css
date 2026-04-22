@@ -21,9 +21,9 @@
 }
 
 .home-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto auto;
-  text-align: center;
+  text-align: left;
   padding-left: 8px;
   padding-right: 8px;
 }

@@ -88,3 +88,28 @@
 .publication-leave-animation {
   animation: fadeOutSlideRight 0.3s ease-in forwards;
 }
+
+.title {
+  font-size: 5rem;
+  font-weight: 800;
+  font-family: 'Space-Grotesk';
+  color: white;
+  text-align: left;
+}
+
+.colored-box-white {
+  padding: 4px 8px;
+  /* border-radius: 8px; */
+  background-color: white;
+  color: black;
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  width: fit-content;
+}
+
+.total-access-records {
+  font-size: 0.875rem;
+  color: gray;
+  font-family: 'Space-Grotesk';
+  text-align: left;
+}

@@ -41,3 +41,107 @@
   justify-content: end;
   gap: 8px;
 }
+
+.colored-box-white {
+  padding: 4px 8px;
+  /* border-radius: 8px; */
+  background-color: white;
+  color: black;
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  width: fit-content;
+}
+
+.operator-id {
+  font-size: 0.875rem;
+  color: gray;
+  font-family: 'Space-Grotesk';
+  text-align: left;
+}
+
+.log-box {
+  padding: 32px;
+  border: 2px solid var(--traxus-primary);
+  background-color: #09090b;
+  font-weight: 400;
+  color: #969699;
+  font-family: 'Space-Grotesk';
+}
+
+.log-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Space-Grotesk';
+  color: var(--traxus-primary);
+  text-align: left;
+}
+
+.small-gray-text {
+  font-size: 0.875rem;
+  color: gray;
+  font-family: 'Space-Grotesk';
+  text-align: left;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--traxus-primary);
+}
+
+.normal-white-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  font-family: 'Space-Grotesk';
+  text-align: left;
+}
+
+.normal-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a8a8ab;
+  font-family: 'Space-Grotesk';
+  text-align: left;
+}
+
+.system-status-box {
+  padding: 32px;
+  border: 2px solid #252528;
+  background-color: black;
+  font-weight: 400;
+  color: #969699;
+  font-family: 'Space-Grotesk';
+}
+
+.system-status-title {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Space-Grotesk';
+  color: var(--traxus-primary);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.system-status-body {
+  font-size: 0.875rem;
+  color: #969699;
+  font-family: 'Space-Grotesk';
+  text-align: left;
+}
+
+.progress-bar-component {
+  width: 12px;
+  height: 16px;
+  background-color: gray;
+}
+
+.skills-title {
+  font-size: 4rem;
+  font-weight: 500;
+  font-style: italic;
+  color: white;
+  font-family: 'Space-Grotesk';
+  text-align: center;
+}

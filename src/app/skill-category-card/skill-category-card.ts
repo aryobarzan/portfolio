@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { SkillCategory } from '../skill-category';
 @Component({
   selector: 'app-skill-category-card',
@@ -7,5 +7,6 @@ import { SkillCategory } from '../skill-category';
   styleUrl: './skill-category-card.css',
 })
 export class SkillCategoryCard {
-  @Input({ required: true }) skillCategory!: SkillCategory;
+  index = input.required<number>();
+  skillCategory = input.required<SkillCategory>();
 }

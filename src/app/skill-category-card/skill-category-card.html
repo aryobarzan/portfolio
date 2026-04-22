@@ -1,7 +1,8 @@
 <section class="card">
-  <p class="skill-category-title">{{ skillCategory.title }}</p>
+  <p class="module-index mb-4">MODULE_0{{ index() + 1 }}</p>
+  <p class="module-title" mb-2>{{ skillCategory().title }}</p>
   <section class="skill-grid">
-    @for (skill of skillCategory.skills; track $index) {
+    @for (skill of skillCategory().skills; track $index) {
       <div class="skill-row">
         <aside class="skill-title">{{ skill.name }}</aside>
         <aside class="skill-level">[{{ skill.level }}]</aside>

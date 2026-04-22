@@ -21,6 +21,5 @@ export const routes: Routes = [
   { path: 'projects', component: Projects },
   { path: 'education', component: Education },
   { path: 'experience', component: WorkExperiences },
-  { path: 'skills', component: SkillCategories },
   { path: 'publications', component: Publications },
 ];

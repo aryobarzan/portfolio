@@ -1,66 +1,42 @@
-<section class="card">
-  <div class="flex justify-between items-start gap-4">
-    <p class="mb-2">
-      {{ publication.authors }}. "{{ publication.title }}." <i> {{ publication.proceedings }}</i
-      >.
-      @if (publication.publisher) {
-        {{ publication.publisher }},
+<section [class]="index() < 3 ? 'publication-card-striped' : 'publication-card'">
+  <div class="flex justify-between gap-2">
+    <div class="authors mb-2">{{ publication().authors }}</div>
+    <div class="authors">// {{ publication().year }}</div>
+  </div>
+
+  <div class="title mb-4">{{ publication().title }}</div>
+  @if (publication().isBestPaper) {
+    <div class="mb-2" style="align-items: center; display: flex; gap: 4px">
+      <span class="material-symbols-outlined link-button-icon mb-2" style="color: rgb(230, 153, 71)"
+        >trophy
+      </span>
+      <p style="color: rgb(230, 153, 71); font-weight: bold">Best Paper</p>
+    </div>
+  }
+  <div class="keyword-list">
+    @for (keyword of publication().keywords; track $index) {
+      <span class="keyword">{{ keyword }}</span>
+    }
+  </div>
+
+  <!-- DOI and link buttons -->
+  <div class="flex justify-between">
+    <!-- DOI -->
+    <div class="doi mt-8">DOI: {{ publication().doi }}</div>
+    <!-- links -->
+    <section class="link-button-grid mt-3 gap-2">
+      @for (link of publication().links; track $index) {
+        <a href="{{ link.url }}" target="_blank">
+          <button [class]="link.type === 'DOI' ? 'traxus-outlined-button' : 'traxus-button'">
+            <span class="material-symbols-outlined link-button-icon">
+              {{ link.type === 'DOI' ? 'open_in_new' : 'article' }}
+            </span>
+            {{ link.type === 'DOI' ? 'DECRYPT' : 'EXTRACT DATA' }}
+          </button></a
+        >
       }
-      {{ publication.year }}.
-      @if (publication.pages) {
-        {{ publication.pages }}.
-      }
-    </p>
+    </section>
   </div>
 
   <!-- Links -->
-  <section class="link-button-grid mt-3">
-    @if (publication.isBestPaper) {
-      <div style="align-items: center; display: flex; gap: 4px">
-        <span
-          class="material-symbols-outlined link-button-icon mb-2"
-          style="color: rgb(230, 153, 71)"
-          >trophy
-        </span>
-        <p style="color: rgb(230, 153, 71); font-weight: bold">Best Paper</p>
-      </div>
-
-      <!-- Spacer between "Best Paper" and the links section -->
-      <div class="grow"></div>
-    }
-    @for (link of publication.links; track $index) {
-      <a href="{{ link.url }}" target="_blank">
-        <div class="link-button">
-          <span class="material-symbols-outlined link-button-icon">
-            @if (link.type == 'PDF') {
-              article
-            } @else if (link.type == 'DOI') {
-              open_in_new
-            }
-          </span>
-          {{ link.name }}
-        </div>
-      </a>
-    }
-    <button (click)="onToggleAbstract()" class="link-button">
-      <span class="material-symbols-outlined link-button-icon">
-        {{ showAbstract ? 'arrow_upward' : 'arrow_downward' }} </span
-      >Abstract
-    </button>
-  </section>
-  <!-- The abstract, which should only be shown when "showAbstract" is true. -->
-  <!-- overflow-hidden: mark the div as the expandable section -->
-  <!-- transition-all: animate the expand / collapse action -->
-  <!-- duration-300: duration of the animation in ms -->
-  <!-- ease-in-out: have the animation start and end slowly -->
-
-  <!-- [style.maxHeight]: dynamic binding to maxHeight property to ensure the div refreshes when showAbstract changes. -->
-  <div
-    class="overflow-hidden transition-all duration-300 ease-in-out"
-    [style.maxHeight]="showAbstract ? '1400px' : '0'"
-  >
-    <p class="mt-2 abstract rounded-lg">
-      {{ publication.abstract }}
-    </p>
-  </div>
 </section>

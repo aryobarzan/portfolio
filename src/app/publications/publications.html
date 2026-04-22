@@ -1,10 +1,16 @@
 <!-- Section with id "publications" (used for navbar on home page) -->
-<section class="container" id="publications">
-  <header class="mb-4 mt-8">
-    <h1>Publications</h1>
+<section class="container pt-8" id="publications">
+  <header class="mb-4 text-left">
+    <div class="page-header-block">
+      <div class="title">ARCHIVE_RECORDS</div>
+      <div>
+        <span class="colored-box-white">CLASSIFIED</span>
+        <span class="pl-4 total-access-records">TOTAL_RECORDS: 7</span>
+      </div>
+    </div>
   </header>
   @if (projectNames.length > 0) {
-    <section class="project-filters-grid">
+    <section class="project-filters-grid pt-8">
       @for (projectName of projectNames; track $index) {
         <div
           class="project-filter"
@@ -18,14 +24,17 @@
       }
     </section>
   }
-  <div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-4 mt-8">
     @for (publication of getFilteredPublications(); track $index) {
       <!-- animate.enter and animate.leave help to animate when publication cards are shown/hidden whenever the user changes the active filters. -->
       <app-publication-card
         [publication]="publication"
+        [index]="$index"
         animate.enter="publication-enter-animation"
         animate.leave="publication-leave-animation"
       ></app-publication-card>
     }
   </div>
+  <br />
+  <br />
 </section>

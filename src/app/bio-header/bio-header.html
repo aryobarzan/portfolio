@@ -3,19 +3,105 @@
   <!-- <div class="pt-4"><app-fedil26-card></app-fedil26-card></div> -->
   <article role="article" aria-label="Short biography">
     <header class="mb-4 text-left">
-      <div class="colored-box">FULL-STACK DEVELOPER</div>
-      <div class="name">ARYOBARZAN</div>
-      <div class="name last">ATASHPENDAR</div>
-      <p class="job-email">
+      <div class="page-header-block">
+        <div class="name">ARYOBARZAN</div>
+        <div class="name last">ATASHPENDAR</div>
+        <div>
+          <span class="colored-box-white">CLASSIFIED</span>
+          <span class="pl-4 operator-id">OPERATOR_ID: LUX-96</span>
+        </div>
+      </div>
+      <!-- <div class="colored-box">FULL-STACK DEVELOPER</div> -->
+      <!-- <p class="job-email">
         <i
           ><a href="mailto:aryobarzan.atashpendar@gmail.com" target="_blank"
             >aryobarzan.atashpendar@gmail.com</a
           ></i
         >
-      </p>
+      </p> -->
     </header>
+    <div class="system-status-box mb-6 mt-12">
+      <div class="flex justify-between align-bottom mb-8">
+        <span class="system-status-title">SYSTEM_STATUS</span
+        ><span class="small-gray-text">ID: 0x9812</span>
+      </div>
+      <div class="flex-col mb-4">
+        <div class="flex justify-between align-bottom">
+          <span class="system-status-body mb-1">CORE_STABILITY</span
+          ><span class="system-status-body" style="color: var(--traxus-primary)">92.3%</span>
+        </div>
+        <div class="flex gap-x-1">
+          @for (i of [].constructor(10); track $index) {
+            <aside
+              class="progress-bar-component"
+              [style]="$index < 9 ? 'background-color: var(--traxus-primary)' : ''"
+            ></aside>
+          }
+        </div>
+      </div>
+      <div class="flex-col">
+        <div class="flex justify-between align-bottom">
+          <span class="system-status-body mb-1">LATENCY_SYNC</span
+          ><span
+            class="small-gray-text"
+            [style]="
+              latency() < 33 ? 'color: green' : latency() < 66 ? 'color: yellow' : 'color: red'
+            "
+            >{{ latency() }}MS</span
+          >
+        </div>
+        <div class="flex gap-x-1">
+          @for (i of [].constructor(10); track $index) {
+            <aside
+              class="progress-bar-component"
+              [style]="$index < latency() / 10.0 ? 'background-color: var(--traxus-primary)' : ''"
+            ></aside>
+          }
+        </div>
+      </div>
 
-    <p class="card-body" [innerHTML]="biography | markdown | async"></p>
+      <hr class="mt-4 mb-4" style="color: gray; opacity: 0.5" />
+      <div class="small-gray-text" style="font-size: 0.75rem">
+        > BOOT SEQUENCE COMPLETE<br />> LOADING MODULES. . . [OK]<br />> INTERFACE STABLE
+      </div>
+    </div>
+    <div class="log-box flex-col">
+      <div class="flex justify-between align-bottom">
+        <span class="flex items-center justify-start gap-2"
+          ><aside class="circle"></aside>
+          <aside class="log-title">OPERATOR_BIO.LOG</aside></span
+        ><span class="small-gray-text">VER: 2.0.1</span>
+      </div>
+      <div
+        class="mt-4 mb-4"
+        style="
+          font-weight: 400;
+          color: rgb(from var(--traxus-primary) r g b / 0.75);
+          font-size: 1.25rem;
+        "
+      >
+        > INITIALIZING READOUT. . .
+      </div>
+      <div class="normal-text">
+        Subject [ARYOBARZAN_ATASHPENDAR] is a software engineer specializing in full-stack and
+        mobile development. Most recent project involved a cross-platform quiz platform, with
+        multiple gamification and smart recommendation features.<br /><br />
+        Current focus: exploring the Angular and SwiftUI frameworks for web and native app
+        development, respectively.
+      </div>
+      <hr class="mt-4 mb-4" style="color: gray; opacity: 0.5" />
+      <div class="flex gap-8">
+        <div class="flex-col">
+          <aside class="small-gray-text">SPECIALIZATION</aside>
+          <aside class="normal-white-text">FULL-STACK / MOBILE</aside>
+        </div>
+        <div class="flex-col">
+          <aside class="small-gray-text">EXPERIENCE</aside>
+          <aside class="normal-white-text">04_YEARS</aside>
+        </div>
+      </div>
+    </div>
+    <!-- <p class="card-body" [innerHTML]="biography | markdown | async"></p> -->
     <div class="link-button-grid">
       <a href="https://www.linkedin.com/in/aryobarzan-atashpendar/" target="_blank">
         <button class="traxus-button">
@@ -33,5 +119,14 @@
         </button></a
       >
     </div>
+    <div class="flex items-center gap-4 mt-12 mb-8">
+      <!-- flex-1 makes the horizontal rules take up equal space on either side of the title -->
+      <hr class="flex-1" />
+      <span class="skills-title">SKILLS</span>
+      <hr class="flex-1" />
+    </div>
+    <app-skills></app-skills>
+    <br />
+    <br />
   </article>
 </section>

@@ -1,18 +1,22 @@
-import { Component } from '@angular/core';
-import { MarkdownPipe } from '../pipes/markdown.pipe';
-import { AsyncPipe } from '@angular/common';
+import { Component, Signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map, timer } from 'rxjs';
+import { SkillCategories } from '../skill-categories/skill-categories';
 
 @Component({
   selector: 'app-bio-header',
-  imports: [MarkdownPipe, AsyncPipe],
+  imports: [SkillCategories],
   templateUrl: './bio-header.html',
   styleUrl: './bio-header.css',
 })
 export class BioHeader {
-  readonly biography: string = `Hi! I'm a **full-stack developer**, primarily focused on mobile platforms, though I have also delved into web app development.    
-  \\
-  I'm interested in keeping up with the latest tech, including popular frameworks such as **Flutter**, **Node.js**, **FastAPI** and **MongoDB**.  
-  My practical experience stretches along the entire app pipeline, including: UI/UX and technical design, frontend (mobile, desktop, web) and backend (API server, database) development, testing, documentation, hosting, automatic logging and backups, publishing (app stores, signed executables).  
-  \\
-  My recent projects were an advanced quiz platform (**BEACON Q**) and a new block-based programming framework (**DartBlock**), both of which were researched and developed as part of my PhD. I'm always eager and quick to learn to work with other frameworks and languages as needed.`;
+  // Simulated latency signal that updates every 2 seconds with a random value between 0 and 100.
+  // - timer(0, 2000) creates an observable that emits a value immediately and then every 2 seconds
+  // - pipe(...) allows us to transform the emitted values using operators
+  // - map(() => Math.floor(Math.random() * 100)) transforms each emitted value into a random number between 0 and 100
+  // - toSignal(...) converts the observable into a signal that can be used in the template and which requires no manual subscription management
+  latency: Signal<number> = toSignal(
+    timer(0, 2000).pipe(map(() => Math.floor(Math.random() * 100))),
+    { initialValue: 40 },
+  );
 }

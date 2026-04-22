@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Publication } from '../publication';
 
 @Component({
@@ -8,7 +8,8 @@ import { Publication } from '../publication';
   styleUrl: './publication-card.css',
 })
 export class PublicationCard {
-  @Input({ required: true }) publication!: Publication;
+  index = input.required<number>();
+  publication = input.required<Publication>();
   showAbstract: boolean = false;
 
   onToggleAbstract() {

@@ -4,14 +4,14 @@
 @import './material-theme/dark.css';
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--md-sys-color-background);
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: black;
   color: var(--md-sys-color-on-background);
   padding-bottom: max(4px, env(safe-area-inset-bottom, 3rem));
 }
 p {
   color: var(--md-sys-color-on-background);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 /* Smooth scrolling with padding for fixed header */
@@ -258,6 +258,26 @@ h3 {
   color: var(--traxus-primary);
 }
 
+.traxus-outlined-button {
+  padding: 12px 12px;
+  background-image: linear-gradient(to right, var(--traxus-primary) 50%, black 50%);
+  background-size: 210% 100%;
+  background-position: right center;
+  border: 1px solid var(--traxus-primary);
+  color: var(--traxus-primary);
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  cursor: pointer;
+  transition:
+    background-position 0.3s ease,
+    color 0.3s ease;
+}
+
+.traxus-outlined-button:hover {
+  background-position: left center;
+  color: black;
+}
+
 .page-header {
   font-size: 4rem;
   font-weight: 1000;
@@ -268,6 +288,7 @@ h3 {
 
 .page-header-block {
   display: flex;
+  flex-direction: column;
   justify-content: start;
   border-left: 6px solid var(--traxus-primary);
   padding-left: 32px;
