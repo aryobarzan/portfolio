@@ -9,6 +9,8 @@ export class WorkExperienceService {
       title: 'Doctoral Researcher',
       description:
         'Developed the new quiz platform "BEACON Q", with advanced features such as adaptive difficulty, review recommendations, recall analysis and various gamification elements. Also developed the new block-based programming framework "DartBlock" which adopts a user interface and experience design tailored for mobile devices, alongside support for quiz integration through automatic program evaluation and difficulty adjustment.',
+      icon: 'terminal',
+      highlighted: true,
       startDate: '2021-10-01',
       endDate: '2025-09-30',
       company: 'University of Luxembourg',
@@ -49,6 +51,8 @@ export class WorkExperienceService {
       title: 'Student Job',
       description:
         'Developed a cross-platform version of the mobile quiz application "Yactul" for iOS and Android using Xamarin.Forms and Flutter.',
+      icon: 'android',
+      highlighted: false,
       startDate: '2018-03-01',
       endDate: '2021-01-01',
       company: 'University of Luxembourg',

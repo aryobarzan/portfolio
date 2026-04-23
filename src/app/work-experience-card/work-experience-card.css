@@ -1,21 +1,12 @@
-/* Chip styling uses Material theme CSS variables provided in
-	 ./src/material-theme/{light,dark}.css so chips adapt to theme. */
-.chip {
-  background-color: var(--md-sys-color-secondary-container, #e6eaf9);
-  color: var(--md-sys-color-on-secondary-container, #3e4759);
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  transition:
-    background-color 150ms ease,
-    color 150ms ease;
-}
-
-.chip:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  box-shadow: 0 0 0 3px rgba(65, 95, 145, 0.12);
+.keyword {
+  font-size: 1rem;
+  color: gray;
+  font-weight: 400;
+  font-family: 'Space-Grotesk';
+  text-align: left;
+  border: 1px solid gray;
+  padding: 2px 8px;
+  text-transform: uppercase;
 }
 
 .technology {
@@ -23,4 +14,84 @@
   padding: 4px 8px;
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
+}
+
+.experience-card {
+  display: block;
+  flex-direction: row;
+  gap: 8px;
+  padding: 32px;
+  border: 2px solid #262629;
+  background-color: #090909;
+}
+
+.experience-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: left;
+  font-family: 'Space-Grotesk';
+  text-transform: uppercase;
+}
+
+.experience-location {
+  font-size: 1rem;
+  text-align: left;
+  font-family: 'Space-Grotesk';
+  text-transform: uppercase;
+  color: gray;
+}
+
+.experience-date {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  font-family: 'Space-Grotesk';
+  text-transform: uppercase;
+  color: gray;
+}
+
+.experience-header {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  font-family: 'Space-Grotesk';
+  text-transform: uppercase;
+}
+
+.experience-text {
+  font-family: 'Space-Grotesk';
+  font-size: 1rem;
+  color: white;
+}
+
+.colored-gray-box {
+  padding: 2px 8px;
+  background-color: #262629;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Space-Grotesk';
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.colored-yellow-box {
+  padding: 2px 8px;
+  background-color: var(--traxus-primary);
+  color: black;
+  text-transform: uppercase;
+  font-family: 'Space-Grotesk';
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.short-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border-left: 3px solid #262629;
+  padding-left: 16px;
+  font-family: 'Space-Grotesk';
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
 }

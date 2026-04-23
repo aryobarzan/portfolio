@@ -303,3 +303,20 @@ h3 {
   font-family: 'Inter';
   src: url('../public/assets/fonts/Inter-VariableFont_opsz\,wght.ttf');
 }
+
+.colored-box-white {
+  padding: 4px 8px;
+  /* border-radius: 8px; */
+  background-color: white;
+  color: black;
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  width: fit-content;
+}
+
+.operator-id {
+  font-size: 0.875rem;
+  color: gray;
+  font-family: 'Space-Grotesk';
+  text-align: left;
+}

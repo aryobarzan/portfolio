@@ -97,16 +97,6 @@
   text-align: left;
 }
 
-.colored-box-white {
-  padding: 4px 8px;
-  /* border-radius: 8px; */
-  background-color: white;
-  color: black;
-  font-weight: 1000;
-  font-family: 'Space-Grotesk';
-  width: fit-content;
-}
-
 .total-access-records {
   font-size: 0.875rem;
   color: gray;
