@@ -1,12 +1,24 @@
-<section class="card">
-  <p class="card-title">{{ degree.title }}</p>
-
-  <p class="card-body">{{ degree.institution }}</p>
-  <p class="date-range">{{ degree.start }} - {{ degree.end }}</p>
-
-  @if (degree.thesis) {
-    <p class="card-body pt-2">
-      <b>Thesis: </b> <i>"{{ degree.thesis }}"</i>
-    </p>
-  }
-</section>
+<app-experience-card
+  icon="school"
+  [highlighted]="false"
+  [title]="degree.title"
+  [subtitle]="degree.institution"
+  [startDate]="degree.start"
+  [endDate]="degree.end"
+  completionTitle="CERTIFIED"
+>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="text-box">
+      <div class="flex-col">
+        <aside class="mb-2" style="color: gray">CORE_CURRICULUM</aside>
+        <aside style="color: white">{{ degree.topics.join(' // ') }}</aside>
+      </div>
+    </div>
+    <div class="text-box">
+      <div class="flex-col">
+        <aside class="mb-2" style="color: gray">THESIS_TOPIC</aside>
+        <aside>"{{ degree.thesis }}"</aside>
+      </div>
+    </div>
+  </div>
+</app-experience-card>

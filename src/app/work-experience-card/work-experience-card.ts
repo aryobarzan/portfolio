@@ -1,20 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { DatePipe } from '@angular/common';
-import { WorkExperience, isRecent, isCompleted } from '../work-experience';
+import { WorkExperience } from '../work-experience';
+import { ExperienceCard } from '../experience-card/experience-card';
+
 @Component({
   selector: 'app-work-experience-card',
-  imports: [DatePipe],
+  imports: [ExperienceCard],
   templateUrl: './work-experience-card.html',
   styleUrl: './work-experience-card.css',
 })
 export class WorkExperienceCard {
   @Input({ required: true }) workExperience!: WorkExperience;
-
-  isRecent(): boolean {
-    return isRecent(this.workExperience);
-  }
-
-  isCompleted(): boolean {
-    return isCompleted(this.workExperience);
-  }
 }

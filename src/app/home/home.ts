@@ -4,7 +4,6 @@ import { Projects } from '../projects/projects';
 import { Publications } from '../publications/publications';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { ContactBar } from '../contact-bar/contact-bar';
-import { Education } from '../education/education';
 import { ScrollObserver } from '../scroll-observer';
 import { NgClass } from '@angular/common';
 import { signal } from '@angular/core';
@@ -19,7 +18,6 @@ import { WorkExperiences } from '../work-experiences/work-experiences';
     RouterLink,
     Publications,
     ContactBar,
-    Education,
     SkillCategories,
     RouterOutlet,
     ScrollObserver,

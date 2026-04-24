@@ -20,5 +20,5 @@ export const SpokenLanguageProficiencyLabels: Record<SpokenLanguageProficiency, 
   [SpokenLanguageProficiency.B2]: 'B2',
   [SpokenLanguageProficiency.C1]: 'C1',
   [SpokenLanguageProficiency.C2]: 'C2',
-  [SpokenLanguageProficiency.F]: 'Mother Tongue',
+  [SpokenLanguageProficiency.F]: 'Native',
 };

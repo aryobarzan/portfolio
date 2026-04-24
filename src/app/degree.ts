@@ -3,5 +3,6 @@ export interface Degree {
   institution: string;
   start: string;
   end: string;
-  thesis?: string;
+  thesis: string;
+  topics: string[];
 }

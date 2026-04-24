@@ -1,0 +1,64 @@
+.experience-card {
+  display: block;
+  flex-direction: row;
+  gap: 8px;
+  padding: 32px;
+  border: 2px solid #262629;
+  background-color: #090909;
+}
+
+.experience-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: left;
+  font-family: 'Space-Grotesk';
+  text-transform: uppercase;
+}
+
+.experience-location {
+  font-size: 1rem;
+  text-align: left;
+  font-family: 'Space-Grotesk';
+  text-transform: uppercase;
+  color: gray;
+}
+
+.experience-date {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  font-family: 'Space-Grotesk';
+  text-transform: uppercase;
+  color: gray;
+}
+
+.colored-gray-box {
+  padding: 2px 8px;
+  background-color: #262629;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Space-Grotesk';
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.colored-yellow-box {
+  padding: 2px 8px;
+  background-color: var(--traxus-primary);
+  color: black;
+  text-transform: uppercase;
+  font-family: 'Space-Grotesk';
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.icon-box {
+  background-color: #262629;
+  padding: 8px;
+  width: 64px;
+  height: 64px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+}

@@ -9,28 +9,27 @@
 
 .language-title {
   text-align: start;
-  font-weight: 500;
+  font-family: 'Space-Grotesk';
+  text-transform: uppercase;
 }
 
 .proficiency-label {
   font-size: 0.875rem;
-  color: var(--md-sys-color-primary);
+  color: var(--traxus-primary);
+  font-family: 'Space-Grotesk';
+  text-transform: uppercase;
 }
 
 .progress-segment {
-  /* Equal width for each segment */
-  flex: 1;
-  height: 100%;
-  /* width: 50px; */
-  background-color: var(--md-sys-color-outline);
-  border-radius: 8px;
-  transition: background-color 0.5s ease;
+  width: 12px;
+  height: 16px;
+  background-color: gray;
 }
 
 .progress-segment[status='filled'] {
-  background-color: var(--md-sys-color-primary);
+  background-color: var(--traxus-primary);
 }
 
 .progress-segment[status='empty'] {
-  background-color: var(--md-sys-color-outline);
+  background-color: gray;
 }

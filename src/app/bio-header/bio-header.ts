@@ -2,10 +2,11 @@ import { Component, Signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map, timer } from 'rxjs';
 import { SkillCategories } from '../skill-categories/skill-categories';
+import { SpokenLanguages } from '../spoken-languages/spoken-languages';
 
 @Component({
   selector: 'app-bio-header',
-  imports: [SkillCategories],
+  imports: [SkillCategories, SpokenLanguages],
   templateUrl: './bio-header.html',
   styleUrl: './bio-header.css',
 })

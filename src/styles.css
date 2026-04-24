@@ -299,11 +299,6 @@ h3 {
   src: url('../public/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf');
 }
 
-@font-face {
-  font-family: 'Inter';
-  src: url('../public/assets/fonts/Inter-VariableFont_opsz\,wght.ttf');
-}
-
 .colored-box-white {
   padding: 4px 8px;
   /* border-radius: 8px; */

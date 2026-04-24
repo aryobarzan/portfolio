@@ -9,6 +9,12 @@
       <app-work-experience-card [workExperience]="workExperience"></app-work-experience-card>
     }
   </div>
+  <div class="flex flex-col gap-6 mt-8">
+    @for (degree of degrees; track $index) {
+      <app-degree-card [degree]="degree"></app-degree-card>
+    }
+  </div>
+
   <br />
   <br />
 </section>

@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { Degree } from '../degree';
+import { ExperienceCard } from '../experience-card/experience-card';
 
 @Component({
   selector: 'app-degree-card',
-  imports: [],
+  imports: [ExperienceCard],
   templateUrl: './degree-card.html',
   styleUrl: './degree-card.css',
 })

@@ -1,7 +1,4 @@
-<header class="mb-4">
-  <h1>Languages</h1>
-</header>
-<section class="card grid grid-cols-1 md:grid-cols-2 gap-4">
+<section class="flex flex-col gap-4">
   @for (spokenLanguage of spokenLanguages; track $index) {
     <app-spoken-language-card [spokenLanguage]="spokenLanguage"></app-spoken-language-card>
   }

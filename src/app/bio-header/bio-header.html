@@ -20,51 +20,67 @@
         >
       </p> -->
     </header>
-    <div class="system-status-box mb-6 mt-12">
-      <div class="flex justify-between align-bottom mb-8">
-        <span class="system-status-title">SYSTEM_STATUS</span
-        ><span class="small-gray-text">ID: 0x9812</span>
-      </div>
-      <div class="flex-col mb-4">
-        <div class="flex justify-between align-bottom">
-          <span class="system-status-body mb-1">CORE_STABILITY</span
-          ><span class="system-status-body" style="color: var(--traxus-primary)">92.3%</span>
+    <div class="flex gap-4">
+      <div class="system-status-box mb-6 mt-12">
+        <div class="flex justify-between align-bottom mb-8">
+          <span class="system-status-title">SYSTEM_STATUS</span
+          ><span class="small-gray-text">ID: 0x9812</span>
         </div>
-        <div class="flex gap-x-1">
-          @for (i of [].constructor(10); track $index) {
-            <aside
-              class="progress-bar-component"
-              [style]="$index < 9 ? 'background-color: var(--traxus-primary)' : ''"
-            ></aside>
-          }
+        <div class="flex-col mb-4">
+          <div class="flex justify-between align-bottom">
+            <span class="system-status-body mb-1">CORE_STABILITY</span
+            ><span class="system-status-body" style="color: var(--traxus-primary)">92.3%</span>
+          </div>
+          <div class="flex gap-x-1">
+            @for (i of [].constructor(10); track $index) {
+              <aside
+                class="progress-bar-component"
+                [style]="$index < 9 ? 'background-color: var(--traxus-primary)' : ''"
+              ></aside>
+            }
+          </div>
         </div>
-      </div>
-      <div class="flex-col">
-        <div class="flex justify-between align-bottom">
-          <span class="system-status-body mb-1">LATENCY_SYNC</span
-          ><span
-            class="small-gray-text"
-            [style]="
-              latency() < 33 ? 'color: green' : latency() < 66 ? 'color: yellow' : 'color: red'
-            "
-            >{{ latency() }}MS</span
-          >
+        <div class="flex-col">
+          <div class="flex justify-between align-bottom">
+            <span class="system-status-body mb-1">LATENCY_SYNC</span
+            ><span
+              class="small-gray-text"
+              [style]="
+                latency() < 33 ? 'color: green' : latency() < 66 ? 'color: yellow' : 'color: red'
+              "
+              >{{ latency() }}MS</span
+            >
+          </div>
+          <div class="flex gap-x-1">
+            @for (i of [].constructor(10); track $index) {
+              <aside
+                class="progress-bar-component"
+                [style]="$index < latency() / 10.0 ? 'background-color: var(--traxus-primary)' : ''"
+              ></aside>
+            }
+          </div>
         </div>
-        <div class="flex gap-x-1">
-          @for (i of [].constructor(10); track $index) {
-            <aside
-              class="progress-bar-component"
-              [style]="$index < latency() / 10.0 ? 'background-color: var(--traxus-primary)' : ''"
-            ></aside>
-          }
-        </div>
-      </div>
 
-      <hr class="mt-4 mb-4" style="color: gray; opacity: 0.5" />
-      <div class="small-gray-text" style="font-size: 0.75rem">
-        > BOOT SEQUENCE COMPLETE<br />> LOADING MODULES. . . [OK]<br />> INTERFACE STABLE
+        <hr class="mt-8 mb-4" style="color: gray; opacity: 0.5" />
+        <div class="small-gray-text" style="font-size: 0.75rem">
+          > BOOT SEQUENCE COMPLETE<br />> LOADING MODULES. . . [OK]<br />> INTERFACE STABLE
+        </div>
+      </div>
+      <div class="system-status-box mb-6 mt-12">
+        <div class="flex justify-between align-bottom mb-8">
+          <span class="system-status-title">LINGUISTIX_MATRIX</span
+          ><span class="small-gray-text">ID: 0x4204</span>
+        </div>
+        <app-languages></app-languages>
+
+        <hr class="mt-8 mb-4" style="color: gray; opacity: 0.5" />
+        <div class="small-gray-text" style="font-size: 0.75rem">
+          > COGNITIVE LEXICON LOADED<br />> SYNTACTIC MAPPING: ACTIVE<br />>
+          CROSS_DOMAIN_COMMUNICATION_ON
+        </div>
       </div>
     </div>
+
     <div class="log-box flex-col">
       <div class="flex justify-between align-bottom">
         <span class="flex items-center justify-start gap-2"
