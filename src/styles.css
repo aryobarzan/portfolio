@@ -278,6 +278,25 @@ h3 {
   color: black;
 }
 
+.traxus-text-button {
+  padding: 12px 12px;
+  color: var(--traxus-primary);
+  border: 1px solid transparent;
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.traxus-text-button:hover {
+  border: 1px solid var(--traxus-primary);
+}
+
+.traxus-text-button:active {
+  background-color: var(--traxus-primary);
+  color: black;
+}
+
 .page-header {
   font-size: 4rem;
   font-weight: 1000;

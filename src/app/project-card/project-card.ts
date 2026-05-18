@@ -1,20 +1,22 @@
-import { Component, Input } from '@angular/core';
-import { AsyncPipe } from '@angular/common';
+import { Component, input } from '@angular/core';
 import { Project, ProjectLink } from '../project';
 import { RouterLink } from '@angular/router';
-import { MarkdownPipe } from '../pipes/markdown.pipe';
+import { BeaconQLogo } from '../views/projects/beacon-q-logo/beacon-q-logo';
+import { GridlockLogo } from '../views/projects/gridlock/gridlock-logo/gridlock-logo';
+
 @Component({
   selector: 'app-project-card',
-  imports: [RouterLink, MarkdownPipe, AsyncPipe],
+  imports: [RouterLink, BeaconQLogo, GridlockLogo],
   templateUrl: './project-card.html',
   styleUrl: './project-card.css',
 })
 export class ProjectCard {
-  @Input({ required: true }) project!: Project;
+  project = input.required<Project>();
+  index = input.required<number>();
 
   getLinks(isExternal: boolean): ProjectLink[] {
-    return this.project.links
-      ? this.project.links.filter((link) => link.isExternal === isExternal)
+    return this.project().links
+      ? this.project().links!.filter((link) => link.isExternal === isExternal)
       : [];
   }
 

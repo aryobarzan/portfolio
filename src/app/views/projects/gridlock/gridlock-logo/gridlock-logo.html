@@ -1,0 +1,11 @@
+<div class="hud-box">
+  <div class="grid-container">
+    <!-- 4x4 Grid Definition (16 Cells) -->
+    @for (cell of cells; track cell.id) {
+      <div class="seat-cell" [style.--row]="cell.row" [style.--col]="cell.col"></div>
+    }
+
+    <!-- The Horizontal Laser Sweep Line -->
+    <div class="scanner-beam"></div>
+  </div>
+</div>

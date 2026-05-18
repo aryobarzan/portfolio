@@ -1,8 +1,12 @@
 export interface Project {
   title: string;
+  id: string;
   description: string;
+  shortDescription: string;
+  detailRoute: string;
   year: number;
   technologies?: ProjectTechnology[];
+  keywords: string[];
   links?: ProjectLink[];
   iconURL?: string;
 }

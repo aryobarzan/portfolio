@@ -1,18 +1,49 @@
 <article
-  class="card h-full flex flex-col p-4 text-left"
+  class="project-card flex flex-col text-left"
   role="article"
-  aria-label="Project called {{ project.title }}"
+  aria-label="Project called {{ project().title }}"
 >
-  <div class="flex-container space-x-2">
+  <div class="project-card-top">
+    <aside>NODE_0{{ index() + 1 }}</aside>
+    <aside style="color: gray">ID: {{ project().id }}</aside>
+  </div>
+  <div class="project-card-middle">
+    <app-gridlock-logo class="logo"></app-gridlock-logo>
+    <!-- <app-beacon-q-logo></app-beacon-q-logo> -->
+    <!-- <img class="logo" src="{{ project().iconURL }}" alt="{{ project().title }} logo" /> -->
+  </div>
+  <div class="project-card-bottom">
+    <aside class="project-card-title mb-2">{{ project().title }}</aside>
+    <aside class="project-card-short-description mb-6">{{ project().shortDescription }}</aside>
+    <div class="flex justify-between gap-2 items-center">
+      <aside class="keyword-list">
+        @for (keyword of project().keywords; track $index) {
+          <span class="keyword">{{ keyword }}</span>
+        }
+      </aside>
+      @if (project().detailRoute) {
+        <button
+          class="traxus-text-button gap-2 flex items-center align-middle"
+          [routerLink]="project().detailRoute"
+        >
+          <span>ACCESS_NODE</span>
+          <span class="material-symbols-outlined link-button-icon" style="top: 0">
+            arrow_right_alt
+          </span>
+        </button>
+      }
+    </div>
+  </div>
+  <!-- <div class="flex-container space-x-2">
     <aside class="left-column">
       <img class="logo" src="{{ project.iconURL }}" alt="{{ project.title }} logo" />
     </aside>
     <aside class="right-column">
       <header>
         <h3>{{ project.title }}</h3>
-      </header>
-      <!-- The 'markdown' pipe returns a Promise<SafeHtml>, which we have to pipe to 'async' to finally include the SafeHtml within [innerHTML] -->
-      <p class="card-body" [innerHTML]="project.description | markdown | async"></p>
+      </header> -->
+  <!-- The 'markdown' pipe returns a Promise<SafeHtml>, which we have to pipe to 'async' to finally include the SafeHtml within [innerHTML] -->
+  <!-- <p class="card-body" [innerHTML]="project.description | markdown | async"></p>
       @if (project.technologies && project.technologies.length > 1) {
         <section class="technology-grid pt-2">
           @for (technology of project.technologies; track $index) {
@@ -50,5 +81,5 @@
         }
       }
     </section>
-  }
+  } -->
 </article>

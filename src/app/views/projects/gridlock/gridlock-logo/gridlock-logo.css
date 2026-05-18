@@ -1,0 +1,92 @@
+:host {
+  display: inline-block;
+}
+
+.hud-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 0, 0.15);
+}
+
+.grid-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 14px);
+  grid-template-rows: repeat(4, 14px);
+  gap: 6px;
+  padding: 4px;
+  overflow: hidden;
+}
+
+/* Individual Seat Unit Layout */
+.seat-cell {
+  box-sizing: border-box;
+  border: 1.5px solid rgba(0, 255, 0, 0.25);
+  border-radius: 2px;
+  background: transparent;
+  will-change: background, border-color, box-shadow;
+
+  /* Animation math ties cell updates directly to the row index */
+  /* Syncs precisely with the 2.5s duration of the vertical scanner */
+  animation: seatVerify 2.5s infinite ease-in-out;
+  animation-delay: calc(var(--row) * 0.35s + var(--col) * 0.05s);
+}
+
+/* The Moving Laser Beam Layer */
+.scanner-beam {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #00ff00;
+  box-shadow:
+    0 0 8px #00ff00,
+    0 0 16px rgba(0, 255, 0, 0.6);
+  will-change: transform, opacity;
+  animation: laserSweep 2.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scanner Motion Mechanics */
+@keyframes laserSweep {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  5%,
+  85% {
+    opacity: 1;
+  }
+  90%,
+  100% {
+    transform: translateY(84px);
+    opacity: 0;
+  }
+}
+
+/* Cell State Logic triggered as beam crosses its coordinates */
+@keyframes seatVerify {
+  0%,
+  100% {
+    background: transparent;
+    border-color: rgba(0, 255, 0, 0.25);
+    box-shadow: none;
+  }
+  /* Beam Hits the Cell: Instant transition to full glow */
+  15% {
+    background: rgba(0, 255, 0, 0.7);
+    border-color: #00ff00;
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+  }
+  /* System Confirms Seat: Settles down to steady occupied grid status */
+  30%,
+  80% {
+    background: rgba(0, 255, 0, 0.2);
+    border-color: #00ff00;
+    box-shadow: inset 0 0 3px rgba(0, 255, 0, 0.4);
+  }
+}

@@ -1,0 +1,6 @@
+<div class="signal-container" [style.--size]="size + 'px'">
+  @for (wave of [0, 1, 2]; track $index) {
+    <div class="wave" [style.animation-delay]="$index * 0.4 + 's'"></div>
+  }
+  <div class="core-dot"></div>
+</div>

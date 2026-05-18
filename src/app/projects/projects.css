@@ -1,0 +1,15 @@
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Space-Grotesk';
+  color: var(--traxus-primary);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-family: 'Space-Grotesk';
+  color: gray;
+  text-align: left;
+}

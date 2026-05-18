@@ -1,8 +1,20 @@
 <!-- Section with id "experience" (used for navbar on home page) -->
 <section class="container pt-8" id="experience">
-  <div class="colored-box-white">CLASSIFIED</div>
-  <div class="title mt-4">OPERATIONAL_HISTORY</div>
-  <div class="subtitle mt-2">ARCHIVE_ID: 201-WRK-01 // CLEARANCE: LEVEL_03</div>
+  <div class="flex justify-between">
+    <div class="flex flex-col">
+      <div class="colored-box-white">CLASSIFIED</div>
+      <div class="title mt-4">OPERATIONAL_HISTORY</div>
+      <div class="subtitle mt-2">ARCHIVE_ID: 201-WRK-01 // 5 ENTRIES FOUND</div>
+    </div>
+    <div class="flex flex-col gap-2 items-start">
+      <div class="flex gap-2">
+        <div class="decorative-striped-box"></div>
+        <div class="decorative-number-box">3</div>
+      </div>
+      <div class="decorative-text">CLEARANCE_LEVEL</div>
+    </div>
+  </div>
+
   <hr class="mt-10 mb-10" style="color: gray; opacity: 0.5" />
   <div class="flex flex-col gap-6">
     @for (workExperience of workExperiences; track $index) {

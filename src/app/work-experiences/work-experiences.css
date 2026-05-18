@@ -13,3 +13,42 @@
   color: gray;
   text-align: left;
 }
+
+.decorative-striped-box {
+  width: 300px;
+  height: 100px;
+  /* repeating-linear-gradient:
+     135deg            — diagonal direction (bottom-left to top-right)
+     transparent 0–8px — gap between stripes (transparent band, 8px wide)
+     white 8px–16px    — the stripe itself (solid white band, 8px wide)
+     The 16px total repeat unit tiles across the element. */
+  background: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 8px,
+    white 8px,
+    white 16px
+  );
+}
+
+.decorative-number-box {
+  width: 50px;
+  height: 100px;
+  background-color: white;
+  color: black;
+  font-family: 'Space-Grotesk';
+  font-size: 3.5rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.decorative-text {
+  font-size: 1rem;
+  font-family: 'Space-Grotesk';
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+}

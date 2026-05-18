@@ -3,7 +3,7 @@
 <!-- <header class="mb-4 mt-8">
     <div class="page-header-block"><aside class="page-header">Skills</aside></div>
   </header> -->
-<section class="category-grid">
+<section class="category-grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
   @for (skillCategory of skillCategories; track $index) {
     <app-skill-category-card
       [index]="$index"

@@ -9,16 +9,16 @@ export class DegreeService {
     {
       title: 'PhD in Computer Science',
       institution: 'University of Luxembourg',
-      start: '2021',
-      end: '2025',
+      start: '2021-10-01',
+      end: '2025-09-01',
       thesis: 'BEACON Q: Encouraging Regular Self-Testing via a Personalized and Gamified Quiz App',
       topics: ['Personalized learning', 'Gamification', 'Testing Effect'],
     },
     {
       title: 'Master in Information and Computer Science',
       institution: 'University of Luxembourg',
-      start: '2019',
-      end: '2021',
+      start: '2019-09-16',
+      end: '2021-09-01',
       thesis: 'Reimagining semantic search through word embeddings and machine learning',
       topics: [
         'Machine Learning',
@@ -30,8 +30,8 @@ export class DegreeService {
     {
       title: 'Bachelor in Computer Science (prof.)',
       institution: 'University of Luxembourg',
-      start: '2016',
-      end: '2019',
+      start: '2016-09-19',
+      end: '2019-07-01',
       thesis: 'Enhanced digital note-taking through machine learning and semantic annotation',
       topics: [
         'IT Security',
