@@ -1,12 +1,11 @@
 import { Component, input } from '@angular/core';
 import { Project, ProjectLink } from '../project';
 import { RouterLink } from '@angular/router';
-import { BeaconQLogo } from '../views/projects/beacon-q-logo/beacon-q-logo';
-import { GridlockLogo } from '../views/projects/gridlock/gridlock-logo/gridlock-logo';
+import { NgComponentOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-project-card',
-  imports: [RouterLink, BeaconQLogo, GridlockLogo],
+  imports: [RouterLink, NgComponentOutlet],
   templateUrl: './project-card.html',
   styleUrl: './project-card.css',
 })

@@ -1,0 +1,30 @@
+.project-technologies-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 400px;
+  max-width: 500px;
+  align-items: flex-start;
+  /* margin-left: auto; */
+}
+.project-technologies-title {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Space-Grotesk';
+  color: var(--traxus-primary);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.project-technology-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: 'Space-Grotesk';
+  color: var(--traxus-gray);
+  text-align: left;
+}
+
+.project-check-circle {
+  font-size: 1.25rem;
+  color: var(--traxus-primary);
+}

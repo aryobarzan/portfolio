@@ -70,14 +70,14 @@ export class SkillService {
           level: 'high',
         },
         {
-          name: 'Firebase',
-          url: 'https://firebase.google.com/',
+          name: 'FastAPI',
+          url: 'https://fastapi.tiangolo.com/',
           level: 'med',
         },
         {
-          name: 'FastAPI',
-          url: 'https://fastapi.tiangolo.com/',
-          level: 'low',
+          name: 'Firebase',
+          url: 'https://firebase.google.com/',
+          level: 'med',
         },
       ],
     },
@@ -146,6 +146,11 @@ export class SkillService {
           level: 'high',
         },
         {
+          name: 'Docker',
+          url: 'https://www.docker.com/',
+          level: 'med',
+        },
+        {
           name: 'GitHub Actions',
           url: 'https://docs.github.com/en/actions',
           level: 'low',
@@ -153,11 +158,6 @@ export class SkillService {
         {
           name: 'PM2',
           url: 'https://pm2.io/',
-          level: 'low',
-        },
-        {
-          name: 'Docker',
-          url: 'https://www.docker.com/',
           level: 'low',
         },
       ],

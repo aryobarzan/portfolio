@@ -1,0 +1,9 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    @for (item of items; track $index) {
+      <a [routerLink]="item.route" routerLinkActive="active">
+        <div class="navbar-item">{{ item.label }}</div>
+      </a>
+    }
+  </div>
+</nav>

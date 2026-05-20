@@ -1,0 +1,80 @@
+.project-specifications-card {
+  display: block;
+  flex-direction: row;
+  border: 2px solid #262629;
+  background-color: #090909;
+  font-family: 'Space-Grotesk';
+  min-width: 400px;
+  max-width: 500px;
+}
+
+.project-specifications-card-middle {
+  display: block;
+  justify-items: center;
+  background-color: black;
+  padding: 32px;
+  background: repeating-linear-gradient(45deg, #090909, #090909 4px, #111113 4px, #111113 8px);
+  border-bottom: 2px solid #262629;
+}
+
+.project-specifications-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 16px;
+  /* border-bottom: 2px solid #262629; */
+  background-color: black;
+  gap: 2px;
+}
+
+.specification-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  align-items: end;
+}
+
+.specification-key {
+  font-size: 0.825rem;
+  font-weight: 400;
+  font-family: 'Space-Grotesk';
+  color: gray;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.specification-value {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Space-Grotesk';
+  color: var(--traxus-primary);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  /* Ensure the main portion of the card takes up the height of the container. This helps to have the links row be pushed to the bottom of the card. */
+  flex: 1;
+}
+.left-column {
+  /* The left column should only take up the width required by its content. */
+  flex: 0 0 auto;
+}
+
+.right-column {
+  /* The right column takes up whatever width remains. */
+  flex: 1;
+}
+
+.logo {
+  max-height: 128px;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+hr {
+  margin-top: 8px;
+}

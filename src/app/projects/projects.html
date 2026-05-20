@@ -2,14 +2,14 @@
 <section class="container pt-8" id="projects">
   <div class="colored-box-white">CLASSIFIED</div>
   <div class="title mt-4">PROJECT_MATRIX</div>
-  <div class="subtitle mt-2">INDEXING COMPLETED // 4 ENTRIES FOUND</div>
+  <div class="subtitle mt-2">INDEXING COMPLETED // {{ projects.length }} ENTRIES FOUND</div>
   <hr class="mt-10 mb-10" style="color: gray; opacity: 0.5" />
   <section class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     @for (project of projects; track $index) {
       <app-project-card
         [project]="project"
         [index]="$index"
-        class="animate-fade-in-up block h-full"
+        class="animate-fade-in-up"
         [style]="getAnimationStyle($index)"
       >
       </app-project-card>

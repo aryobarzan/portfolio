@@ -1,0 +1,9 @@
+<div class="project-technologies-container">
+  <div class="project-technologies-title mb-2">TECHNOLOGIES_USED</div>
+  @for (technology of technologies(); track $index) {
+    <div class="flex gap-2">
+      <span class="material-symbols-outlined project-check-circle">check_circle</span>
+      <span class="technology-name">{{ technology.name }}</span>
+    </div>
+  }
+</div>

@@ -19,6 +19,8 @@ html {
   scroll-behavior: smooth;
   /* Top padding due to the fixed nav bar on the home page */
   scroll-padding-top: 6rem;
+  /* Always reserve scrollbar space to prevent layout shift on navigation */
+  scrollbar-gutter: stable;
 }
 
 h1 {
@@ -138,7 +140,7 @@ h3 {
 
 /* Color for text with a hyperlinked attached to it. */
 .link-text {
-  color: var(--md-sys-color-primary);
+  color: var(--traxus-primary);
 }
 
 .link-text:hover {
@@ -147,7 +149,7 @@ h3 {
 
 /* Color to use when a hyperlink has previously been visited by the use. */
 .link-text:visited {
-  color: var(--md-sys-color-tertiary);
+  color: var(--traxus-white);
 }
 
 .container {
@@ -222,7 +224,13 @@ h3 {
 :root,
 .core-theme {
   --traxus-primary: #d0ff00;
+  --traxus-on-primary: black;
   --traxus-background: #0e0e0e;
+  --traxus-on-background: white;
+  --traxus-gray: #23242d;
+  --traxus-on-gray: #bbbcc8;
+  --traxus-white: #dddce0;
+  --traxus-on-white: black;
 }
 
 .colored-box {

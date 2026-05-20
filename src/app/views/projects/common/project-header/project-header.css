@@ -1,0 +1,56 @@
+p {
+  text-align: left;
+}
+
+.project-header-card {
+  display: block;
+  flex-direction: row;
+  gap: 8px;
+  padding: 32px;
+  /* border: 2px solid #262629; */
+  background-color: #090909;
+}
+
+.project-header-card-striped {
+  display: block;
+  flex-direction: row;
+  gap: 8px;
+  padding: 32px;
+  /* border: 2px solid #262629; */
+  background: repeating-linear-gradient(0deg, #090909, #090909 2px, #111113 2px, #111113 4px);
+}
+
+.colored-box-traxus-primary {
+  padding: 4px 8px;
+  /* border-radius: 8px; */
+  background-color: var(--traxus-primary);
+  color: var(--traxus-on-primary);
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  width: fit-content;
+}
+
+.title {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 500;
+  font-family: 'Space-Grotesk';
+  color: var(--traxus-primary);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.id {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Space-Grotesk';
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Space-Grotesk';
+  text-align: left;
+}

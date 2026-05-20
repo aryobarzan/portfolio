@@ -1,0 +1,43 @@
+/* nav-bar.component.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 1200px;
+  background-color: transparent;
+  display: flex;
+  z-index: 1000;
+}
+
+.navbar-container {
+  padding: 8px 16px;
+  gap: 16px;
+  display: flex;
+}
+
+.navbar-item {
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: var(--traxus-gray);
+  color: var(--traxus-on-gray);
+  padding: 6px 12px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+.navbar-item:hover {
+  background-color: #555;
+}
+
+.active .navbar-item {
+  background-color: var(--traxus-white);
+  color: var(--traxus-on-white);
+}
+
+/* .active:hover .navbar-item {
+  background-color: var(--traxus-gray);
+  color: var(--traxus-on-gray);
+} */

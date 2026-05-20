@@ -1,0 +1,19 @@
+<article
+  class="project-specifications-card flex flex-col text-left"
+  role="article"
+  aria-label="Project specifications"
+>
+  <div class="project-specifications-card-middle">
+    @if (icon() != null) {
+      <img class="logo" src="{{ icon() }}" alt="project logo" />
+    }
+  </div>
+  <div class="project-specifications-card-bottom">
+    @for (specification of specifications(); track $index) {
+      <aside class="specification-row">
+        <span class="specification-key">{{ specification.key }}</span>
+        <span class="specification-value">{{ specification.value }}</span>
+      </aside>
+    }
+  </div>
+</article>

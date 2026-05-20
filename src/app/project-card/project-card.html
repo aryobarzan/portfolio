@@ -8,9 +8,11 @@
     <aside style="color: gray">ID: {{ project().id }}</aside>
   </div>
   <div class="project-card-middle">
-    <app-gridlock-logo class="logo"></app-gridlock-logo>
-    <!-- <app-beacon-q-logo></app-beacon-q-logo> -->
-    <!-- <img class="logo" src="{{ project().iconURL }}" alt="{{ project().title }} logo" /> -->
+    @if (project().logoComponent) {
+      <div class="logo"><ng-container *ngComponentOutlet="project().logoComponent!" /></div>
+    } @else if (project().iconURL) {
+      <img class="logo" [src]="project().iconURL" [alt]="project().title + ' logo'" />
+    }
   </div>
   <div class="project-card-bottom">
     <aside class="project-card-title mb-2">{{ project().title }}</aside>

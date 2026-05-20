@@ -1,0 +1,15 @@
+<section class="project-header-card-striped">
+  <div class="flex justify-between gap-2 mb-2">
+    <div class="flex gap-2 items-center">
+      <span class="colored-box-traxus-primary">CLASSIFIED</span>
+      <span class="id">LEVEL_04_CLEARANCE</span>
+    </div>
+
+    <div class="id">{{ id() }}</div>
+  </div>
+  <div class="title mb-4">{{ title() }}</div>
+  <div class="page-header-block">
+    <!-- we use [innerHTML] to bind SafeHtml -->
+    <div class="description" [innerHTML]="description() | markdown | async"></div>
+  </div>
+</section>

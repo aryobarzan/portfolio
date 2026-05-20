@@ -1,4 +1,7 @@
 <!-- Do not place <app-home></app-home> here!
  Otherwise, routing won't work. -->
-<div class="position-relative"><app-sidebar></app-sidebar></div>
-<div class="content-container"><router-outlet></router-outlet></div>
+<!-- <div class="position-relative"><app-sidebar></app-sidebar></div> -->
+<app-navigation-bar></app-navigation-bar>
+<div style="margin-top: 60px">
+  <div class="content-container"><router-outlet></router-outlet></div>
+</div>

@@ -1,9 +1,15 @@
-.project-card {
+:host {
   display: block;
-  flex-direction: row;
+  height: 100%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
   border: 2px solid #262629;
   background-color: #090909;
   font-family: 'Space-Grotesk';
+  height: 100%;
 }
 
 .project-card-top {
@@ -18,8 +24,9 @@
 }
 
 .project-card-middle {
-  display: block;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   padding: 64px;
   background: repeating-linear-gradient(45deg, #090909, #090909 4px, #111113 4px, #111113 8px);
@@ -30,6 +37,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  flex: 1; /* make the bottom part take up the remaining space */
   padding: 32px;
   /* border-bottom: 2px solid #262629; */
   background-color: black;
@@ -88,9 +96,13 @@
 }
 
 .logo {
+  min-height: 128px;
   max-height: 128px;
   object-fit: contain;
   border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 hr {

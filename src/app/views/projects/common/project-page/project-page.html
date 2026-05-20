@@ -1,0 +1,23 @@
+<section class="container pt-8" id="project">
+  <header class="mb-4 text-left">
+    <app-project-header
+      [id]="project().id"
+      [title]="project().title"
+      [description]="project().description"
+    ></app-project-header>
+  </header>
+  <div class="flex flex-col gap-4 mt-8">
+    <div class="flex gap-4 justify-between">
+      <app-project-technologies
+        [technologies]="project().technologies || []"
+      ></app-project-technologies>
+      <app-project-specifications
+        [specifications]="project().specifications"
+        [icon]="project().iconURL"
+      ></app-project-specifications>
+      <app-project-links [links]="project().links || []"></app-project-links>
+    </div>
+  </div>
+  <br />
+  <br />
+</section>
