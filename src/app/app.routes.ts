@@ -9,6 +9,7 @@ import { YactulPage } from './views/projects/yactul/yactul-page/yactul-page';
 import { SketchnotingPage } from './views/projects/sketchnoting/sketchnoting-page/sketchnoting-page';
 import { DartblockPage } from './views/projects/dartblock/dartblock-page/dartblock-page';
 import { GridlockPage } from './views/projects/gridlock/gridlock-page/gridlock-page';
+import { GridLockPrivacyPolicyPage } from './views/projects/gridlock/privacy-policy/privacy-policy';
 
 export const routes: Routes = [
   {
@@ -29,4 +30,8 @@ export const routes: Routes = [
   { path: 'projects/dartblock', component: DartblockPage },
   { path: 'projects/sketchnoting', component: SketchnotingPage },
   { path: 'projects/yactul', component: YactulPage },
+  {
+    path: 'gridlock/privacy-policy',
+    component: GridLockPrivacyPolicyPage,
+  },
 ];
