@@ -11,17 +11,10 @@
           <span class="pl-4 operator-id">OPERATOR_ID: LUX-96</span>
         </div>
       </div>
-      <!-- <div class="colored-box">FULL-STACK DEVELOPER</div> -->
-      <!-- <p class="job-email">
-        <i
-          ><a href="mailto:aryobarzan.atashpendar@gmail.com" target="_blank"
-            >aryobarzan.atashpendar@gmail.com</a
-          ></i
-        >
-      </p> -->
     </header>
-    <div class="flex gap-4">
-      <div class="system-status-box mb-6 mt-12">
+    <!-- we use inline-grid to ensure the grid container only takes up the width its content requires, with its columns placed side-by-side -->
+    <div class="inline-grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="system-status-box sm:mt-4 md:mt-12">
         <div class="flex justify-between align-bottom mb-8">
           <span class="system-status-title">SYSTEM_STATUS</span
           ><span class="small-gray-text">ID: 0x9812</span>
@@ -66,7 +59,7 @@
           > BOOT SEQUENCE COMPLETE<br />> LOADING MODULES. . . [OK]<br />> INTERFACE STABLE
         </div>
       </div>
-      <div class="system-status-box mb-6 mt-12">
+      <div class="system-status-box md:mt-12">
         <div class="flex justify-between align-bottom mb-8">
           <span class="system-status-title">LINGUISTIX_MATRIX</span
           ><span class="small-gray-text">ID: 0x4204</span>
@@ -81,7 +74,7 @@
       </div>
     </div>
 
-    <div class="log-box flex-col">
+    <div class="log-box flex-col mt-6">
       <div class="flex justify-between align-bottom">
         <span class="flex items-center justify-start gap-2"
           ><aside class="circle"></aside>

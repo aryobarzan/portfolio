@@ -6,11 +6,14 @@
       [description]="project().description"
     ></app-project-header>
   </header>
-  <div class="flex flex-col gap-4 mt-8">
-    <div class="flex gap-4 justify-between">
-      <app-project-technologies
-        [technologies]="project().technologies || []"
-      ></app-project-technologies>
+  <!-- On smaller devices, stack vertically in a column layout. 
+   On larger (lg:) devices, make it a row instead. -->
+  <div class="flex flex-col lg:flex-row gap-4 mt-8 justify-between">
+    <app-project-technologies
+      [technologies]="project().technologies || []"
+    ></app-project-technologies>
+    <!-- ml-auto ensures they are both pushed to the right when in a single row. -->
+    <div class="flex flex-col lg:flex-row gap-4 lg:ml-auto">
       <app-project-specifications
         [specifications]="project().specifications"
         [icon]="project().iconURL"

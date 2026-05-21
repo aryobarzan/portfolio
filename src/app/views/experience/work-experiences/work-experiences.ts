@@ -5,6 +5,7 @@ import { DegreeCard } from '../degree-card/degree-card';
 import { WorkExperienceCard } from '../work-experience-card/work-experience-card';
 import { DegreeService } from '../../../core/services/degree/degree.service';
 import { Degree } from '../../../core/services/degree/degree';
+
 @Component({
   selector: 'app-work-experiences',
   imports: [WorkExperienceCard, DegreeCard],

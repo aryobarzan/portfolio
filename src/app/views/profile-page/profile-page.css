@@ -21,9 +21,12 @@
   color: var(--md-sys-color-secondary);
   text-align: left;
 }
-
 .name {
-  font-size: 5rem;
+  /* we use clamp for a responsive font size:
+  - minimum: 2rem
+  - maximum: 5rem
+  - default: 10vw (10% of the viewport width, i.e., of the available screen/browser width */
+  font-size: clamp(2rem, 10vw, 5rem);
   font-weight: 800;
   font-family: 'Space-Grotesk';
   color: white;
