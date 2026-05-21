@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./privacy-policy.css'],
 })
 export class GridLockPrivacyPolicyPage implements OnInit {
-  appName: string = 'Gridlock';
+  appName: string = 'GridLock';
   lastUpdated: string = 'May 18, 2026';
   contactEmail: string = 'aryobarzan.atashpendar@gmail.com';
 
