@@ -5,12 +5,12 @@ import { SkillCategories } from '../skills/skill-categories/skill-categories';
 import { SpokenLanguagesContainer } from '../spoken-languages/spoken-languages-container/spoken-languages-container';
 
 @Component({
-  selector: 'app-bio-header',
+  selector: 'app-profile-page',
   imports: [SkillCategories, SpokenLanguagesContainer],
-  templateUrl: './bio-header.html',
-  styleUrl: './bio-header.css',
+  templateUrl: './profile-page.html',
+  styleUrl: './profile-page.css',
 })
-export class BioHeader {
+export class ProfilePage {
   // Simulated latency signal that updates every 2 seconds with a random value between 0 and 100.
   // - timer(0, 2000) creates an observable that emits a value immediately and then every 2 seconds
   // - pipe(...) allows us to transform the emitted values using operators

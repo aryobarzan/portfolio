@@ -22,7 +22,7 @@
 
 .traxus-button:hover {
   background-position: left center;
-  color: var(--traxus-primary);
+  color: var(--traxus-primary-deep);
 }
 
 /* --- Outlined variant --- */

@@ -2,7 +2,7 @@
   height: 100%;
   border: 2px solid #252528;
   background-color: #09090b;
-  border-radius: 0px;
+  border-radius: 4px;
   padding: 32px;
 }
 
@@ -64,6 +64,7 @@ hr {
   font-weight: 600;
   color: gray;
   text-align: left;
+  font-family: 'Space-Grotesk';
   text-transform: uppercase;
 }
 
@@ -71,6 +72,7 @@ hr {
   font-size: 1rem;
   font-weight: 600;
   color: var(--traxus-primary);
+  font-family: 'Space-Grotesk';
   text-align: left;
   text-transform: uppercase;
 }
@@ -79,6 +81,7 @@ hr {
   font-size: 1.25rem;
   font-weight: 600;
   color: white;
+  font-family: 'Space-Grotesk';
   text-align: left;
   text-transform: uppercase;
 }
@@ -87,6 +90,7 @@ hr {
   font-size: 0.75rem;
   font-weight: 400;
   color: gray;
+  font-family: 'Space-Grotesk';
   text-align: left;
   text-transform: uppercase;
 }

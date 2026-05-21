@@ -20,11 +20,11 @@
   </div>
 
   <!-- DOI and link buttons -->
-  <div class="flex justify-between">
+  <div class="flex justify-between mt-4">
     <!-- DOI -->
     <div class="doi mt-8">DOI: {{ publication().doi }}</div>
     <!-- links -->
-    <section class="link-button-grid mt-3 gap-2">
+    <section class="link-button-grid gap-2">
       @for (link of publication().links; track $index) {
         <a href="{{ link.url }}" target="_blank">
           <button [class]="link.type === 'DOI' ? 'traxus-outlined-button' : 'traxus-button'">

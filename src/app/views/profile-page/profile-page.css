@@ -28,12 +28,13 @@
   font-family: 'Space-Grotesk';
   color: white;
   text-align: left;
+  line-height: 0.65;
 }
 
 .name.last {
   color: var(--traxus-primary);
   /* We want the last name to be vertically closer to the first name */
-  margin-top: -1.5rem;
+  /* margin-top: -4.25rem; */
 }
 
 .link-button-grid {
@@ -52,6 +53,7 @@
 .log-box {
   padding: 32px;
   border: 2px solid var(--traxus-primary);
+  border-radius: 4px;
   background-color: #09090b;
   font-weight: 400;
   color: #969699;
@@ -100,6 +102,7 @@
   padding: 32px;
   min-width: 350px;
   border: 2px solid #252528;
+  border-radius: 4px;
   background-color: black;
   font-weight: 400;
   color: #969699;
@@ -129,10 +132,10 @@
 }
 
 .skills-title {
-  font-size: 4rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  font-style: italic;
-  color: white;
   font-family: 'Space-Grotesk';
-  text-align: center;
+  color: var(--traxus-primary);
+  font-family: 'Space-Grotesk';
+  text-align: left;
 }

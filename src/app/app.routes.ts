@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Dartblock } from './views/projects/dartblock/dartblock-demo/dartblock';
 import { WorkExperiences } from './views/experience/work-experiences/work-experiences';
-import { BioHeader } from './views/bio-header/bio-header';
+import { ProfilePage } from './views/profile-page/profile-page';
 import { YactulPage } from './views/projects/yactul/yactul-page/yactul-page';
 import { SketchnotingPage } from './views/projects/sketchnoting/sketchnoting-page/sketchnoting-page';
 import { DartblockPage } from './views/projects/dartblock/dartblock-page/dartblock-page';
@@ -14,13 +14,13 @@ import { ProjectsPage } from './views/projects/projects-page/projects-page';
 export const routes: Routes = [
   {
     path: '',
-    component: BioHeader,
+    component: ProfilePage,
   },
   {
     path: 'dartblock',
     component: Dartblock,
   },
-  { path: 'home', component: BioHeader },
+  { path: 'home', component: ProfilePage },
   { path: 'projects', component: ProjectsPage },
   { path: 'experience', component: WorkExperiences },
   { path: 'publications', component: PublicationsPage },

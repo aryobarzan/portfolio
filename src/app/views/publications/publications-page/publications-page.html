@@ -2,7 +2,7 @@
 <section class="container pt-8" id="publications">
   <header class="mb-4 text-left">
     <div class="page-header-block">
-      <div class="title">ARCHIVE_RECORDS</div>
+      <div class="title mb-8">ARCHIVE_RECORDS</div>
       <div>
         <span class="colored-box-white">CLASSIFIED</span>
         <span class="pl-4 total-access-records">TOTAL_RECORDS: 7</span>
@@ -24,7 +24,7 @@
       }
     </section>
   }
-  <div class="flex flex-col gap-4 mt-8">
+  <div class="flex flex-col gap-4 mt-4">
     @for (publication of getFilteredPublications(); track $index) {
       <!-- animate.enter and animate.leave help to animate when publication cards are shown/hidden whenever the user changes the active filters. -->
       <app-publication-card

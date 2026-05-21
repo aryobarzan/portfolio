@@ -1,7 +1,7 @@
 .category-grid {
   display: grid;
   align-items: stretch;
-  gap: 8px;
+  gap: 16px;
 }
 .container {
   margin: auto auto;

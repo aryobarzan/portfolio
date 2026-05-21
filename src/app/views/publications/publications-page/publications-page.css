@@ -9,50 +9,46 @@
 }
 
 .project-filter {
+  font-family: 'Space-Grotesk';
   padding: 4px 8px;
   cursor: pointer;
   user-select: none;
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
-    border-radius 0.3s ease,
     border-color 0.3s ease,
     font-weight 0.3s ease;
 }
 
 .project-filter-inactive {
-  border-radius: 8px;
-  border: 1px var(--md-sys-color-outline) solid;
+  border: 1px var(--border-card-soft) solid;
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
 }
 .project-filter-inactive:hover {
-  background-color: var(--md-sys-color-surface-variant);
-  color: var(--md-sys-color-on-surface-variant);
+  border: 1px var(--traxus-primary) solid;
 }
 
 .project-filter-inactive:active {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
+  background-color: var(--traxus-primary-deep);
+  color: var(--traxus-on-primary);
 }
 
 .project-filter-active {
-  border-radius: 16px;
   border: 1px var(--md-sys-color-on-primary) solid;
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
+  background-color: var(--traxus-primary);
+  color: var(--traxus-on-primary);
   font-weight: 500;
 }
 
 .project-filter-active:hover {
-  background-color: var(--md-sys-color-inverse-primary);
-  color: var(--md-sys-color-on-inverse-primary);
+  border: 1px var(--traxus-on-primary) solid;
+  background-color: var(--traxus-primary-deep);
 }
 
 .project-filter-active:active {
-  border: 1px var(--md-sys-color-outline) solid;
-  background-color: var(--md-sys-color-surface);
-  color: var(--md-sys-color-on-surface);
+  background-color: var(--traxus-primary);
+  color: var(--traxus-on-primary);
 }
 
 @keyframes fadeInSlideDown {
@@ -95,6 +91,7 @@
   font-family: 'Space-Grotesk';
   color: white;
   text-align: left;
+  line-height: 0.9;
 }
 
 .total-access-records {

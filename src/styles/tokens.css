@@ -5,7 +5,8 @@
 :root,
 .core-theme {
   /* Brand Colors */
-  --traxus-primary: #d0ff00;
+  --traxus-primary: #c5ff3a;
+  --traxus-primary-deep: #b6e645;
   --traxus-on-primary: black;
 
   /* Background & Surface */
@@ -17,4 +18,82 @@
   --traxus-on-gray: #bbbcc8;
   --traxus-white: #dddce0;
   --traxus-on-white: black;
+
+  --tier-pack: #d622d6; /* magenta — Pack / Premium */
+  --tier-deluxe: #2d3eff; /* electric blue — Deluxe */
+  --tier-owned: var(--traxus-primary);
+  --tier-locked: #e63a3a; /* red — Locked / No Contract */
+
+  /* -----------------------------------------------------------------------
+     SURFACES — cards float on near-black with subtle border separation.
+     Two card grounds (#090909 flat, #09090b log-box) are used interchangeably.
+     ----------------------------------------------------------------------- */
+  --surface-page: #0e0e0e;
+  --surface-card: #090909; /* flat card ground */
+  --surface-card-alt: #09090b; /* log-box ground (slightly cooler) */
+  --surface-stripe-a: #090909; /* striped/scanline gradient stop A */
+  --surface-stripe-b: #111113; /* striped/scanline gradient stop B */
+  --border-card: #262629; /* 2px hairline border on every card */
+  --border-card-soft: #252528; /* status panels (a hair softer) */
+
+  /* -----------------------------------------------------------------------
+     FOREGROUND TIERS — never use raw "gray". These are the tiers:
+     ----------------------------------------------------------------------- */
+  --fg-1: #ffffff; /* page title, name */
+  --fg-2: #dddce0; /* secondary heading, body emphasis */
+  --fg-3: #a8a8ab; /* normal body text */
+  --fg-4: #969699; /* dim status / log body */
+  --fg-5: #808080; /* "gray" — small label, ID */
+  --fg-dim: rgba(255, 255, 255, 0.5);
+  --fg-faint: rgba(255, 255, 255, 0.1);
+
+  /* -----------------------------------------------------------------------
+     SEMANTIC STATUS — for system_status panels (latency, stability).
+     ----------------------------------------------------------------------- */
+  --status-ok: #00ff00; /* green HUD (logos, scanner) */
+  --status-warn: #ffff00;
+  --status-danger: #ff3333;
+  --accent-best-paper: rgb(230, 153, 71); /* trophy orange */
+
+  /* -----------------------------------------------------------------------
+     TYPE RAMP — Space Grotesk for the geometric voice, Fraunces for named
+     entities (project titles, shell names), IBM Plex Mono for system text.
+     ----------------------------------------------------------------------- */
+  --font-display: 'Space-Grotesk', 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Space-Grotesk', 'Space Grotesk', system-ui, sans-serif;
+  --font-serif: 'Fraunces', 'EB Garamond', ui-serif, Georgia, serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-icon: 'Material Symbols Outlined';
+
+  /* Display sizes (px values from production CSS; 1rem = 16px) */
+  --t-mega: 5rem; /* 80px — name / page title */
+  --t-hero: 4rem; /* 64px — page-header / skills banner */
+  --t-display: 3rem; /* 48px — project page title (italic) */
+  --t-h1: 2rem; /* 32px — h1 */
+  --t-h2: 1.75rem; /* 28px — h2 */
+  --t-h3: 1.5rem; /* 24px — h3, log title, project card title */
+  --t-card-title: 1.25rem; /* 20px — module title, card subtitle */
+  --t-body: 1rem; /* 16px — body */
+  --t-small: 0.875rem; /* 14px — IDs, small gray text */
+  --t-micro: 0.75rem; /* 12px — module index, log boot trace */
+
+  /* Weights (Space Grotesk variable) */
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semi: 600;
+  --w-bold: 800;
+  --w-black: 1000; /* used aggressively on buttons + name */
+
+  /* -----------------------------------------------------------------------
+     SPACING — production code uses bare px values (no token system),
+     but they cluster into a coarse 4/8/16/32 scale. Captured here.
+     ----------------------------------------------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px; /* canonical card padding */
+  --space-12: 48px;
+  --space-16: 64px; /* hero / logo cell padding */
 }

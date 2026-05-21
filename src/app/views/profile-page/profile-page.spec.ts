@@ -1,17 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ProfilePage } from './profile-page';
 
-import { BioHeader } from './bio-header';
-
-describe('BioHeader', () => {
-  let component: BioHeader;
-  let fixture: ComponentFixture<BioHeader>;
+describe('ProfilePage', () => {
+  let component: ProfilePage;
+  let fixture: ComponentFixture<ProfilePage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BioHeader],
+      imports: [ProfilePage],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(BioHeader);
+    fixture = TestBed.createComponent(ProfilePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

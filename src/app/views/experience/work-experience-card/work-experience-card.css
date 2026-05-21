@@ -1,10 +1,10 @@
 .keyword {
   font-size: 1rem;
-  color: gray;
-  font-weight: 400;
+  color: var(--fg-5);
+  font-weight: 500;
   font-family: 'Space-Grotesk';
   text-align: left;
-  border: 1px solid gray;
+  background-color: var(--fg-faint);
   padding: 2px 8px;
   text-transform: uppercase;
 }
@@ -19,7 +19,7 @@
 .experience-text {
   font-family: 'Space-Grotesk';
   font-size: 1rem;
-  color: white;
+  color: var(--fg-3);
 }
 
 .short-description {

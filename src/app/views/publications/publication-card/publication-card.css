@@ -21,7 +21,8 @@ button:hover .material-symbols-outlined {
   display: block;
   flex-direction: row;
   gap: 8px;
-  padding: 32px;
+  padding: 24px;
+  border-radius: 4px;
   border: 2px solid #262629;
   background-color: #090909;
 }
@@ -30,7 +31,8 @@ button:hover .material-symbols-outlined {
   display: block;
   flex-direction: row;
   gap: 8px;
-  padding: 32px;
+  padding: 24px;
+  border-radius: 4px;
   border: 2px solid #262629;
   background: repeating-linear-gradient(45deg, #090909, #090909 4px, #111113 4px, #111113 8px);
 }
