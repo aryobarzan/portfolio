@@ -1,0 +1,67 @@
+/* ============================================================================
+ * BUTTONS — Traxus Brand Style
+ * Primary, outlined, and text variants with gradient hover effects.
+ * ============================================================================ */
+
+/* --- Primary filled button with gradient hover effect --- */
+.traxus-button {
+  padding: 12px 12px;
+  background-image: linear-gradient(to right, black 50%, var(--traxus-primary) 50%);
+  /* 210% prevents sub-pixel bleed at the gradient stop edge */
+  background-size: 210% 100%;
+  background-position: right center;
+  border: 1px solid var(--traxus-primary);
+  color: black;
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  cursor: pointer;
+  transition:
+    background-position 0.3s ease,
+    color 0.3s ease;
+}
+
+.traxus-button:hover {
+  background-position: left center;
+  color: var(--traxus-primary);
+}
+
+/* --- Outlined variant --- */
+.traxus-outlined-button {
+  padding: 12px 12px;
+  background-image: linear-gradient(to right, var(--traxus-primary) 50%, black 50%);
+  background-size: 210% 100%;
+  background-position: right center;
+  border: 1px solid var(--traxus-primary);
+  color: var(--traxus-primary);
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  cursor: pointer;
+  transition:
+    background-position 0.3s ease,
+    color 0.3s ease;
+}
+
+.traxus-outlined-button:hover {
+  background-position: left center;
+  color: black;
+}
+
+/* --- Text-only variant --- */
+.traxus-text-button {
+  padding: 12px 12px;
+  color: var(--traxus-primary);
+  border: 1px solid transparent;
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.traxus-text-button:hover {
+  border: 1px solid var(--traxus-primary);
+}
+
+.traxus-text-button:active {
+  background-color: var(--traxus-primary);
+  color: black;
+}

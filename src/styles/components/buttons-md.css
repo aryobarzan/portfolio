@@ -1,0 +1,110 @@
+/* ============================================================================
+ * BUTTONS — Material Design Style
+ * Icon buttons, link buttons, and outlined buttons using MD color tokens.
+ * ============================================================================ */
+
+/* --- Icon Button --- */
+.icon-button {
+  padding: 4px 8px;
+  cursor: pointer;
+  vertical-align: middle;
+  opacity: 0.75;
+  width: 40px; /* button hit area */
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button:hover {
+  opacity: 1;
+  border-radius: 16px;
+}
+
+.icon-button .material-symbols-outlined {
+  font-size: 32px; /* the glyph size */
+  line-height: 1;
+  display: inline-block;
+}
+
+/* --- Link Button --- */
+.link-button {
+  margin-right: 8px;
+  padding: 4px 8px;
+  color: var(--md-sys-color-primary);
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.link-button:hover {
+  background-color: rgb(from var(--md-sys-color-primary) r g b / 0.2);
+  border-radius: 16px;
+}
+
+.link-button:active {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border-radius: 16px;
+}
+
+.link-button-icon {
+  font-size: 18px;
+  font-weight: 500;
+  top: 4px;
+  position: relative;
+}
+
+.link-button:hover .link-button-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* --- Outlined Button --- */
+.outlined-button {
+  margin-right: 8px;
+  border-radius: 16px;
+  padding: 4px 8px;
+  border: 2px solid var(--md-sys-color-primary);
+  color: var(--md-sys-color-primary);
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.outlined-button:hover {
+  border: 0x;
+  background-color: rgb(from var(--md-sys-color-primary) r g b / 0.2);
+  color: var(--md-sys-color-primary);
+}
+
+.outlined-button:active {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.outlined-button-icon {
+  font-size: 18px;
+  font-weight: 500;
+  top: 4px;
+  position: relative;
+}
+
+.outlined-button:hover .outlined-button-icon {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* --- Link Button Grid (wrapper) --- */
+.link-button-grid {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 8px;
+}

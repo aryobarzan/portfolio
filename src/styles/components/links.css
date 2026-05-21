@@ -1,0 +1,15 @@
+/* ============================================================================
+ * LINKS & TEXT STATES
+ * Hyperlinked text with hover and visited states.
+ * ============================================================================ */
+.link-text {
+  color: var(--traxus-primary);
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+
+.link-text:visited {
+  color: var(--traxus-white);
+}

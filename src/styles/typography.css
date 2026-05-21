@@ -1,0 +1,45 @@
+/* ============================================================================
+ * TYPOGRAPHY
+ * Headings, page headers, and text utilities.
+ * ============================================================================ */
+
+/* Standard headings */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Page-level header */
+.page-header {
+  font-size: 4rem;
+  font-weight: 1000;
+  font-family: 'Space-Grotesk';
+  color: white;
+  text-transform: uppercase;
+}
+
+.page-header-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border-left: 6px solid var(--traxus-primary);
+  padding-left: 32px;
+}
+
+/* Small identifier text */
+.operator-id {
+  font-size: 0.875rem;
+  color: gray;
+  font-family: 'Space-Grotesk';
+  text-align: left;
+}

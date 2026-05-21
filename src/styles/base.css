@@ -1,0 +1,24 @@
+/* ============================================================================
+ * BASE STYLES
+ * Foundational resets for html, body, and paragraphs.
+ * ============================================================================ */
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: black;
+  color: var(--md-sys-color-on-background);
+  padding-bottom: max(4px, env(safe-area-inset-bottom, 3rem));
+}
+
+p {
+  color: var(--md-sys-color-on-background);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Smooth scrolling with padding for fixed header */
+html {
+  scroll-behavior: smooth;
+  /* Top padding due to the fixed nav bar on the home page */
+  scroll-padding-top: 6rem;
+  /* Always reserve scrollbar space to prevent layout shift on navigation */
+  scrollbar-gutter: stable;
+}

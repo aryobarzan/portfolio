@@ -1,0 +1,20 @@
+/* ============================================================================
+ * DESIGN TOKENS (CSS Custom Properties)
+ * Brand colors, backgrounds, and neutral tones used throughout the app.
+ * ============================================================================ */
+:root,
+.core-theme {
+  /* Brand Colors */
+  --traxus-primary: #d0ff00;
+  --traxus-on-primary: black;
+
+  /* Background & Surface */
+  --traxus-background: #0e0e0e;
+  --traxus-on-background: white;
+
+  /* Neutral Tones */
+  --traxus-gray: #23242d;
+  --traxus-on-gray: #bbbcc8;
+  --traxus-white: #dddce0;
+  --traxus-on-white: black;
+}
