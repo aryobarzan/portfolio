@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { ProjectSpecification } from '../../../../project';
+import { ProjectSpecification } from '../../../../core/services/project/project';
 
 @Component({
   selector: 'app-project-specifications',

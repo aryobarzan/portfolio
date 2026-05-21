@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { ProjectService } from '../../../../project.service';
-import { Project } from '../../../../project';
+import { ProjectService } from '../../../../core/services/project/project.service';
+import { Project } from '../../../../core/services/project/project';
 import { ProjectPage } from '../../common/project-page/project-page';
 
 @Component({

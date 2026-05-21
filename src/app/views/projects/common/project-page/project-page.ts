@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { Project } from '../../../../project';
+import { Project } from '../../../../core/services/project/project';
 import { ProjectHeader } from '../project-header/project-header';
 import { ProjectTechnologies } from '../project-technologies/project-technologies';
 import { ProjectSpecifications } from '../project-specifications/project-specifications';

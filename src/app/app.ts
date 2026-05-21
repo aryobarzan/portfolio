@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
-import { ThemeService } from './theme.service';
-import { NavigationBar } from './views/core/navigation-bar/navigation-bar';
+import { ThemeService } from './core/other/theme.service';
+import { NavigationBar } from './layout/navigation-bar/navigation-bar';
 
 @Component({
   selector: 'app-root',

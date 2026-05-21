@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { ProjectTechnology } from '../../../../project';
+import { ProjectTechnology } from '../../../../core/services/project/project';
 
 @Component({
   selector: 'app-project-technologies',

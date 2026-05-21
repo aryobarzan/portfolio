@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
-import { MarkdownPipe } from '../../../../pipes/markdown.pipe';
 import { AsyncPipe } from '@angular/common';
+import { MarkdownPipe } from '../../../../core/pipes/markdown.pipe';
 
 @Component({
   selector: 'app-project-header',
