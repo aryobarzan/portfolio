@@ -1,20 +1,10 @@
-/* nav-bar.component.css */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto;
-  max-width: 1200px;
-  background-color: transparent;
-  display: flex;
-  z-index: 1000;
-}
-
-.navbar-container {
-  padding: 8px 16px;
-  gap: 16px;
-  display: flex;
+.hamburger-button {
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--traxus-white);
 }
 
 .navbar-item {
@@ -38,7 +28,17 @@
   color: var(--traxus-on-white);
 }
 
-/* .active:hover .navbar-item {
-  background-color: var(--traxus-gray);
-  color: var(--traxus-on-gray);
-} */
+@media (max-width: 640px) {
+  .nav-items {
+    overflow: hidden;
+    max-height: 0;
+    transition:
+      max-height 0.3s ease,
+      padding 0.3s ease;
+  }
+
+  .nav-items.open {
+    max-height: 300px;
+    padding-bottom: 8px;
+  }
+}

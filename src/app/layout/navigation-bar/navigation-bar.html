@@ -1,9 +1,42 @@
-<nav class="navbar">
-  <div class="navbar-container">
-    @for (item of items; track $index) {
-      <a [routerLink]="item.route" routerLinkActive="active">
-        <div class="navbar-item">{{ item.label }}</div>
-      </a>
-    }
+<!-- - fixed top-0: fix to the top
+     - left-1/2 -translate-x-1/2: center navbar (shift left edge to 50%, then shift back by half of its OWN width)
+     - z-1000: ensure it is shown above the rest of the app's content (other than the film-grain-overlay)
+     - max-sm: on smaller devices, we want the nav bar to take up the full width -->
+<nav
+  class="fixed top-0 left-1/2 -translate-x-1/2 z-1000 max-sm:left-0 max-sm:translate-x-0 max-sm:w-full"
+>
+  <!-- - flex px-4 py-2 gap-4: on desktop, display buttons in a row
+     - max-sm:flex-col: on mobile, display in a column
+     - max-sm:items-end: align buttons to the right edge -->
+  <div class="flex px-4 py-2 gap-4 max-sm:flex-col max-sm:items-end max-sm:gap-0">
+    <!-- Hamburger button — hidden on desktop, visible on mobile -->
+    <!-- it has display mode hidden by default, but because of the order from left to right (hidden max-sm:flex), 
+          it will instead end up with display mode flex on mobile and thus not be hidden. -->
+    <button
+      class="hamburger-button hidden max-sm:flex"
+      (click)="toggleMenu()"
+      aria-label="Toggle navigation"
+    >
+      <span class="material-symbols-outlined">{{ isMenuOpen() ? 'close' : 'menu' }}</span>
+    </button>
+
+    <!-- Nav items — row on desktop, collapsible dropdown on mobile -->
+    <!-- nav-items: only applied on smaller devices (@media (max-width: 640px)), which sets their height to 0 when the menu is closed
+      class.open meanwhile sets the class .nav-items.open on the buttons container, which raises the height to 300px and thus reveals them-->
+    <!-- max-sm:flex-col: we want a column layout for the buttons on mobile
+           max-sm:items-end: align the buttons to the right edge (cross-axis of the flex-col) -->
+    <!-- max-sm:w-full: if not set, the column of buttons would display in the middle of the screen, rather than being pushed to the right edge -->
+    <div
+      class="nav-items flex gap-4 max-sm:flex-col max-sm:items-end max-sm:w-full"
+      [class.open]="isMenuOpen()"
+    >
+      @for (item of items; track $index) {
+        <a [routerLink]="item.route" routerLinkActive="active" (click)="closeMenu()">
+          <div class="navbar-item">
+            {{ item.label }}
+          </div>
+        </a>
+      }
+    </div>
   </div>
 </nav>
