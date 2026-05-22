@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { ThemeService } from './core/other/theme.service';
 import { NavigationBar } from './layout/navigation-bar/navigation-bar';
+import { FilmGrainOverlay } from './layout/film-grain-overlay/film-grain-overlay';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule, NavigationBar],
+  imports: [RouterOutlet, RouterModule, NavigationBar, FilmGrainOverlay],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

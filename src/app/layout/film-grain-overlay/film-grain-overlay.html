@@ -1,0 +1,14 @@
+<!-- SVG is invisible — it just registers a named filter in the document -->
+<svg style="display: none">
+  <filter id="noiseFilter">
+    <!--
+          feTurbulence generates a noise/grain texture using Perlin fractal noise.
+          - type="fractalNoise": smoother, organic noise (vs "turbulence" which is more chaotic)
+          - baseFrequency: controls grain density — higher = finer grain
+          - numOctaves: how many detail layers are blended — more = richer texture, more CPU usage
+          - stitchTiles: makes the noise tile seamlessly at the element's edges
+        -->
+    <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" stitchTiles="stitch" />
+  </filter>
+</svg>
+<div class="grain"></div>

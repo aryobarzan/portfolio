@@ -1,0 +1,67 @@
+.grain {
+  position: fixed;
+
+  /*
+          Oversized by 2x and offset by -50% so the div extends beyond all four
+          viewport edges. This prevents uncovered edges when the animation
+          translates the element by up to 35% in any direction.
+        */
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+
+  /* Sit above all page content without blocking any interaction */
+  pointer-events: none;
+  z-index: 9999;
+
+  opacity: 0.25;
+
+  /*
+          Paints the div using the SVG filter defined above.
+          url(#noiseFilter) references the filter by its id attribute.
+        */
+  filter: url(#noiseFilter);
+  /*
+          steps(10) makes the animation jump between 10 discrete positions
+          instead of interpolating smoothly — this mimics real film grain
+          which changes abruptly frame-to-frame, not gradually.
+          The random-looking translate values shift the noise texture to a
+          different region each step, simulating per-frame grain variation.
+        */
+  animation: grainAnimation 0.5s steps(10) infinite;
+}
+
+@keyframes grainAnimation {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(5%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(5%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}

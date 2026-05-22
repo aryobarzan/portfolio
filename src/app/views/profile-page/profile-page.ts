@@ -3,10 +3,11 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { map, timer } from 'rxjs';
 import { SkillCategories } from '../skills/skill-categories/skill-categories';
 import { SpokenLanguagesContainer } from '../spoken-languages/spoken-languages-container/spoken-languages-container';
+import { HudTiltDirective } from '../../core/directives/hud-tilt.directive';
 
 @Component({
   selector: 'app-profile-page',
-  imports: [SkillCategories, SpokenLanguagesContainer],
+  imports: [SkillCategories, SpokenLanguagesContainer, HudTiltDirective],
   templateUrl: './profile-page.html',
   styleUrl: './profile-page.css',
 })
