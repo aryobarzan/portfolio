@@ -45,6 +45,7 @@ export class ProjectService {
           isExternal: true,
         },
       ],
+      images: [],
     },
     {
       title: 'BEACON Q',
@@ -107,6 +108,7 @@ export class ProjectService {
           isExternal: true,
         },
       ],
+      images: [],
     },
     {
       title: 'DartBlock',
@@ -161,6 +163,7 @@ export class ProjectService {
           isExternal: true,
         },
       ],
+      images: [],
     },
     {
       title: 'Sketchnoting',
@@ -197,6 +200,43 @@ export class ProjectService {
           type: 'GitHub',
           url: 'https://github.com/aryobarzan/Sketchnoting',
           isExternal: true,
+        },
+      ],
+      images: [
+        {
+          imagePath: 'assets/projects/sketchnoting/image_1.jpg',
+          caption: 'Handwritten note with sketch recognition',
+          alt: 'Example handwritten note on iPad with sketch recognition',
+        },
+        {
+          imagePath: 'assets/projects/sketchnoting/image_2.jpg',
+          caption: 'PDF document imported into Sketchnoting',
+          alt: 'PDF document imported into Sketchnoting',
+        },
+        {
+          imagePath: 'assets/projects/sketchnoting/image_3.jpg',
+          caption: 'Related web resources for note based on semantic annotation',
+          alt: 'Related web resources for note based on semantic annotation',
+        },
+        {
+          imagePath: 'assets/projects/sketchnoting/image_4.jpg',
+          caption: 'Semantic search based on related web resources of note',
+          alt: 'Semantic search based on related web resources of note',
+        },
+        {
+          imagePath: 'assets/projects/sketchnoting/image_5.jpg',
+          caption: 'Question-answering as part of the search results',
+          alt: 'Question-answering as part of the search results',
+        },
+        {
+          imagePath: 'assets/projects/sketchnoting/image_6.jpg',
+          caption: 'Force-directed graph visualization for visual search',
+          alt: 'Force-directed graph visualization for visual search',
+        },
+        {
+          imagePath: 'assets/projects/sketchnoting/image_7.jpg',
+          caption: 'Viewing related notes based on semantic similarity',
+          alt: 'Viewing related notes based on semantic similarity',
         },
       ],
     },
@@ -242,6 +282,7 @@ export class ProjectService {
           isExternal: true,
         },
       ],
+      images: [],
     },
   ];
 }

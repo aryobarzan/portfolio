@@ -1,0 +1,23 @@
+<!-- thumbnail row -->
+<div class="thumbnail-row" #thumbnailRow (wheel)="onWheel($event, thumbnailRow)">
+  @for (image of images; track image.imagePath) {
+    <img class="thumbnail" [src]="image.imagePath" [alt]="image.alt" (click)="select(image)" />
+  }
+</div>
+
+<!-- Lightbox overlay -->
+@if (selectedImage(); as image) {
+  <!-- Clicking the backdrop closes the lightbox -->
+  <div class="backdrop" (click)="close()">
+    <!-- Stop propagation so clicking the image/caption doesn't close it -->
+    <div class="lightbox" (click)="$event.stopPropagation()">
+      <button class="close-button" (click)="close()" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <img class="expanded-image" [src]="image.imagePath" [alt]="image.alt" />
+      @if (image.caption) {
+        <p class="caption">{{ image.caption }}</p>
+      }
+    </div>
+  </div>
+}

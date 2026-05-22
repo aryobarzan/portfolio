@@ -21,6 +21,12 @@
       <app-project-links [links]="project().links || []"></app-project-links>
     </div>
   </div>
+  @if (project().images.length > 0) {
+    <app-project-images-carousel
+      [images]="project().images"
+      class="mt-8"
+    ></app-project-images-carousel>
+  }
   <br />
   <br />
 </section>

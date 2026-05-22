@@ -13,6 +13,7 @@ export interface Project {
   links?: ProjectLink[];
   iconURL?: string;
   logoComponent?: Type<unknown>;
+  images: ProjectImage[];
 }
 
 export interface ProjectTechnology {
@@ -30,4 +31,10 @@ export interface ProjectLink {
 export interface ProjectSpecification {
   key: string;
   value: string;
+}
+
+export interface ProjectImage {
+  imagePath: string;
+  caption: string;
+  alt: string;
 }
