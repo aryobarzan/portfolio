@@ -1,0 +1,71 @@
+.specs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border: 1px solid var(--border-card, #262629);
+  background: var(--surface-card, #090909);
+  margin-top: 16px;
+}
+
+.spec-item {
+  flex: 1 1 0;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-right: 1px solid var(--border-card, #262629);
+}
+
+.spec-item:last-child {
+  border-right: none;
+}
+
+/* On smaller screens, each spec takes a full row */
+@media (max-width: 640px) {
+  .spec-item {
+    flex: 1 1 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-card, #262629);
+  }
+
+  .spec-item:last-child {
+    border-bottom: none;
+  }
+}
+
+.spec-key {
+  font-size: var(--t-micro, 0.7rem);
+  font-weight: var(--w-regular, 400);
+  font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+  color: var(--fg-5, #808080);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.spec-value {
+  font-size: var(--t-card-title, 0.9rem);
+  font-weight: var(--w-medium, 500);
+  font-family: var(--font-display, 'Space-Grotesk', sans-serif);
+  color: var(--fg-2, #dddce0);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.feature-matrix-title {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  font-family: 'Space-Grotesk', system-ui, sans-serif;
+  color: var(--traxus-primary, #c5ff3a);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.project-logo {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border: 1px solid var(--border-card, #262629);
+  border-radius: 4px;
+}

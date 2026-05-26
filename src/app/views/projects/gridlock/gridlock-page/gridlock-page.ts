@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { ProjectService } from '../../../../core/services/project/project.service';
 import { Project } from '../../../../core/services/project/project';
-import { ProjectPage } from '../../common/project-page/project-page';
+import { ProjectHeader } from '../../common/project-header/project-header';
+import { ProjectTechnologies } from '../../common/project-technologies/project-technologies';
+import { GridlockFeatureGrid } from '../gridlock-feature-grid/gridlock-feature-grid';
 
 @Component({
   selector: 'app-gridlock-page',
-  imports: [ProjectPage],
+  imports: [ProjectHeader, ProjectTechnologies, GridlockFeatureGrid],
   templateUrl: './gridlock-page.html',
   styleUrl: './gridlock-page.css',
 })

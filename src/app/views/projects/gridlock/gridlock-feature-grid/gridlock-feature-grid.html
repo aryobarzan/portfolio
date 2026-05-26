@@ -1,0 +1,70 @@
+<div class="feature-grid-container">
+  <!-- Collapsed: Grid View -->
+  @if (expandedIndex === null) {
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      @for (feature of features; track feature.title; let i = $index) {
+        <button class="feature-tile group" (click)="expandFeature(i)">
+          <div class="tile-header">
+            <span class="node-id">NODE_{{ (i + 1).toString().padStart(2, '0') }}</span>
+          </div>
+
+          <!-- icon + title body -->
+          <div class="tile-body">
+            <span class="material-symbols-outlined tile-icon">{{ feature.icon }}</span>
+            <span class="tile-title">{{ feature.title }}</span>
+          </div>
+        </button>
+      }
+    </div>
+  }
+
+  <!-- Expanded: Single Feature Detail View -->
+  @if (expandedIndex !== null) {
+    @let feature = features[expandedIndex];
+    <div class="expanded-view">
+      <!-- Close button -->
+      <button class="close-button" (click)="collapseFeature()">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+
+      <div class="expanded-layout">
+        <!-- Image — click to open fullscreen overlay -->
+        <div class="expanded-image-wrapper">
+          <img
+            [src]="feature.imagePath"
+            [alt]="feature.title"
+            class="expanded-image"
+            (click)="openImageOverlay(feature)"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="expanded-content">
+          <div class="expanded-meta">
+            <span class="node-id">NODE_{{ (expandedIndex + 1).toString().padStart(2, '0') }}</span>
+            <span class="feature-badge">DECRYPTED</span>
+          </div>
+
+          <div class="expanded-icon-row">
+            <span class="material-symbols-outlined expanded-icon">{{ feature.icon }}</span>
+            <h2 class="expanded-title">{{ feature.title }}</h2>
+          </div>
+
+          <p class="expanded-description">{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  }
+
+  <!-- Lightbox overlay for enlarged image -->
+  @if (selectedImageForOverlay(); as overlayFeature) {
+    <div class="backdrop" (click)="closeImageOverlay()">
+      <div class="lightbox" (click)="$event.stopPropagation()">
+        <button class="overlay-close-button" (click)="closeImageOverlay()" aria-label="Close">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <img class="overlay-image" [src]="overlayFeature.imagePath" [alt]="overlayFeature.title" />
+      </div>
+    </div>
+  }
+</div>

@@ -1,1 +1,64 @@
-<app-project-page [project]="project"></app-project-page>
+<section class="container pt-8" id="project">
+  <!-- Project Header -->
+  <header class="mb-4 text-left">
+    <app-project-header
+      [id]="project.id"
+      [title]="project.title"
+      [description]="project.description"
+    ></app-project-header>
+  </header>
+
+  <!-- Specifications — inline row under header -->
+  <div class="specs-row">
+    @for (spec of project.specifications; track spec.key) {
+      <div class="spec-item">
+        <span class="spec-key">{{ spec.key }}</span>
+        <span class="spec-value">{{ spec.value }}</span>
+      </div>
+    }
+  </div>
+
+  <!-- Feature Grid -->
+  <div class="mt-10">
+    <div class="feature-matrix-title">FEATURE_MATRIX</div>
+    <app-gridlock-feature-grid />
+  </div>
+
+  <!-- Technologies — below feature grid -->
+  <div class="mt-10">
+    <app-project-technologies
+      [technologies]="project.technologies || []"
+    ></app-project-technologies>
+  </div>
+
+  <!-- Project Logo + Links — centered -->
+  <div class="mt-8 flex flex-col items-center gap-6">
+    @if (project.iconURL) {
+      <img [src]="project.iconURL" alt="{{ project.title }} logo" class="project-logo" />
+    }
+
+    <!-- Project Links — centered buttons, max-width 400px -->
+    <div class="flex justify-center w-full">
+      <div class="flex flex-col gap-4" style="max-width: 400px; width: 100%">
+        @for (link of project.links || []; track $index) {
+          @if (link.isExternal) {
+            <a [href]="link.url" target="_blank">
+              <button class="traxus-button w-full flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined">open_in_new</span>
+                {{ link.name }}
+              </button>
+            </a>
+          } @else {
+            <a [href]="link.url">
+              <button class="traxus-button w-full flex items-center justify-center gap-2">
+                {{ link.name }}
+              </button>
+            </a>
+          }
+        }
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+</section>
