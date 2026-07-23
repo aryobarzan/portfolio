@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 
 import { Dartblock } from './dartblock';
 
@@ -9,6 +10,7 @@ describe('Dartblock', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Dartblock],
+      providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Dartblock);

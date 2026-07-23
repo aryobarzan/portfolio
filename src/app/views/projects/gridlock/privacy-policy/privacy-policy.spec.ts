@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PrivacyPolicy } from './privacy-policy';
+import { GridLockPrivacyPolicyPage } from './privacy-policy';
 
-describe('PrivacyPolicy', () => {
-  let component: PrivacyPolicy;
-  let fixture: ComponentFixture<PrivacyPolicy>;
+describe('GridLockPrivacyPolicyPage', () => {
+  let component: GridLockPrivacyPolicyPage;
+  let fixture: ComponentFixture<GridLockPrivacyPolicyPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PrivacyPolicy],
+      imports: [GridLockPrivacyPolicyPage],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PrivacyPolicy);
+    fixture = TestBed.createComponent(GridLockPrivacyPolicyPage);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

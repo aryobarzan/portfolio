@@ -13,6 +13,11 @@ describe('ExperienceCard', () => {
 
     fixture = TestBed.createComponent(ExperienceCard);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('icon', 'assets/images/icon.svg');
+    fixture.componentRef.setInput('highlighted', false);
+    fixture.componentRef.setInput('title', 'Test title');
+    fixture.componentRef.setInput('subtitle', 'Test subtitle');
+    fixture.componentRef.setInput('startDate', '2021-01-01');
     await fixture.whenStable();
   });
 

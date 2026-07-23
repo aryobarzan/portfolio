@@ -13,6 +13,9 @@ describe('ProjectHeader', () => {
 
     fixture = TestBed.createComponent(ProjectHeader);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('id', 'test-id');
+    fixture.componentRef.setInput('title', 'Test title');
+    fixture.componentRef.setInput('description', 'Test description');
     await fixture.whenStable();
   });
 

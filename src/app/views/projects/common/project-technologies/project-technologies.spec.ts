@@ -13,6 +13,7 @@ describe('ProjectTechnologies', () => {
 
     fixture = TestBed.createComponent(ProjectTechnologies);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('technologies', []);
     await fixture.whenStable();
   });
 
