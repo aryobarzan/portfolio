@@ -79,6 +79,11 @@ export class SkillService {
           url: 'https://firebase.google.com/',
           level: 'med',
         },
+        {
+          name: 'Spring Boot',
+          url: 'https://spring.io/projects/spring-boot',
+          level: 'low',
+        },
       ],
     },
     {
