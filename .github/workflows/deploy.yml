@@ -1,48 +1,70 @@
-name: Deploy Production Build to Public Repo
+name: Test, Build and Deploy to Production
 
 on:
   push:
     branches:
       - production
 
+concurrency:
+  group: production-deploy
+  cancel-in-progress: true
+
 jobs:
-  build-and-deploy:
+  build-test-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the source repository
-      # This needs to be done on the private repo containing the docs folder
-      - name: Checkout Source Repository
+      - name: Checkout source repository
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          # Use the PAT to access the private repo
-          token: ${{ secrets.ACCESS_TOKEN }}
-      - name: Checkout Destination Repo
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run unit tests
+        run: npx ng test --watch=false
+
+      - name: Build production bundle
+        run: npx ng build
+
+      # From here on, the source repo's freshly built ./docs is what gets deployed.
+      # Steps above this point gate everything after it: if tests or the build fail, nothing is pushed.
+
+      - name: Checkout destination repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           repository: 'aryobarzan/aryobarzan'
           path: 'target-repo'
-      - name: Copy docs and push
+
+      - name: Copy build output and prepare GitHub Pages files
         run: |
-          pwd
-          ls
-          # Change directory to the target repo
           cd target-repo
 
           # Remove any old docs folder to ensure a clean sync
           rm -rf docs
 
-          # Copy the docs folder and its contents from the source repo
-          # This command ensures the parent directory exists
-          cp -r ../docs . # Note the trailing dot
+          # Copy the freshly built docs folder from the source repo
+          cp -r ../docs .
           cp ./docs/index.html ./docs/404.html
-          echo "aryobarzan.com" >> ./docs/CNAME
+          echo "aryobarzan.com" > ./docs/CNAME
+
       - name: Commit and push changes
         working-directory: ./target-repo
         run: |
           git config user.name "aryobarzan"
           git config user.email "aryobarzan.atashpendar@gmail.com"
           git add docs
+
+          if git diff --cached --quiet; then
+            echo "No changes to deploy."
+            exit 0
+          fi
+
           git commit -m "Deploying docs from private repository [skip ci]"
           git push
