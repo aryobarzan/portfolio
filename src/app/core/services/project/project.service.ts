@@ -48,6 +48,56 @@ export class ProjectService {
       images: [],
     },
     {
+      title: 'Photo Classifier',
+      id: '28-PC-65',
+      detailRoute: '/projects/photo-classifier',
+      shortDescription: 'Profile editor with photo classification.',
+      description: `Photo Classifier is an experimental project to work with a microservice-based architecture. The backend is composed of several services, including a core FastAPI REST server, a separate FastAPI server handling image classification tasks, an S3 object store (Garage) for storing user profile images and a PostgreSQL database to store user data.
+      The entire backend is containerized for easy deployment via Docker. The frontend is built using Angular, which features pages for user authentication, profile editing and user management via an admin view.`,
+      keywords: ['Angular', 'FastAPI'],
+      technologies: [
+        { name: 'TypeScript', isLanguage: true },
+        { name: 'Angular', isLanguage: false },
+        { name: 'Python', isLanguage: true },
+        { name: 'FastAPI', isLanguage: false },
+        { name: 'Garage (S3 object store)', isLanguage: false },
+        { name: 'PostgreSQL', isLanguage: false },
+        { name: 'Docker', isLanguage: false },
+        { name: 'ML Models', isLanguage: false },
+      ],
+      specifications: [
+        {
+          key: 'release',
+          value: '2026',
+        },
+        {
+          key: 'type',
+          value: 'app',
+        },
+        {
+          key: 'access',
+          value: 'open_source',
+        },
+      ],
+      year: 2026,
+      iconURL: 'assets/images/photo-classifier.jpg',
+      links: [
+        {
+          name: 'GitHub (Frontend)',
+          type: 'GitHub',
+          url: 'https://github.com/aryobarzan/photo-classification-angular',
+          isExternal: true,
+        },
+        {
+          name: 'GitHub (Backend)',
+          type: 'GitHub',
+          url: 'https://github.com/aryobarzan/photo_classification-fastapi',
+          isExternal: true,
+        },
+      ],
+      images: [],
+    },
+    {
       title: 'BEACON Q',
       id: '53-BQ-26',
       detailRoute: '/projects/beaconq',
@@ -279,6 +329,44 @@ export class ProjectService {
           name: 'App Store',
           type: 'App Store',
           url: 'https://apps.apple.com/us/app/yactul/id1435998187',
+          isExternal: true,
+        },
+      ],
+      images: [],
+    },
+    {
+      title: 'Kitty (Discord Bot)',
+      id: '89-KD-45',
+      detailRoute: '/projects/kitty-bot',
+      shortDescription: 'Discord bot for moderation.',
+      description: `"Kitty" is a mature, multi-purpose Discord bot. Its features include extensive logging, user customization and moderation.
+      Its MusicBrainz API integration enables a music profile feature, allowing users to highlight their favorite songs for a given artist, resulting in a banner rendered by the bot.`,
+      keywords: ['Java'],
+      technologies: [
+        { name: 'Java', isLanguage: true },
+        { name: 'sqlite', isLanguage: false },
+      ],
+      specifications: [
+        {
+          key: 'release',
+          value: '2018',
+        },
+        {
+          key: 'type',
+          value: 'bot',
+        },
+        {
+          key: 'access',
+          value: 'open_source',
+        },
+      ],
+      year: 2018,
+      iconURL: 'assets/images/kitty-bot.jpg',
+      links: [
+        {
+          name: 'GitHub',
+          type: 'GitHub',
+          url: 'https://github.com/aryobarzan/kitty-discord-bot',
           isExternal: true,
         },
       ],
