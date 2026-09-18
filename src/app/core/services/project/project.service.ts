@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Project } from './project';
-import { GridlockLogo } from '../../../views/projects/gridlock/gridlock-logo/gridlock-logo';
-import { BeaconQLogo } from '../../../views/projects/beacon-q/beacon-q-logo/beacon-q-logo';
 
 @Injectable({
   providedIn: 'root',
@@ -36,7 +34,6 @@ export class ProjectService {
       ],
       year: 2026,
       iconURL: 'assets/images/gridlock.jpg',
-      logoComponent: GridlockLogo,
       links: [
         {
           name: 'App Store',
@@ -118,7 +115,6 @@ export class ProjectService {
         { name: 'OpenAI GPT', isLanguage: false },
       ],
       year: 2025,
-      logoComponent: BeaconQLogo,
       specifications: [
         {
           key: 'release',
@@ -137,7 +133,7 @@ export class ProjectService {
           value: 'app_stores',
         },
       ],
-      iconURL: 'assets/images/beaconq.jpg',
+      iconURL: 'assets/images/beaconq.webp',
       links: [
         {
           name: 'Play Store',
