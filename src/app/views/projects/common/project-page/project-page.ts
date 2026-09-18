@@ -5,6 +5,7 @@ import { ProjectTechnologies } from '../project-technologies/project-technologie
 import { ProjectSpecifications } from '../project-specifications/project-specifications';
 import { ProjectLinks } from '../project-links/project-links';
 import { ProjectImagesCarousel } from '../project-images-carousel/project-images-carousel';
+import { ProjectFeatureMatrix } from '../project-feature-matrix/project-feature-matrix';
 
 @Component({
   selector: 'app-project-page',
@@ -14,6 +15,7 @@ import { ProjectImagesCarousel } from '../project-images-carousel/project-images
     ProjectSpecifications,
     ProjectLinks,
     ProjectImagesCarousel,
+    ProjectFeatureMatrix,
   ],
   templateUrl: './project-page.html',
   styleUrl: './project-page.css',

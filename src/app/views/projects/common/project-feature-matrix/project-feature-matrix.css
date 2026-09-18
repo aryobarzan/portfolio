@@ -1,3 +1,13 @@
+.feature-matrix-title {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  font-family: 'Space-Grotesk', system-ui, sans-serif;
+  color: var(--traxus-primary, #c5ff3a);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
 .feature-tile {
   display: flex;
   flex-direction: column;

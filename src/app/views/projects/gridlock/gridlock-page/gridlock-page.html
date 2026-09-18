@@ -18,11 +18,12 @@
     }
   </div>
 
-  <!-- Feature Grid -->
-  <div class="mt-10">
-    <div class="feature-matrix-title">FEATURE_MATRIX</div>
-    <app-gridlock-feature-grid />
-  </div>
+  <!-- Feature Matrix -->
+  @if (project.features?.length) {
+    <div class="mt-10">
+      <app-project-feature-matrix [features]="project.features!" />
+    </div>
+  }
 
   <!-- Technologies — below feature grid -->
   <div class="mt-10">

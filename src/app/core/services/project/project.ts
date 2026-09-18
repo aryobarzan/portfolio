@@ -14,6 +14,14 @@ export interface Project {
   iconURL?: string;
   logoComponent?: Type<unknown>;
   images: ProjectImage[];
+  features?: ProjectFeature[];
+}
+
+export interface ProjectFeature {
+  title: string;
+  description: string;
+  imagePath: string;
+  icon: string;
 }
 
 export interface ProjectTechnology {

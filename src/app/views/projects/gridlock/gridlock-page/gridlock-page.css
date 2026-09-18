@@ -51,16 +51,6 @@
   letter-spacing: 0.02em;
 }
 
-.feature-matrix-title {
-  font-size: 1rem;
-  font-weight: 400;
-  text-align: left;
-  font-family: 'Space-Grotesk', system-ui, sans-serif;
-  color: var(--traxus-primary, #c5ff3a);
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
 .project-logo {
   display: block;
   width: 100%;

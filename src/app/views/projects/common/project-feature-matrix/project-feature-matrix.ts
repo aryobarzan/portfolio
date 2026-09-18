@@ -1,21 +1,20 @@
-import { Component, HostListener, inject, signal } from '@angular/core';
-import { GridlockService, GridLockFeature } from '../core/gridlock-service';
+import { Component, HostListener, Input, signal } from '@angular/core';
+import { ProjectFeature } from '../../../../core/services/project/project';
 
 @Component({
-  selector: 'app-gridlock-feature-grid',
+  selector: 'app-project-feature-matrix',
   imports: [],
-  templateUrl: './gridlock-feature-grid.html',
-  styleUrl: './gridlock-feature-grid.css',
+  templateUrl: './project-feature-matrix.html',
+  styleUrl: './project-feature-matrix.css',
 })
-export class GridlockFeatureGrid {
-  private gridlockService = inject(GridlockService);
-
-  readonly features: GridLockFeature[] = this.gridlockService.features;
+export class ProjectFeatureMatrix {
+  @Input() features: ProjectFeature[] = [];
+  @Input() title = 'FEATURE_MATRIX';
 
   expandedIndex: number | null = null;
 
   /** Tracks the currently selected image for the fullscreen lightbox overlay. */
-  readonly selectedImageForOverlay = signal<GridLockFeature | null>(null);
+  readonly selectedImageForOverlay = signal<ProjectFeature | null>(null);
 
   expandFeature(index: number): void {
     this.expandedIndex = index;
@@ -26,7 +25,7 @@ export class GridlockFeatureGrid {
   }
 
   /** Opens the image in a fullscreen lightbox overlay. */
-  openImageOverlay(feature: GridLockFeature): void {
+  openImageOverlay(feature: ProjectFeature): void {
     this.selectedImageForOverlay.set(feature);
   }
 

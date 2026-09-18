@@ -3,11 +3,11 @@ import { ProjectService } from '../../../../core/services/project/project.servic
 import { Project } from '../../../../core/services/project/project';
 import { ProjectHeader } from '../../common/project-header/project-header';
 import { ProjectTechnologies } from '../../common/project-technologies/project-technologies';
-import { GridlockFeatureGrid } from '../gridlock-feature-grid/gridlock-feature-grid';
+import { ProjectFeatureMatrix } from '../../common/project-feature-matrix/project-feature-matrix';
 
 @Component({
   selector: 'app-gridlock-page',
-  imports: [ProjectHeader, ProjectTechnologies, GridlockFeatureGrid],
+  imports: [ProjectHeader, ProjectTechnologies, ProjectFeatureMatrix],
   templateUrl: './gridlock-page.html',
   styleUrl: './gridlock-page.css',
 })

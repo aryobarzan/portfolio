@@ -27,6 +27,9 @@
       class="mt-8"
     ></app-project-images-carousel>
   }
+  @if (project().features?.length) {
+    <app-project-feature-matrix [features]="project().features!" class="mt-8" />
+  }
   <br />
   <br />
 </section>
