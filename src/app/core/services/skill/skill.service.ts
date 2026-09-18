@@ -55,9 +55,24 @@ export class SkillService {
           level: 'med',
         },
         {
+          name: 'UIKit',
+          url: 'https://developer.apple.com/documentation/uikit',
+          level: 'med',
+        },
+        {
           name: 'Angular',
           url: 'https://angular.dev/',
           level: 'med',
+        },
+        {
+          name: 'Xamarin.Forms',
+          url: 'https://dotnet.microsoft.com/en-us/apps/xamarin/xamarin-forms',
+          level: 'med',
+        },
+        {
+          name: 'React / Next.js',
+          url: 'https://nextjs.org/',
+          level: 'low',
         },
       ],
     },
@@ -84,6 +99,11 @@ export class SkillService {
           url: 'https://spring.io/projects/spring-boot',
           level: 'low',
         },
+        {
+          name: 'Garage (S3 object store)',
+          url: 'https://garagehq.deuxfleurs.fr/',
+          level: 'low',
+        },
       ],
     },
     {
@@ -97,7 +117,7 @@ export class SkillService {
         {
           name: 'PostgreSQL',
           url: 'https://www.postgresql.org/',
-          level: 'low',
+          level: 'med',
         },
       ],
     },
@@ -164,6 +184,62 @@ export class SkillService {
           name: 'PM2',
           url: 'https://pm2.io/',
           level: 'low',
+        },
+      ],
+    },
+
+    {
+      title: 'AI & ML',
+      skills: [
+        {
+          name: 'OpenAI API',
+          url: 'https://platform.openai.com/docs',
+          level: 'high',
+        },
+        {
+          name: 'Gemini API',
+          url: 'https://ai.google.dev/',
+          level: 'high',
+        },
+        {
+          name: 'LM Studio',
+          url: 'https://lmstudio.ai/',
+          level: 'high',
+        },
+        {
+          name: 'Claude Code',
+          url: 'https://claude.com/product/claude-code',
+          level: 'high',
+        },
+        {
+          name: 'GitHub Copilot',
+          url: 'https://github.com/features/copilot',
+          level: 'high',
+        },
+        {
+          name: 'Google Antigravity',
+          url: 'https://antigravity.google/',
+          level: 'high',
+        },
+        {
+          name: 'Word Embeddings',
+          url: '',
+          level: 'med',
+        },
+        {
+          name: 'Prompt Engineering',
+          url: '',
+          level: 'med',
+        },
+        {
+          name: 'Apple Foundation Models',
+          url: 'https://developer.apple.com/documentation/foundationmodels',
+          level: 'med',
+        },
+        {
+          name: 'MLX',
+          url: 'https://opensource.apple.com/projects/mlx/',
+          level: 'med',
         },
       ],
     },

@@ -88,7 +88,7 @@ export class ProjectService {
         },
         {
           key: 'access',
-          value: 'mac_app_store',
+          value: 'app_store',
         },
       ],
       year: 2026,
