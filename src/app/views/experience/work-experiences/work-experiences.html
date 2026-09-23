@@ -4,7 +4,7 @@
     <div class="flex flex-col">
       <div class="colored-box-white">CLASSIFIED</div>
       <div class="title mt-4">OPERATIONAL_HISTORY</div>
-      <div class="subtitle mt-2">ARCHIVE_ID: 201-WRK-01 // 5 ENTRIES FOUND</div>
+      <div class="subtitle mt-2">ARCHIVE_ID: 201-WRK-01 // (2 + 3 + 3) ENTRIES FOUND</div>
     </div>
     <!-- we hide (hidden) this div by default.
      On medium and larger devices (md:), we instead apply flex as the display option.
@@ -19,12 +19,20 @@
   </div>
 
   <hr class="mt-10 mb-10" style="color: gray; opacity: 0.5" />
+  <div class="section-title mt-12 mb-4">WORK</div>
   <div class="flex flex-col gap-6">
     @for (workExperience of workExperiences; track $index) {
       <app-work-experience-card [workExperience]="workExperience"></app-work-experience-card>
     }
   </div>
-  <div class="flex flex-col gap-6 mt-8">
+  <div class="section-title mt-12 mb-4">CERTIFICATES</div>
+  <div class="flex flex-col gap-6">
+    @for (certificate of certificates; track $index) {
+      <app-certificate-card [certificate]="certificate"></app-certificate-card>
+    }
+  </div>
+  <div class="section-title mt-12 mb-4">EDUCATION</div>
+  <div class="flex flex-col gap-6">
     @for (degree of degrees; track $index) {
       <app-degree-card [degree]="degree"></app-degree-card>
     }

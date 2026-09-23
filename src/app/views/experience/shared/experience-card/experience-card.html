@@ -23,24 +23,32 @@
         <div class="experience-date whitespace-nowrap text-left flex-col items-end place-items-end">
           <!-- usage of Angular's DatePipe (reusable function) to format the dates in human-readable fashion -->
           <!-- Example: 'Mar 2025' -->
-          @if (isRecent()) {
-            <div class="colored-yellow-box mb-2">RECENT</div>
-          } @else if (isCompleted()) {
-            <div class="colored-gray-box mb-2">{{ completionTitle() }}</div>
+          @if (!hideCompletionTitle()) {
+            @if (isRecent()) {
+              <div class="colored-yellow-box mb-2">RECENT</div>
+            } @else if (isCompleted()) {
+              <div class="colored-gray-box mb-2">{{ completionTitle() }}</div>
+            }
           }
           <div>
-            <time [attr.datetime]="startDate()">{{ startDate() | date: 'yyyy.MM' }}</time>
-
-            @if (endDate()) {
-              —
-              <time [attr.datetime]="endDate()">{{ endDate() | date: 'yyyy.MM' }}</time>
+            @if (singleDate()) {
+              <time [attr.datetime]="startDate()">{{ startDate() | date: 'yyyy' }}</time>
             } @else {
-              — PRESENT
+              <time [attr.datetime]="startDate()">{{ startDate() | date: 'yyyy.MM' }}</time>
+
+              @if (endDate()) {
+                —
+                <time [attr.datetime]="endDate()">{{ endDate() | date: 'yyyy.MM' }}</time>
+              } @else {
+                — PRESENT
+              }
             }
           </div>
         </div>
       </header>
-      <hr class="mt-6 mb-6" style="color: gray; opacity: 0.5" />
+      @if (!hideBodyDivider()) {
+        <hr class="mt-6 mb-6" style="color: gray; opacity: 0.5" />
+      }
       <!-- insertion point for content projected by the parent component -->
       <ng-content />
     </div>

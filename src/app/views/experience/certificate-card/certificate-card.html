@@ -1,0 +1,18 @@
+<app-experience-card
+  icon="license"
+  [highlighted]="false"
+  [title]="certificate.title"
+  [subtitle]="certificate.issuer"
+  [startDate]="certificate.year.toString()"
+  [hideCompletionTitle]="true"
+  [singleDate]="true"
+  [hideBodyDivider]="true"
+>
+  <div class="flex justify-end">
+    <a [href]="certificate.link" target="_blank">
+      <button class="traxus-button">
+        <span class="material-symbols-outlined link-button-icon"> open_in_new </span> Credential
+      </button></a
+    >
+  </div>
+</app-experience-card>

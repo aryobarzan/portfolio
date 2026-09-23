@@ -15,6 +15,9 @@ export class ExperienceCard {
   startDate = input.required<string>();
   endDate = input<string>();
   completionTitle = input<string>('COMPLETED');
+  hideCompletionTitle = input<boolean>(false);
+  singleDate = input<boolean>(false);
+  hideBodyDivider = input<boolean>(false);
 
   isRecent(): boolean {
     if (this.endDate() === undefined) {
