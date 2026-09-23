@@ -71,6 +71,34 @@
   text-align: left;
 }
 
+.showcase-box {
+  padding: 32px;
+  border: 2px solid #252528;
+  border-radius: 4px;
+  background-color: #09090b;
+  font-weight: 400;
+  color: #969699;
+  font-family: 'Space-Grotesk';
+}
+
+.showcase-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Space-Grotesk';
+  color: var(--traxus-primary);
+  text-align: left;
+}
+
+.showcase-logo {
+  min-height: 128px;
+  max-height: 128px;
+  object-fit: contain;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .small-gray-text {
   font-size: 0.875rem;
   color: gray;
@@ -103,7 +131,6 @@
 
 .system-status-box {
   padding: 32px;
-  min-width: 350px;
   border: 2px solid #252528;
   border-radius: 4px;
   background-color: black;

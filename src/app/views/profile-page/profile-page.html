@@ -12,68 +12,8 @@
         </div>
       </div>
     </header>
-    <!-- we use inline-grid to ensure the grid container only takes up the width its content requires, with its columns placed side-by-side -->
-    <div class="inline-grid sm:grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="system-status-box sm:mt-4 md:mt-12">
-        <div class="flex justify-between align-bottom mb-8">
-          <span class="system-status-title">SYSTEM_STATUS</span
-          ><span class="small-gray-text">ID: 0x9812</span>
-        </div>
-        <div class="flex-col mb-4">
-          <div class="flex justify-between align-bottom">
-            <span class="system-status-body mb-1">CORE_STABILITY</span
-            ><span class="system-status-body" style="color: var(--traxus-primary)">92.3%</span>
-          </div>
-          <div class="flex gap-x-1">
-            @for (i of [].constructor(10); track $index) {
-              <aside
-                class="progress-bar-component"
-                [style]="$index < 9 ? 'background-color: var(--traxus-primary)' : ''"
-              ></aside>
-            }
-          </div>
-        </div>
-        <div class="flex-col">
-          <div class="flex justify-between align-bottom">
-            <span class="system-status-body mb-1">LATENCY_SYNC</span
-            ><span
-              class="small-gray-text"
-              [style]="
-                latency() < 33 ? 'color: green' : latency() < 66 ? 'color: yellow' : 'color: red'
-              "
-              >{{ latency() }}MS</span
-            >
-          </div>
-          <div class="flex gap-x-1">
-            @for (i of [].constructor(10); track $index) {
-              <aside
-                class="progress-bar-component"
-                [style]="$index < latency() / 10.0 ? 'background-color: var(--traxus-primary)' : ''"
-              ></aside>
-            }
-          </div>
-        </div>
 
-        <hr class="mt-8 mb-4" style="color: gray; opacity: 0.5" />
-        <div class="small-gray-text" style="font-size: 0.75rem">
-          > BOOT SEQUENCE COMPLETE<br />> LOADING MODULES. . . [OK]<br />> INTERFACE STABLE
-        </div>
-      </div>
-      <div class="system-status-box md:mt-12">
-        <div class="flex justify-between align-bottom mb-8">
-          <span class="system-status-title">LINGUISTIX_MATRIX</span
-          ><span class="small-gray-text">ID: 0x4204</span>
-        </div>
-        <app-languages></app-languages>
-
-        <hr class="mt-8 mb-4" style="color: gray; opacity: 0.5" />
-        <div class="small-gray-text" style="font-size: 0.75rem">
-          > COGNITIVE LEXICON LOADED<br />> SYNTACTIC MAPPING: ACTIVE<br />>
-          CROSS_DOMAIN_COMMUNICATION_ON
-        </div>
-      </div>
-    </div>
-
+    <!-- BIO -->
     <div class="log-box flex-col mt-6" appHudTilt>
       <div class="flex justify-between align-bottom">
         <span class="flex items-center justify-start gap-2"
@@ -139,6 +79,74 @@
         </button></a
       >
     </div>
+
+    <!-- we use inline-flex to ensure the container only takes up the width its content requires; flex-wrap lets the showcase box drop below the languages box once there's no longer room for both -->
+    <div class="inline-flex flex-wrap gap-4">
+      <!-- LANGUAGES -->
+      <div class="system-status-box basis-87.5 shrink-0 sm:mt-8 lg:mt-12">
+        <div class="flex justify-between align-bottom mb-4">
+          <span class="system-status-title">LINGUISTIX_MATRIX</span
+          ><span class="small-gray-text">ID: 0x4204</span>
+        </div>
+        <app-languages></app-languages>
+
+        <hr class="mt-8 mb-4" style="color: gray; opacity: 0.5" />
+        <div class="small-gray-text" style="font-size: 0.75rem">
+          > COGNITIVE LEXICON LOADED<br />> SYNTACTIC MAPPING: ACTIVE<br />>
+          CROSS_DOMAIN_COMMUNICATION_ON
+        </div>
+      </div>
+      <!-- SHOWCASE -->
+      <div class="showcase-box flex-1 min-w-120 sm:mt-8 lg:mt-12">
+        <div class="flex justify-between align-bottom mb-4">
+          <span class="system-status-title">SHOWCASE</span
+          ><span class="small-gray-text">ID: 0x6935</span>
+        </div>
+        <div class="flex justify-between align-middle items-center">
+          <div class="flex flex-col">
+            <span class="showcase-title">BEACON Q</span>
+            <span
+              >Quiz platform for self-paced learning, featuring adaptive difficulty adjustment,
+              review recommendations, recall analysis, and personalized gamification.</span
+            >
+          </div>
+
+          <img class="showcase-logo" src="assets/images/beaconq.webp" alt="BEACON Q app logo" />
+        </div>
+        <hr class="mt-8 mb-4" style="color: gray; opacity: 0.5" />
+        <span class="normal-white-text">Latest update (September 2026):</span>
+        <br />
+        <span>> Localization -- French, German, Luxembourgish</span>
+        <br />
+        <span>> UI redesign based on Material 3 Expressive</span>
+        <br />
+        <span>> Smarter free-form answer grading</span>
+        <div class="link-button-grid">
+          <a href="https://apps.apple.com/us/app/beacon-q/id1643852992" target="_blank">
+            <button class="traxus-button">
+              <span class="material-symbols-outlined link-button-icon"> open_in_new </span> App
+              Store
+            </button></a
+          >
+          <a
+            href="https://play.google.com/store/apps/details?id=lu.uni.coast.beacon_q_app"
+            target="_blank"
+          >
+            <button class="traxus-button">
+              <span class="material-symbols-outlined link-button-icon"> open_in_new </span> Play
+              Store
+            </button></a
+          >
+          <a href="/projects/beaconq">
+            <button class="traxus-button">
+              <span class="material-symbols-outlined link-button-icon"> read_more </span> Project
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
 
     <div class="skills-title mt-12 mb-4">SKILLS_MATRIX</div>
 
