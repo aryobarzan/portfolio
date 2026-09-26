@@ -1,0 +1,26 @@
+<figure class="article-figure" [class.expandable]="expandable()">
+  @if (expandable()) {
+    <button
+      type="button"
+      class="article-figure-thumb"
+      (click)="open()"
+      [attr.aria-label]="'Enlarge image: ' + alt()"
+    >
+      <img [src]="src()" [alt]="alt()" loading="lazy" />
+    </button>
+  } @else {
+    <img [src]="src()" [alt]="alt()" loading="lazy" />
+  }
+  @if (caption()) {
+    <figcaption>{{ caption() }}</figcaption>
+  }
+</figure>
+
+@if (isOpen()) {
+  <div class="article-figure-overlay" role="dialog" aria-modal="true" (click)="close()">
+    <button type="button" class="article-figure-close" (click)="close()" aria-label="Close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <img [src]="src()" [alt]="alt()" />
+  </div>
+}

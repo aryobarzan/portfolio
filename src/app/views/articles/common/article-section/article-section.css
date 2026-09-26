@@ -1,0 +1,63 @@
+/* Spacing lives on the host so the first section can sit flush with the sidebar. */
+:host {
+  display: block;
+  margin-top: 48px;
+}
+
+:host(:first-child) {
+  margin-top: 0;
+}
+
+.article-section {
+  /* Keeps the section heading clear of the sticky navbar when jumped to via TOC/hash. */
+  scroll-margin-top: 96px;
+}
+
+.article-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border: 2px solid #262629;
+  background: repeating-linear-gradient(0deg, #090909, #090909 2px, #111113 2px, #111113 4px);
+  padding: 16px 24px;
+}
+
+.article-section-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Space-Grotesk';
+  color: var(--traxus-primary);
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.article-section-link-button {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-card);
+  background: transparent;
+  color: var(--fg-5);
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.article-section-link-button:hover {
+  color: var(--traxus-primary);
+  border-color: var(--traxus-primary);
+}
+
+.article-section-body {
+  padding: 24px 4px 0;
+  color: var(--fg-3);
+  font-family: 'Space-Grotesk';
+  text-align: left;
+  line-height: 1.6;
+}

@@ -11,6 +11,7 @@ export class NavigationBar {
   readonly items: NavigationBarItem[] = [
     { label: 'HOME', icon: 'home', route: '/home' },
     { label: 'PROJECTS', icon: 'person', route: '/projects' },
+    { label: 'ARTICLES', icon: 'article', route: '/articles' },
     { label: 'EXPERIENCE', icon: 'settings', route: '/experience' },
     { label: 'PUBLICATIONS', icon: 'settings', route: '/publications' },
   ];

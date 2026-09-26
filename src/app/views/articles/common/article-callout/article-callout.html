@@ -1,0 +1,15 @@
+<article
+  class="article-callout"
+  [class.tone-danger]="tone() === 'danger'"
+  [class.tone-warn]="tone() === 'warn'"
+>
+  <div class="article-callout-title">
+    @if (icon()) {
+      <span class="material-symbols-outlined">{{ icon() }}</span>
+    }
+    <span>{{ title() }}</span>
+  </div>
+  <div class="article-callout-body">
+    <ng-content></ng-content>
+  </div>
+</article>

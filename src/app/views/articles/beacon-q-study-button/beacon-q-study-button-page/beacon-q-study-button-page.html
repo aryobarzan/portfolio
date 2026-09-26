@@ -1,0 +1,90 @@
+<app-article-page [article]="article">
+  <app-article-section title="Overview">
+    <app-article-callout-row>
+      <app-article-callout title="Role" icon="code">
+        <p>
+          Solo developer — built the entire platform, including UX/UI design, prototyping, and data
+          analysis.
+        </p>
+      </app-article-callout>
+      <app-article-callout title="Timeline" icon="timeline">
+        <p>
+          Under a year to first working prototype, tested with students; a new version shipped each
+          subsequent semester over 3 years.
+        </p>
+      </app-article-callout>
+      <app-article-callout title="Tools" icon="edit">
+        <p>Pen and paper, Figma, Flutter.</p>
+      </app-article-callout>
+    </app-article-callout-row>
+    <!-- <div [innerHTML]="overviewMarkdown | markdown | async"></div> -->
+  </app-article-section>
+
+  <app-article-section title="Context">
+    <div [innerHTML]="contextMarkdown | markdown | async"></div>
+  </app-article-section>
+
+  <app-article-section title="The Challenge">
+    <div [innerHTML]="challengeMarkdown | markdown | async"></div>
+  </app-article-section>
+
+  <app-article-section title="The Problem">
+    <div [innerHTML]="problemMarkdown | markdown | async"></div>
+  </app-article-section>
+
+  <app-article-section title="Prototypes">
+    <div [innerHTML]="v1Markdown | markdown | async"></div>
+    <app-article-figure
+      [src]="images.v1"
+      [expandable]="true"
+      alt="V1: icon-only study button in the top toolbar"
+      caption="V1: the initial version of the study button shipped to production, featuring a universal IconButton in the top toolbar of the play page."
+    />
+
+    <div [innerHTML]="v2Markdown | markdown | async"></div>
+    <app-article-figure
+      [src]="images.v2"
+      [expandable]="true"
+      alt="V2: outlined Study button next to the continue FAB"
+      caption="V2: an unshipped prototype of the study button, placing an OutlinedButton in the bottom section of the play page."
+    />
+
+    <div [innerHTML]="v3Markdown | markdown | async"></div>
+    <app-article-figure
+      [src]="images.v3"
+      [expandable]="true"
+      alt="V3: icon-only mini FAB above the continue FAB"
+      caption="V3: an unshipped prototype of the study button, placing a mini FAB above the existing primary FAB of the play page."
+    />
+
+    <div [innerHTML]="v4Markdown | markdown | async"></div>
+    <app-article-figure
+      [src]="images.v4"
+      [expandable]="true"
+      alt="V4: extended Study FAB with icon and label"
+      caption="V4: an unshipped prototype of the study button, placing an extended FAB above the existing primary FAB of the play page."
+    />
+
+    <div [innerHTML]="v5Markdown | markdown | async"></div>
+    <app-article-figure
+      [src]="images.v5"
+      [expandable]="true"
+      alt="V5: one outlined button per topic in a scrolling strip"
+      caption="V5: the final version of the study button shipped to production, featuring separate OutlinedButtons for each topic in the bottom section of the play page."
+    />
+  </app-article-section>
+
+  <app-article-section title="Results">
+    <div [innerHTML]="resultsIntroMarkdown | markdown | async"></div>
+    <app-article-figure
+      [src]="images.results"
+      alt="Topic resource views by source, comparing V1 and V5"
+      caption="Figure 1: total number of topic resource views by users from each available source within the app."
+    />
+    <div [innerHTML]="resultsMarkdown | markdown | async"></div>
+  </app-article-section>
+
+  <app-article-section title="Conclusion">
+    <div [innerHTML]="conclusionMarkdown | markdown | async"></div>
+  </app-article-section>
+</app-article-page>

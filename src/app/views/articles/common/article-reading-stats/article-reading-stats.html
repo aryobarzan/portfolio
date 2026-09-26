@@ -1,0 +1,17 @@
+<div class="article-toc-card">
+  <div class="article-toc-label">
+    <span class="material-symbols-outlined">chart_data</span>
+    SESSION_TELEMETRY
+  </div>
+  <div class="stats-row">
+    <span class="stats-key">WORD_COUNT</span>
+    <span class="stats-value">{{ toc.wordCount() | number }}</span>
+  </div>
+  <div class="stats-row">
+    <span class="stats-key">PROGRESS</span>
+    <span class="stats-value">{{ toc.progress() * 100 | number: '1.0-0' }}%</span>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" [style.width.%]="toc.progress() * 100"></div>
+  </div>
+</div>

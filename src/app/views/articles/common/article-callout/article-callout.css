@@ -1,0 +1,51 @@
+/* flex-basis lets several callouts sit on one line inside an app-article-callout-row and
+   wrap to a new line once the available width runs out. */
+:host {
+  display: flex;
+  flex: 1 1 240px;
+}
+
+.article-callout {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #262629;
+  background-color: #090909;
+  padding: 20px;
+}
+
+.article-callout-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: 'Space-Grotesk';
+  text-transform: uppercase;
+  color: var(--traxus-primary);
+}
+
+.tone-danger .article-callout-title {
+  color: var(--status-danger);
+}
+
+.tone-warn .article-callout-title {
+  color: var(--status-warn);
+}
+
+.article-callout-body {
+  font-size: 0.9rem;
+  color: var(--fg-3);
+  text-align: left;
+  line-height: 1.5;
+}
+
+.article-callout-body :first-child {
+  margin-top: 0;
+}
+
+.article-callout-body :last-child {
+  margin-bottom: 0;
+}

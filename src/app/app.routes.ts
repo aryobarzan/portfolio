@@ -26,6 +26,20 @@ export const routes: Routes = [
   { path: 'projects', component: ProjectsPage },
   { path: 'experience', component: WorkExperiences },
   { path: 'publications', component: PublicationsPage },
+  // Articles — lazy-loaded, since this list will keep growing and each article
+  // page ships its own body content/components that don't need to be in the initial bundle.
+  {
+    path: 'articles',
+    loadComponent: () =>
+      import('./views/articles/articles-page/articles-page').then((m) => m.ArticlesPage),
+  },
+  {
+    path: 'articles/beacon-q-study-button',
+    loadComponent: () =>
+      import('./views/articles/beacon-q-study-button/beacon-q-study-button-page/beacon-q-study-button-page').then(
+        (m) => m.BeaconQStudyButtonPage,
+      ),
+  },
   // Projects
   { path: 'projects/gridlock', component: GridlockPage },
   { path: 'projects/photo-classifier', component: PhotoClassifierPage },

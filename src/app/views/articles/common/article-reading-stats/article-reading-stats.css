@@ -1,0 +1,55 @@
+.article-toc-card {
+  border: 2px solid #262629;
+  background-color: #090909;
+  padding: 20px;
+  font-family: 'Space-Grotesk';
+}
+
+.article-toc-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--fg-5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.article-toc-label .material-symbols-outlined {
+  font-size: 1.125rem;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.stats-key {
+  font-size: 0.75rem;
+  color: var(--fg-5);
+  text-transform: uppercase;
+}
+
+.stats-value {
+  font-size: 0.875rem;
+  color: var(--traxus-primary);
+  font-weight: 500;
+}
+
+.progress-track {
+  margin-top: 12px;
+  height: 4px;
+  background-color: var(--border-card);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--traxus-primary);
+  transition: width 0.15s ease-out;
+}

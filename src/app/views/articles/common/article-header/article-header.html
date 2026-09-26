@@ -1,0 +1,31 @@
+<section class="article-header-card">
+  <div class="flex justify-between gap-2 mb-2 flex-wrap">
+    <div class="flex gap-2 items-center flex-wrap">
+      @for (tag of article().tags; track tag) {
+        <span class="colored-box-traxus-primary">{{ tag }}</span>
+      }
+    </div>
+    <div class="id">{{ article().id }}</div>
+  </div>
+  <div class="title mb-4">{{ article().title }}</div>
+  <div class="byline mb-4">
+    {{ article().author }}
+    @if (article().affiliation) {
+      &middot; {{ article().affiliation }}
+    }
+    &middot; {{ article().publishedDate }}
+  </div>
+  <div class="page-header-block mb-6">
+    <p class="summary">{{ article().summary }}</p>
+  </div>
+  @if (article().abstract) {
+    <div class="description" [innerHTML]="article().abstract | markdown | async"></div>
+  }
+  @if (relatedProject(); as project) {
+    <div class="related-project-row">
+      <a [routerLink]="project.detailRoute">
+        <button class="traxus-outlined-button">VIEW RELATED PROJECT: {{ project.title }}</button>
+      </a>
+    </div>
+  }
+</section>

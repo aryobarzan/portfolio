@@ -1,0 +1,90 @@
+:host {
+  display: block;
+}
+
+.article-figure {
+  margin: 24px 0;
+  border: 2px solid #262629;
+  background-color: black;
+  padding: 8px;
+}
+
+.article-figure img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 70vh;
+  height: auto;
+  margin: 0 auto;
+}
+
+.article-figure figcaption {
+  margin-top: 8px;
+  padding: 4px;
+  font-size: 0.875rem;
+  color: var(--fg-5);
+  font-family: 'Space-Grotesk';
+  text-align: left;
+}
+
+/* Small thumbnail; the full-size image is shown in the overlay. */
+.article-figure.expandable {
+  width: fit-content;
+  max-width: 100%;
+  margin: 24px auto;
+}
+
+.article-figure.expandable img {
+  max-height: 380px;
+}
+
+.article-figure.expandable figcaption {
+  text-align: center;
+}
+
+.article-figure-thumb {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.article-figure-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: rgba(0, 0, 0, 0.9);
+  cursor: zoom-out;
+}
+
+.article-figure-overlay img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.article-figure-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-card);
+  background-color: #090909;
+  color: var(--fg-2);
+  cursor: pointer;
+}
+
+.article-figure-close:hover {
+  color: var(--traxus-primary);
+  border-color: var(--traxus-primary);
+}

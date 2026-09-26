@@ -1,0 +1,25 @@
+<section class="container pt-8" id="article">
+  <header class="mb-8 text-left">
+    <app-article-header
+      [article]="article()"
+      [relatedProject]="relatedProject()"
+    ></app-article-header>
+  </header>
+
+  <div class="flex flex-col lg:flex-row gap-8 items-start">
+    <aside class="w-full flex-none lg:w-64 flex flex-col gap-4 lg:sticky lg:top-24">
+      <app-article-toc></app-article-toc>
+      <app-article-reading-stats></app-article-reading-stats>
+    </aside>
+    <app-article-body class="w-full flex-1 min-w-0">
+      <ng-content></ng-content>
+      @if (article().citations?.length) {
+        <app-article-section title="Citations">
+          <app-article-citations [citations]="article().citations!"></app-article-citations>
+        </app-article-section>
+      }
+    </app-article-body>
+  </div>
+  <br />
+  <br />
+</section>

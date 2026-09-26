@@ -1,0 +1,17 @@
+<section [id]="sectionId" class="article-section">
+  <div class="article-section-heading">
+    <h2 class="article-section-title">{{ title() }}</h2>
+    <button
+      type="button"
+      class="article-section-link-button"
+      (click)="copyLink()"
+      [attr.aria-label]="'Copy link to section: ' + title()"
+      [title]="copied() ? 'Copied!' : 'Copy link to this section'"
+    >
+      <span class="material-symbols-outlined">{{ copied() ? 'check' : 'link' }}</span>
+    </button>
+  </div>
+  <div class="article-section-body article-prose">
+    <ng-content></ng-content>
+  </div>
+</section>

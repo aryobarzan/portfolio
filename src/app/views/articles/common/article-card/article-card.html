@@ -1,0 +1,30 @@
+<article
+  class="article-card flex flex-col text-left"
+  role="article"
+  aria-label="Article titled {{ article().title }}"
+>
+  <div class="article-card-top">
+    <aside>ARC_0{{ index() + 1 }}</aside>
+    <aside style="color: gray">{{ article().publishedDate }}</aside>
+  </div>
+  <div class="article-card-bottom">
+    <aside class="article-card-title mb-2">{{ article().title }}</aside>
+    <aside class="article-card-summary mb-6">{{ article().summary }}</aside>
+    <div class="flex justify-between gap-2 items-center flex-wrap">
+      <aside class="tag-list">
+        @for (tag of article().tags; track tag) {
+          <span class="tag">{{ tag }}</span>
+        }
+      </aside>
+      <button
+        class="traxus-text-button gap-2 flex items-center align-middle ml-auto"
+        [routerLink]="article().detailRoute"
+      >
+        <span>READ</span>
+        <span class="material-symbols-outlined link-button-icon" style="top: 0">
+          arrow_right_alt
+        </span>
+      </button>
+    </div>
+  </div>
+</article>

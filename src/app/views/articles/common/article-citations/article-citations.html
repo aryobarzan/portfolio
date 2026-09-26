@@ -1,0 +1,26 @@
+<ol class="citation-list">
+  @for (citation of citations(); track $index) {
+    <li class="citation">
+      <div class="citation-main">
+        <div class="citation-heading">
+          <span class="citation-tag">CIT_{{ ($index + 1).toString().padStart(2, '0') }}</span>
+          <span class="citation-venue">{{ citation.venue }}</span>
+        </div>
+        <p class="citation-text">{{ citation.text }}</p>
+      </div>
+      @if (linkFor(citation); as href) {
+        <a
+          [href]="href"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="citation-link"
+          [class.traxus-button]="citation.primary"
+          [class.traxus-text-button]="!citation.primary"
+        >
+          <span>{{ linkLabel(citation) }}</span>
+          <span class="material-symbols-outlined citation-link-icon">open_in_new</span>
+        </a>
+      }
+    </li>
+  }
+</ol>

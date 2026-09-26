@@ -26,6 +26,7 @@
 @import './styles/components/cards.css';
 @import './styles/components/links.css';
 @import './styles/components/badges.css';
+@import './styles/components/article-prose.css';
 
 /* 7. Animations */
 @import './styles/animations.css';

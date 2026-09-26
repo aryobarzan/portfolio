@@ -1,0 +1,60 @@
+/* ============================================================================
+ * ARTICLE PROSE
+ * Styles for markdown rendered into an article body. Tailwind's preflight strips
+ * list markers and paragraph margins, and component-scoped styles can't reach
+ * [innerHTML] content, so these live globally under .article-prose.
+ * ============================================================================ */
+.article-prose p {
+  margin: 0 0 1rem;
+}
+
+.article-prose ul,
+.article-prose ol {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.article-prose ul {
+  list-style: disc;
+}
+
+.article-prose ol {
+  list-style: decimal;
+}
+
+.article-prose ul ul,
+.article-prose ol ol,
+.article-prose ul ol,
+.article-prose ol ul {
+  margin: 0.25rem 0 0;
+}
+
+.article-prose ul ul {
+  list-style: circle;
+}
+
+.article-prose li {
+  margin-bottom: 0.25rem;
+}
+
+.article-prose li::marker {
+  color: var(--traxus-primary);
+}
+
+.article-prose strong {
+  color: var(--fg-2);
+  font-weight: 600;
+}
+
+.article-prose blockquote {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--border-card);
+  color: var(--fg-4);
+}
+
+/* Only plain markdown links — anchors with a class (e.g. button-styled ones) style themselves. */
+.article-prose a:not([class]) {
+  color: var(--traxus-primary);
+  text-decoration: underline;
+}

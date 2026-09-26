@@ -1,0 +1,21 @@
+<nav class="article-toc-card" aria-label="Table of contents">
+  <div class="article-toc-label">
+    <span class="material-symbols-outlined">toc</span>
+    INDEX_TREE
+  </div>
+  <ul class="article-toc-list">
+    @for (entry of toc.sections(); track entry.id) {
+      <li>
+        <a
+          [href]="hrefFor(entry.id)"
+          [class.active]="toc.activeId() === entry.id"
+          [attr.aria-current]="toc.activeId() === entry.id ? 'location' : null"
+          (click)="scrollTo($event, entry.id)"
+        >
+          <span class="article-toc-number">{{ ($index + 1).toString().padStart(2, '0') }}</span>
+          <span>{{ entry.title }}</span>
+        </a>
+      </li>
+    }
+  </ul>
+</nav>
