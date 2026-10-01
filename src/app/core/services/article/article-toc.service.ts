@@ -27,10 +27,26 @@ export class ArticleTocService {
   readonly activeId = this._activeId.asReadonly();
 
   private bodyEl: HTMLElement | null = null;
-  private readonly onScroll = () => {
-    this.updateProgress();
-    this.updateActiveSection();
-  };
+  private frameId: number | null = null;
+  private wordCountDirty = false;
+
+  // Layout reads (getBoundingClientRect etc.) force a synchronous reflow when the DOM is dirty,
+  // so every trigger (scroll, resize, observers) just schedules one update per animation frame.
+  private readonly onScroll = () => this.scheduleUpdate();
+
+  private scheduleUpdate(recountWords = false): void {
+    this.wordCountDirty ||= recountWords;
+    if (this.frameId !== null) return;
+    this.frameId = requestAnimationFrame(() => {
+      this.frameId = null;
+      if (this.wordCountDirty) {
+        this.wordCountDirty = false;
+        this._wordCount.set(this.countWords(this.bodyEl?.textContent ?? ''));
+      }
+      this.updateProgress();
+      this.updateActiveSection();
+    });
+  }
 
   registerSection(entry: ArticleTocEntry): void {
     this._sections.update((sections) => [...sections, entry]);
@@ -43,10 +59,7 @@ export class ArticleTocService {
   registerBody(el: ElementRef<HTMLElement>): void {
     this.bodyEl = el.nativeElement;
 
-    const recompute = () => {
-      this._wordCount.set(this.countWords(this.bodyEl?.textContent ?? ''));
-      this.onScroll();
-    };
+    const recompute = () => this.scheduleUpdate(true);
     recompute();
 
     // The article body's height can change after this point — markdown is rendered
@@ -65,6 +78,7 @@ export class ArticleTocService {
       window.removeEventListener('resize', this.onScroll);
       resizeObserver.disconnect();
       mutationObserver.disconnect();
+      if (this.frameId !== null) cancelAnimationFrame(this.frameId);
     });
   }
 

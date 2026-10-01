@@ -35,9 +35,10 @@
         <!-- We want a minimum width of 350px. -->
         <div class="smartphone-frame w-[99.0%] md:w-[95%] min-w-[350px]">
           <div class="smartphone-content">
-            @if (isLoading) {
+            @if (isLoading()) {
               <div class="loading-spinner">
                 <div class="spinner"></div>
+                <div class="loading-label">This may take a moment...</div>
               </div>
             }
             <!-- "lazy" loading means only start loading the iframe when it becomes visible on the screen. -->
@@ -46,8 +47,8 @@
               class="smartphone-content"
               src="assets/dartblock/index.html"
               loading="lazy"
-              [class.is-hidden]="isLoading"
-              (load)="onIframeLoad()"
+              [class.is-hidden]="isLoading()"
+              (load)="onIframeLoad($event)"
             ></iframe>
           </div>
         </div>

@@ -13,6 +13,21 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
+## Profiling
+
+To test the production performance, build and serve the production build locally:
+
+```bash
+npx ng build --base-href "/"
+npx http-server docs -p 8080 --proxy http://localhost:8080? -c-1
+```
+
+- The build writes to `docs/`, the tracked GitHub Pages output, so don't commit it unintentionally.
+- `-c-1` disables server-side caching, so you never profile a stale bundle.
+- `--proxy` falls back to `index.html` for unknown paths, so deep links like `/articles` work in this single-page app.
+
+Profile in an Incognito window with "Disable cache" ticked in DevTools (Network tab), and optionally enable network ('slow 4G') and CPU throttling (Performance tab > settings cog).
+
 ## Testing
 
 Unit tests run on [Vitest](https://vitest.dev/):

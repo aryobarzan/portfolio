@@ -28,10 +28,6 @@
                 "output": "assets/dartblock/"
               }
             ],
-            "scripts": [
-              "public/assets/dartblock/flutter_bootstrap.js",
-              "public/assets/dartblock/flutter.js"
-            ],
             "styles": ["src/styles.css"]
           },
           "configurations": {
