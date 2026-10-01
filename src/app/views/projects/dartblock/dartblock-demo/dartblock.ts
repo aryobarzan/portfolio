@@ -1,9 +1,7 @@
 import { Component, HostListener, signal } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-dartblock',
-  imports: [RouterLink, RouterOutlet],
   templateUrl: './dartblock.html',
   styleUrl: './dartblock.css',
 })
