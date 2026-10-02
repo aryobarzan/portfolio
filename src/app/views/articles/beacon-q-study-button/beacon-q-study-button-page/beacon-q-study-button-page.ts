@@ -3,7 +3,6 @@ import { Component, inject } from '@angular/core';
 import { Article } from '../../../../core/services/article/article';
 import { ArticleService } from '../../../../core/services/article/article.service';
 import { MarkdownPipe } from '../../../../core/pipes/markdown.pipe';
-import { CloudinaryPipe } from '../../../../core/pipes/cloudinary.pipe';
 import { ArticleFigure } from '../../common/article-figure/article-figure';
 import { ArticlePage } from '../../common/article-page/article-page';
 import { ArticleSection } from '../../common/article-section/article-section';
@@ -17,7 +16,6 @@ import { ArticleCalloutRow } from '../../common/article-callout-row/article-call
     ArticleSection,
     ArticleFigure,
     MarkdownPipe,
-    CloudinaryPipe,
     AsyncPipe,
     ArticleCallout,
     ArticleCalloutRow,

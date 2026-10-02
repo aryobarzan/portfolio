@@ -5,20 +5,28 @@
     <title>Aryobarzan - Portfolio</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio of Aryobarzan Atashpendar: software projects, case studies and articles."
+    />
+    <!-- preconnect: open the connection (DNS + TLS) to the font hosts early; downloads nothing yet. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz@20&display=block&icon_names=account_circle,android,arrow_downward,arrow_right_alt,arrow_upward,article,chart_data,check,check_alert,check_circle,close,code,download,edit,grid_view,home,license,link,mail,menu,open_in_new,person_add,read_more,rule,school,search,terminal,timeline,timer,toc,trophy,tv_displays"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- preload: download this exact file now, so it beats the ~100ms window of font-display: optional. -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="/assets/fonts/roboto-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
   </head>
   <body>

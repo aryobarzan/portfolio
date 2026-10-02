@@ -13,6 +13,9 @@ import { ProjectsPage } from './views/projects/projects-page/projects-page';
 import { KittyBotPage } from './views/projects/kitty-bot/kitty-bot-page/kitty-bot-page';
 import { PhotoClassifierPage } from './views/projects/photo-classifier/photo-classifier-page/photo-classifier-page';
 
+// `component` = eager: the component is statically imported above, so it ships in the main bundle.
+// `loadComponent` = lazy: a dynamic import() that esbuild splits into its own chunk, fetched on
+// first navigation (or in the background, see withPreloading in app.config.ts).
 export const routes: Routes = [
   {
     path: '',
@@ -30,6 +33,7 @@ export const routes: Routes = [
   // page ships its own body content/components that don't need to be in the initial bundle.
   {
     path: 'articles',
+    // Lazy: dynamic import() creates a separate chunk.
     loadComponent: () =>
       import('./views/articles/articles-page/articles-page').then((m) => m.ArticlesPage),
   },
