@@ -72,7 +72,7 @@ export class ProjectService {
       shortDescription: 'Exam seating arranger.',
       description: `GridLock enables teachers to automatically set up seating charts for their exam sessions based on various types of constraints. On top of its assignment engine, it also supports multi-phase timers, on-screen instructions, detailed attendance tracking and auditing.  
       To facilitate setup, teachers can import their student lists from JSON or CSV files. Finally, to aid students at the start of the exam, their assigned seat can be highlighted for greater clarity.`,
-      keywords: ['SwiftUI'],
+      keywords: ['SwiftUI', 'Local LLM'],
       technologies: [
         { name: 'Swift', isLanguage: true },
         { name: 'SwiftUI', isLanguage: false },
@@ -110,11 +110,14 @@ export class ProjectService {
       detailRoute: '/projects/photo-classifier',
       shortDescription: 'Profile editor with photo classification.',
       description: `Photo Classifier is an experimental project to work with a microservice-based architecture. The backend is composed of several services, including a core FastAPI REST server, a separate FastAPI server handling image classification tasks, an S3 object store (Garage) for storing user profile images and a PostgreSQL database to store user data.
-      The entire backend is containerized for easy deployment via Docker. The frontend is built using Angular, which features pages for user authentication, profile editing and user management via an admin view.`,
-      keywords: ['Angular', 'FastAPI'],
+      The entire backend is containerized for easy deployment via Docker. The frontend was built twice using both Next.js and Angular, featuring pages for user authentication, profile editing and user management via an admin view.`,
+      keywords: ['Next.js', 'Angular', 'FastAPI', 'Docker'],
       technologies: [
         { name: 'TypeScript', isLanguage: true },
+        { name: 'Next.js', isLanguage: false },
+        { name: 'React', isLanguage: false },
         { name: 'Angular', isLanguage: false },
+        { name: 'Tailwind CSS', isLanguage: false },
         { name: 'Python', isLanguage: true },
         { name: 'FastAPI', isLanguage: false },
         { name: 'Garage (S3 object store)', isLanguage: false },
@@ -140,7 +143,13 @@ export class ProjectService {
       iconURL: 'assets/images/photo-classifier.jpg',
       links: [
         {
-          name: 'GitHub (Frontend)',
+          name: 'GitHub (Frontend - Next.js)',
+          type: 'GitHub',
+          url: 'https://github.com/aryobarzan/photo-classification-nextjs',
+          isExternal: true,
+        },
+        {
+          name: 'GitHub (Frontend - Angular)',
           type: 'GitHub',
           url: 'https://github.com/aryobarzan/photo-classification-angular',
           isExternal: true,
@@ -162,7 +171,7 @@ export class ProjectService {
       description: `BEACON Q is a feature-packed quiz platform for self-paced learning. Its core functionality includes an adaptive difficulty system for its activities, review recommendations based on spaced-repetition, and recall analysis for exam preparation.  
       To encourage regular self-testing, the platform integrates an set of gamification elements, including a bespoke "patron" system which offers a more personal experience.  
       In addition to multiple-choice questions, the DartBlock framework enables the inclusion of block-based coding questions in BEACON Q.`,
-      keywords: ['Flutter', 'Node.js'],
+      keywords: ['Flutter', 'Node.js', 'Docker'],
       technologies: [
         { name: 'Dart', isLanguage: true },
         { name: 'Flutter', isLanguage: false },
