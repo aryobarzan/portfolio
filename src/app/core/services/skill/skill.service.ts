@@ -50,6 +50,11 @@ export class SkillService {
           level: 'high',
         },
         {
+          name: 'Next.js & React',
+          url: 'https://nextjs.org/',
+          level: 'med',
+        },
+        {
           name: 'SwiftUI',
           url: 'https://developer.apple.com/documentation/swiftui',
           level: 'med',
@@ -68,11 +73,6 @@ export class SkillService {
           name: 'Xamarin.Forms',
           url: 'https://dotnet.microsoft.com/en-us/apps/xamarin/xamarin-forms',
           level: 'med',
-        },
-        {
-          name: 'React / Next.js',
-          url: 'https://nextjs.org/',
-          level: 'low',
         },
       ],
     },
