@@ -140,6 +140,7 @@ export class ProjectService {
       technologies: [
         { name: 'TypeScript', isLanguage: true },
         { name: 'Next.js', isLanguage: false },
+        { name: 'Tailwind CSS', isLanguage: false },
         { name: 'next-intl', isLanguage: false },
         { name: 'Sanity (CMS)', isLanguage: false },
         { name: 'React Hook Form', isLanguage: false },
