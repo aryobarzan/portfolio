@@ -17,20 +17,23 @@ jobs:
       - name: Checkout source repository
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: npm
+          cache: pnpm
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Run unit tests
-        run: npx ng test --watch=false
+        run: pnpm exec ng test --watch=false
 
       - name: Build production bundle
-        run: npx ng build
+        run: pnpm exec ng build
 
       # From here on, the source repo's freshly built ./docs is what gets deployed.
       # Steps above this point gate everything after it: if tests or the build fail, nothing is pushed.

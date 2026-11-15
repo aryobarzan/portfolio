@@ -12,6 +12,7 @@ import { PublicationsPage } from './views/publications/publications-page/publica
 import { ProjectsPage } from './views/projects/projects-page/projects-page';
 import { KittyBotPage } from './views/projects/kitty-bot/kitty-bot-page/kitty-bot-page';
 import { PhotoClassifierPage } from './views/projects/photo-classifier/photo-classifier-page/photo-classifier-page';
+import { Hope4rosioriiPage } from './views/projects/hope4rosiorii/hope4rosiorii-page/hope4rosiorii-page';
 
 // `component` = eager: the component is statically imported above, so it ships in the main bundle.
 // `loadComponent` = lazy: a dynamic import() that esbuild splits into its own chunk, fetched on
@@ -45,6 +46,7 @@ export const routes: Routes = [
       ),
   },
   // Projects
+  { path: 'projects/hope4rosiorii', component: Hope4rosioriiPage },
   { path: 'projects/gridlock', component: GridlockPage },
   { path: 'projects/photo-classifier', component: PhotoClassifierPage },
   { path: 'projects/beaconq', component: BeaconQPage },

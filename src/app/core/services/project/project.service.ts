@@ -1,5 +1,70 @@
 import { Injectable } from '@angular/core';
 import { Project, ProjectFeature } from './project';
+const hope4rosioriiFeatures: ProjectFeature[] = [
+  {
+    title: 'Sanity (CMS)',
+    description:
+      'Dynamic content such as dogs and donation updates are integrated via the content management system Sanity.io. The volunteers of the dog rescue can add, modify and delete dynamic data via the Sanity dashboard.',
+    imagePath: 'assets/projects/hope4rosiorii/animals.webp',
+    icon: 'grid_view',
+  },
+  {
+    title: 'Form Validation',
+    description:
+      'The multi-step adoption form includes validation via both React Hook Form and Zod. To reduce spam, e.g., via automated bots, the form includes an invisible field to catch such cases and prevent submissions.',
+    imagePath: 'assets/projects/hope4rosiorii/adopt-elli.webp',
+    icon: 'check_box',
+  },
+  {
+    title: 'Tests',
+    description:
+      'A thorough set of tests, including unit tests via Vitest to verify logic such as dog filters, form schemas, server actions, proxies, translations, and so on. End-to-end tests are integrated using Playwright, which simulate things like filling out forms, using filters, opening pages in every supported language and scanning each page for accessibility issues.',
+    imagePath: 'assets/projects/hope4rosiorii/vitest.webp',
+    icon: 'rule',
+  },
+  {
+    title: 'Localization',
+    description:
+      'The static content is fully translated to four languages (English, Luxembourgish, German, French) and integrated via next-intl. Dynamic content fetched from Sanity also supports localization, with fallback to Luxembourgish for content not-translated by the volunteers.',
+    imagePath: 'assets/projects/hope4rosiorii/donate-lb.webp',
+    icon: 'translate',
+  },
+  {
+    title: 'Caching',
+    description:
+      'Server-side caching for the dynamic content fetched from Sanity, in each supported language. To prevent stale content, a revalidation webhook is used to stay up-to-date with content changes via the Sanity dashboard by volunteers.',
+    imagePath: 'assets/projects/hope4rosiorii/animal-elli.webp',
+    icon: 'cached',
+  },
+  {
+    title: 'Dynamic Layout',
+    description:
+      'The website layout adapts to the screen size. Examples include the navigation bar collapsing into a menu on mobile, and grid-based layouts collapsing into a column-view on smaller screens.',
+    imagePath: 'assets/projects/hope4rosiorii/mobile-home.webp',
+    icon: 'mobile',
+  },
+  {
+    title: 'Mail',
+    description:
+      'Form submissions lead to emails being sent to the email address of the dog rescue association. This is enabled via Gmail SMTP using nodemailer.',
+    imagePath: 'assets/projects/hope4rosiorii/contact.webp',
+    icon: 'mail',
+  },
+  {
+    title: 'Preview Card',
+    description:
+      "When filling out the adoption or contact form, a preview card of the relevant dog is shown on the side to keep an overview of the main characteristics of the animal. Technically this is enabled by the animal's name being passed as a route parameter.",
+    imagePath: 'assets/projects/hope4rosiorii/adopt-elli.webp',
+    icon: 'preview',
+  },
+  {
+    title: 'Playful Design',
+    description:
+      'The sole starting point for the project was the existing pink logo of the association, from which the color scheme was created. A playful design was adopted, with dog-related iconography such as paw prints throughout the website, blob-shaped image avatars and eyebrow headings which speak to the visitor. The UI takes into account general guidelines which improve readability and signal importance of elements, such as filled versus outlined buttons, differently colored blocks to distinguish sections of a given page, reactive states for interactive elements, e.g., hover, inactive and active states for buttons, as well as accessibility considerations such as alt image labels, HTML semantic tags and metadata descriptors for each page and important elements of pages.',
+    imagePath: 'assets/projects/hope4rosiorii/home-cropped.webp',
+    icon: 'pets',
+  },
+];
 
 const gridlockFeatures: ProjectFeature[] = [
   {
@@ -65,6 +130,54 @@ const gridlockFeatures: ProjectFeature[] = [
 })
 export class ProjectService {
   readonly projects: Project[] = [
+    {
+      title: 'Hope 4 Rosiorii',
+      id: '26-HR-44',
+      detailRoute: '/projects/hope4rosiorii',
+      shortDescription: 'Dog rescue website. (volunteer project)',
+      description: `A volunteer project for the non-profit association 'Hope 4 Rosiorii', which is a dog rescue bringing dogs from Romania to Luxembourg for adoption. The website includes a dynamic list of available dogs, a multi-step adoption form, an about page with the list of volunteers, a contact form and a donation page with updates from the team.`,
+      keywords: ['Next.js', 'Sanity'],
+      technologies: [
+        { name: 'TypeScript', isLanguage: true },
+        { name: 'Next.js', isLanguage: false },
+        { name: 'next-intl', isLanguage: false },
+        { name: 'Sanity (CMS)', isLanguage: false },
+        { name: 'React Hook Form', isLanguage: false },
+        { name: 'Zod', isLanguage: false },
+        { name: 'nodemailer', isLanguage: false },
+        { name: 'Vitest', isLanguage: false },
+        { name: 'Playwright', isLanguage: false },
+        { name: 'Vercel', isLanguage: false },
+      ],
+      specifications: [
+        {
+          key: 'release',
+          value: '2026',
+        },
+        {
+          key: 'type',
+          value: 'website',
+        },
+      ],
+      year: 2026,
+      iconURL: 'assets/images/hope4rosiorii.webp',
+      links: [
+        {
+          name: 'Preview',
+          type: 'Website',
+          url: 'https://hope4rosiorii.vercel.app/',
+          isExternal: true,
+        },
+        {
+          name: 'GitHub',
+          type: 'GitHub',
+          url: 'https://github.com/aryobarzan/hope4rosiorii',
+          isExternal: true,
+        },
+      ],
+      images: [],
+      features: hope4rosioriiFeatures,
+    },
     {
       title: 'GridLock',
       id: '97-GL-35',
